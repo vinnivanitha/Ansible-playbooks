@@ -1,0 +1,142 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sip.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas4/sip.conf"
+        ], 
+        "delta": "0:00:00.001614", 
+        "end": "2018-09-18 01:18:51.247670", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sip.conf /etc/ansible/playbooks/uk3/mas/mas4/sip.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas4", 
+        "rc": 0, 
+        "start": "2018-09-18 01:18:51.246056", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sip.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas3/sip.conf"
+        ], 
+        "delta": "0:00:00.001653", 
+        "end": "2018-09-18 01:18:51.501485", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sip.conf /etc/ansible/playbooks/uk3/mas/mas3/sip.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas3", 
+        "rc": 0, 
+        "start": "2018-09-18 01:18:51.499832", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sip.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas2/sip.conf"
+        ], 
+        "delta": "0:00:00.001585", 
+        "end": "2018-09-18 01:18:51.729211", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sip.conf /etc/ansible/playbooks/uk3/mas/mas2/sip.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas2", 
+        "rc": 0, 
+        "start": "2018-09-18 01:18:51.727626", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sip.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas1/sip.conf"
+        ], 
+        "delta": "0:00:00.001565", 
+        "end": "2018-09-18 01:18:51.959742", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sip.conf /etc/ansible/playbooks/uk3/mas/mas1/sip.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas1", 
+        "rc": 0, 
+        "start": "2018-09-18 01:18:51.958177", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

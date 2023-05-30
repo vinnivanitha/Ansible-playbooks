@@ -1,0 +1,4 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+#::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+10.188.40.9	wdc06-mas-001 INJECTHOST
+10.188.40.21	 traphost ntpserverA

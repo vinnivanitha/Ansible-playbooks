@@ -1,0 +1,142 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/http.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas4/http.conf"
+        ], 
+        "delta": "0:00:00.001632", 
+        "end": "2018-09-20 03:58:30.709712", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/http.conf /etc/ansible/playbooks/uk3/mas/mas4/http.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas4", 
+        "rc": 0, 
+        "start": "2018-09-20 03:58:30.708080", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/http.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas3/http.conf"
+        ], 
+        "delta": "0:00:00.001731", 
+        "end": "2018-09-20 03:58:30.939216", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/http.conf /etc/ansible/playbooks/uk3/mas/mas3/http.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas3", 
+        "rc": 0, 
+        "start": "2018-09-20 03:58:30.937485", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/http.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas2/http.conf"
+        ], 
+        "delta": "0:00:00.001603", 
+        "end": "2018-09-20 03:58:31.173879", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/http.conf /etc/ansible/playbooks/uk3/mas/mas2/http.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas2", 
+        "rc": 0, 
+        "start": "2018-09-20 03:58:31.172276", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/http.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas1/http.conf"
+        ], 
+        "delta": "0:00:00.001614", 
+        "end": "2018-09-20 03:58:31.399802", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/http.conf /etc/ansible/playbooks/uk3/mas/mas1/http.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas1", 
+        "rc": 0, 
+        "start": "2018-09-20 03:58:31.398188", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

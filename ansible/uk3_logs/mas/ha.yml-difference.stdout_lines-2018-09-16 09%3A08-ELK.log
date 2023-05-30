@@ -1,0 +1,142 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/ha.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas4/ha.yml"
+        ], 
+        "delta": "0:00:00.001600", 
+        "end": "2018-09-16 09:08:27.114047", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/ha.yml /etc/ansible/playbooks/uk3/mas/mas4/ha.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas4", 
+        "rc": 0, 
+        "start": "2018-09-16 09:08:27.112447", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/ha.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas3/ha.yml"
+        ], 
+        "delta": "0:00:00.001647", 
+        "end": "2018-09-16 09:08:27.355068", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/ha.yml /etc/ansible/playbooks/uk3/mas/mas3/ha.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas3", 
+        "rc": 0, 
+        "start": "2018-09-16 09:08:27.353421", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/ha.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas2/ha.yml"
+        ], 
+        "delta": "0:00:00.001569", 
+        "end": "2018-09-16 09:08:27.576966", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/ha.yml /etc/ansible/playbooks/uk3/mas/mas2/ha.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas2", 
+        "rc": 0, 
+        "start": "2018-09-16 09:08:27.575397", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/ha.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas1/ha.yml"
+        ], 
+        "delta": "0:00:00.001601", 
+        "end": "2018-09-16 09:08:27.799009", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/ha.yml /etc/ansible/playbooks/uk3/mas/mas1/ha.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas1", 
+        "rc": 0, 
+        "start": "2018-09-16 09:08:27.797408", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

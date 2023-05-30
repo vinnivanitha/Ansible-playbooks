@@ -1,0 +1,17 @@
+---
+- name: Compare playbook #2
+  hosts: mas1
+  gather_facts: no
+
+  tasks:
+  - name: get difference of two files
+    command: >
+      diff sip.conf sip.conf
+      chdir=/etc/ansible/logs
+    register: difference
+    failed_when: difference.rc > 1
+    changed_when: difference.rc == 1
+
+  - name: debug output
+    debug: 
+      msg: "{{ difference }}"

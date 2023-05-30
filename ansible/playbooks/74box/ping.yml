@@ -1,0 +1,20 @@
+---
+- hosts: dummy
+  become: yes
+  gather_facts: no
+  tasks:
+   - block:
+     - name: ping the server
+       ping: 
+       register: ping_output
+     - name:
+       debug: 
+         msg: "{{ ping_output }}"
+     rescue:
+       
+     - name: send an email   
+       mail: 
+         to: vinnivanitha99@gmail.com
+         sbuject: "ping fail"
+       when: ping_output in  search("unreachable!")        
+      

@@ -1,0 +1,142 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/manager.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas4/manager.conf"
+        ], 
+        "delta": "0:00:00.001964", 
+        "end": "2018-09-18 01:10:47.700255", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/manager.conf /etc/ansible/playbooks/uk3/mas/mas4/manager.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas4", 
+        "rc": 0, 
+        "start": "2018-09-18 01:10:47.698291", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/manager.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas3/manager.conf"
+        ], 
+        "delta": "0:00:00.001673", 
+        "end": "2018-09-18 01:10:47.959876", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/manager.conf /etc/ansible/playbooks/uk3/mas/mas3/manager.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas3", 
+        "rc": 0, 
+        "start": "2018-09-18 01:10:47.958203", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/manager.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas2/manager.conf"
+        ], 
+        "delta": "0:00:00.001612", 
+        "end": "2018-09-18 01:10:48.200088", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/manager.conf /etc/ansible/playbooks/uk3/mas/mas2/manager.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas2", 
+        "rc": 0, 
+        "start": "2018-09-18 01:10:48.198476", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/manager.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas1/manager.conf"
+        ], 
+        "delta": "0:00:00.001631", 
+        "end": "2018-09-18 01:10:48.426351", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/manager.conf /etc/ansible/playbooks/uk3/mas/mas1/manager.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas1", 
+        "rc": 0, 
+        "start": "2018-09-18 01:10:48.424720", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

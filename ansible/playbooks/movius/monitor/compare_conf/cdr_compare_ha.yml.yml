@@ -1,0 +1,36 @@
+---
+- name: 'Compare ha.yml  files'
+  hosts: ansible
+  gather_facts: yes
+  tasks:
+  - name: 'Compare ha.yml  files'
+    command:
+      diff /etc/ansible/playbooks/master/cdr/ha.yml /etc/ansible/playbooks/uk3/cdr/{{ item }}/ha.yml
+      chdir=/etc/ansible/playbooks/
+    register: difference
+    failed_when: difference.rc > 1
+    changed_when: difference.rc == 1
+    with_inventory_hostnames:
+          - cdr_servers
+
+  - name: Print differences
+    debug: msg='{{ difference }}'
+  
+  - name: Create output file
+    local_action: copy content='{{ item.value | list | to_nice_json }}' dest='/etc/ansible/uk3_logs/cdr/ha.yml-{{ item.variable }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}-{{ ansible_hostname }}.log'
+    register: output
+    with_items:
+          - variable: difference.stdout_lines
+            value: "{{ difference.results }}"
+
+  - name: copy output file
+    local_action: copy content='{{ item.value | list | to_nice_json }}' dest='/etc/ansible/uk3_logs/cdr/save/ha.yml.json'
+    with_items:
+          - variable: difference.stdout_lines
+            value: "{{ difference.results }}"
+    no_log: true
+
+  - name: send an email of compare files
+    shell: mail -a "/etc/ansible/uk3_logs/cdr/save/ha.yml.json" -s "cdr_ha.yml"  "{{ myvars.mail }}"
+
+

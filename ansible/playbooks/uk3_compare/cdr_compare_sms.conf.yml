@@ -1,0 +1,36 @@
+---
+- name: 'Compare sms.conf  files'
+  hosts: ansible
+  gather_facts: yes
+  tasks:
+      - name: 'Compare sms.conf  files'
+        command:
+           diff /etc/ansible/playbooks/master/cdr/sms.conf /etc/ansible/playbooks/uk3/cdr/{{ item }}/sms.conf
+           chdir=/etc/ansible/playbooks/
+        register: difference
+        failed_when: difference.rc > 1
+        changed_when: difference.rc == 1
+        with_inventory_hostnames:
+          - cdr_servers
+
+      - name: print output
+        debug:
+          msg: "{{ item.stdout_lines }}"
+        with_items: "{{ difference.results }}"
+
+      - name: Create output file
+        local_action: copy content='{{ item.value | list | to_nice_json }}' dest='/etc/ansible/uk3_logs/cdr/sms.conf.json-{{ item.variable }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}-{{ ansible_hostname }}.log'
+        register: output
+        with_items:
+          - variable: difference.stdout_lines
+            value: "{{ difference.results }}"
+
+      - name: copy output file
+        local_action: copy content='{{ item.value | list | to_nice_json }}' dest='/etc/ansible/uk3_logs/cdr/save/sms.conf.json'
+        with_items:
+          - variable: difference.stdout_lines
+            value: "{{ difference.results }}"
+
+
+      - name: send an email on failure upgrade
+        shell: mail -a "/etc/ansible/uk3_logs/cdr/save/sms.conf.json" -s "cdr_sms.conf"  "{{ myvars.mail }}"

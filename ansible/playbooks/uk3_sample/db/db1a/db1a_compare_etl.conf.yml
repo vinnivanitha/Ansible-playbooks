@@ -1,0 +1,22 @@
+---
+- name: 'Compare etl.conf  files'
+  hosts: ansible
+  gather_facts: yes
+  tasks: 
+  - name: 'Compare etl.conf  files'
+    command:
+      diff /etc/ansible/playbooks/master/db/etl.conf /etc/ansible/playbooks/uk3/db/db1a/etl.conf
+      chdir=/etc/ansible/playbooks/
+    register: difference
+    failed_when: difference.rc > 1
+    changed_when: difference.rc == 1
+
+  - name: Print differences
+    debug: msg='{{ difference.stdout }}'
+
+  - name: Create output file
+    local_action: copy content='{{ item.value }}' dest='/etc/ansible/uk3_logs/db1a/etl.conf-{{ item.variable }}-{{ ansible_date_time.date }}-{{ ansible_hostname }}.log'
+    with_items:
+      - variable: difference
+        value: '{{ difference }}'
+    no_log: true

@@ -1,0 +1,23 @@
+---
+- hosts: local_152
+  vars:
+  - mcp: MCP Version
+  tasks:
+  - name: find cafe version
+    command: version
+    register: disk
+    failed_when: disk.rc > 1
+    changed_when: disk.rc == 1
+
+  - name: ===== Debug disk =======
+    debug: var=disk
+
+  - name: Print disk usage
+    debug: msg="{{ disk.stdout_lines }}"
+
+#  tasks:
+#  - name: find cafe version 222
+#    command: version
+#    when: mcp == "aaa"
+
+

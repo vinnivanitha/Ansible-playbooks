@@ -1,0 +1,16 @@
+---
+- name: 'Compare etl.conf  files'
+  hosts: ansible
+  gather_facts: no
+  tasks: 
+  - name: 'Compare etl.conf  files'
+    command:
+      diff /etc/ansible/playbooks/master/cdr/etl.conf /etc/ansible/playbooks/uk3/cdr/{{ item }}/etl.conf
+      chdir=/etc/ansible/playbooks/
+    register: difference
+    failed_when: difference.rc > 1
+    changed_when: difference.rc == 1
+    with_inventory_hostnames:
+          - cdr_servers 
+
+

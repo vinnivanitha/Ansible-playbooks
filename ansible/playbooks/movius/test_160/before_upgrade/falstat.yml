@@ -1,0 +1,10 @@
+---
+- name: this is the master falstat yml file
+  hosts: ansible
+  gather_facts: no
+  
+- include: mas_falstat.yml
+- include: db_falstat.yml
+- include: userdb_falstat.yml
+- include: vap_falstat.yml
+- include: cdr_falstat.yml

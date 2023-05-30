@@ -1,0 +1,107 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/etl.conf", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr2b/etl.conf"
+        ], 
+        "delta": "0:00:00.001815", 
+        "end": "2018-09-21 05:06:52.677485", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/etl.conf /etc/ansible/playbooks/uk3/cdr/cdr2b/etl.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr2b", 
+        "rc": 0, 
+        "start": "2018-09-21 05:06:52.675670", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/etl.conf", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr2a/etl.conf"
+        ], 
+        "delta": "0:00:00.001650", 
+        "end": "2018-09-21 05:06:52.923474", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/etl.conf /etc/ansible/playbooks/uk3/cdr/cdr2a/etl.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr2a", 
+        "rc": 0, 
+        "start": "2018-09-21 05:06:52.921824", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/etl.conf", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr1a/etl.conf"
+        ], 
+        "delta": "0:00:00.001637", 
+        "end": "2018-09-21 05:06:53.149804", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/etl.conf /etc/ansible/playbooks/uk3/cdr/cdr1a/etl.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr1a", 
+        "rc": 0, 
+        "start": "2018-09-21 05:06:53.148167", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

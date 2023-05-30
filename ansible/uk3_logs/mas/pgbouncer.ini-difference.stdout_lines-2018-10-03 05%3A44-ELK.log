@@ -1,0 +1,142 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/pgbouncer.ini", 
+            "/etc/ansible/playbooks/uk3/mas/mas4/pgbouncer.ini"
+        ], 
+        "delta": "0:00:00.001727", 
+        "end": "2018-10-03 05:44:08.866737", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/pgbouncer.ini /etc/ansible/playbooks/uk3/mas/mas4/pgbouncer.ini", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas4", 
+        "rc": 0, 
+        "start": "2018-10-03 05:44:08.865010", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/pgbouncer.ini", 
+            "/etc/ansible/playbooks/uk3/mas/mas3/pgbouncer.ini"
+        ], 
+        "delta": "0:00:00.001629", 
+        "end": "2018-10-03 05:44:09.124198", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/pgbouncer.ini /etc/ansible/playbooks/uk3/mas/mas3/pgbouncer.ini", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas3", 
+        "rc": 0, 
+        "start": "2018-10-03 05:44:09.122569", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/pgbouncer.ini", 
+            "/etc/ansible/playbooks/uk3/mas/mas2/pgbouncer.ini"
+        ], 
+        "delta": "0:00:00.001639", 
+        "end": "2018-10-03 05:44:09.350935", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/pgbouncer.ini /etc/ansible/playbooks/uk3/mas/mas2/pgbouncer.ini", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas2", 
+        "rc": 0, 
+        "start": "2018-10-03 05:44:09.349296", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/pgbouncer.ini", 
+            "/etc/ansible/playbooks/uk3/mas/mas1/pgbouncer.ini"
+        ], 
+        "delta": "0:00:00.001669", 
+        "end": "2018-10-03 05:44:09.593289", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/pgbouncer.ini /etc/ansible/playbooks/uk3/mas/mas1/pgbouncer.ini", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas1", 
+        "rc": 0, 
+        "start": "2018-10-03 05:44:09.591620", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

@@ -1,0 +1,17 @@
+---
+- name: Compare mmail.conf file Playbook
+
+  hosts: ansible
+  gather_facts: true
+
+  tasks:
+  - name: 'Compare mmail.conf files'
+    command: 
+      diff /root/config/before_upgrade/mas1/mmail.conf /root/config/after_upgrade/mas1/mmail.conf
+      chdir=/root/config/
+    register: difference
+    failed_when: difference.rc > 1
+    changed_when: difference.rc == 1
+
+  - name: Print differences
+    debug: msg='{{ difference.stdout }}'

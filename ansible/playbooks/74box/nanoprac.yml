@@ -1,0 +1,70 @@
+- hosts: local_10
+  become: yes
+  gather_facts: no
+  any_errors_fatal: true
+  vars: 
+     mail: vinnivanitha99@gmail.com
+     output: 50
+  
+  tasks:
+       - name: ping server
+         ping:
+         register: ping_output
+       - name: print ping
+         debug:
+           msg: "{{ ping_output }}"
+
+#   This task prints disk space
+  
+       - name: check disk sapce
+         shell: df | tail --lines=+2 | sed s/%//g | awk '{ if($5 > 50) print $0;}' | mail -s "space alert" vinnivanitha99@gmail.com
+         register: disk_output
+       - name: print disk_space
+         debug:
+           msg: "{{ disk_output }}"
+
+#   This task executes diskspace_check.yml  to check disk space and send an email if reches 80% threshold 
+
+       - name: run diskspace_check.yml
+         include: diskspace_check.yml
+
+#    This task calls and executes falstat.yml
+
+       - name: run falstat.yml
+         include: falstat.yml
+
+#    This task is to check version on nano server 
+       - name: check version on nano
+         command: version
+         register: version_output
+       - name: print version
+         debug:
+           msg: "{{ version_output }}"
+
+#    This task calls and executes copy.yml for copy tar file
+
+       - name: run copy.yml
+         include: copy.yml
+
+#    This task calls and execute addsoftware.yml 
+
+       - name: run addsoftware.yml
+         include: addsoftware.yml
+
+#    This task will upgrade the  software
+     
+       - name: to upgrade
+         command: spm_util -c upgrade ind-nano-001 -s MCP-3.4.110
+         register: upgrade_output
+       - name: print output
+         debug:
+           msg: "{{ upgrade_output }}"
+       - name: send an email on failure upgrade
+         mail:
+           to: "{{ mail }}"
+           subject: upgrading task is  failed
+           body: upgrading software  on $(local_10) is failed 
+         when: upgrade_output | failed
+               
+
+

@@ -1,0 +1,15 @@
+{
+    "changed": true, 
+    "cmd": "/opt/mcp/falcon/fmc -v | grep scheduler", 
+    "delta": "0:00:01.014585", 
+    "end": "2018-09-20 02:10:02.535007", 
+    "failed": false, 
+    "rc": 0, 
+    "start": "2018-09-20 02:10:01.520422", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "scheduler         12  3   stopped     0     0          stop/waiting                            ", 
+    "stdout_lines": [
+        "scheduler         12  3   stopped     0     0          stop/waiting                            "
+    ]
+}

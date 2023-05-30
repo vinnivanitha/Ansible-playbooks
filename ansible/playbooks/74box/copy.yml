@@ -1,0 +1,19 @@
+     - block:
+       - name: copy tar file from 74 to 10
+         copy:
+            src=/root/builds/3.4/MCP-3.4.110-67.tar
+            dest=/root/builds/3.4
+         register: copyoutput
+
+       rescue:
+       
+       - name: send mail
+         mail:
+           to: "{{ mail }}"
+           subject: copying tar file from remote server is failed
+           body: copying tar file from ansible_server to nano_server is failed
+         when: copyoutput is failed
+
+       - name: pause the task
+         meta: end_play
+         when: copyoutput is failed

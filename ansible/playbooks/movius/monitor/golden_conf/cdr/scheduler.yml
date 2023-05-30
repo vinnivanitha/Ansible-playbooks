@@ -1,0 +1,75 @@
+properties:
+ #:sms_gateway_addresses: '10.164.133.210,10.164.133.211' # if more than one,   '157.230.161.209,157.230.161.234' 
+ :sms_gateway_addresses: '10.164.133.210' # if more than one,   '157.230.161.209,157.230.161.234' 
+ :imap_host: 'localhost'
+ :message_store: '/opt/mcp/media_store'
+ :scheduler_uri: ':8000/mcp/event'
+ :messageme_uri: ':8020/adk/event'
+ :mail_store: '/opt/mcp/mail_store'
+ :smtp_relay_host: 'localhost'
+ :smtp_relay_port: '25'
+ :smtp_debug: 'false'
+ :log_level: 'error'
+ :cdr_enabled: 'false'
+ :replication: 'true'
+ :replication_log_level: 'error'
+ #shortcode_from_number:  use one of the following three configuration as needed.
+ :shortcode_from_number: 'shortcode'   #use short code as from number in the short code notification
+ #:shortcode_from_number: 'caller'      #use caller number as from number in the short code notification
+ #:shortcode_from_number: '7702831000'   #predefined fixed number as from number in the short code notification
+ :business_group_notify_enabled: 'false'
+ :business_group_notify_sleep_time: 3  #in seconds
+ :business_group_notify_num_requests_between_sleep: 100
+ :strip_country_code: 'false'
+ :mwi_using_new_msg_count: 'false'
+ :system_mailbox_start: '9000000001'
+ :system_mailbox_end: '9000000005'
+ :mms_username: 'movius'
+ :mms_password: 'movius'
+ :mms_vasid: 'mcp-vasid'
+ :mms_servicecode: 'mcp_servicecode'
+ :mms_mclass: 'Personal'
+ :mms_charged_party: 'Recipient'
+ :mms_allow_adaptations: '1'
+ :mms_template_file: '/opt/mcp/config/mms_notification_template.txt'
+ #mms_from_number:  use one of the following configuration as needed.
+ :mms_from_number: 'caller' #use caller number as from number in the mms code notification
+ #:mms_from_number: '7702831000'  #predefined fixed number as from number in the mms notification
+ #set mms_to_sms_fallback to 1 if you want to send SMS message in the case of failure in sending the MMS message.
+ :mms_delivery_report: 0
+ :mms_delivery_report_timeout: 1 #in hours
+ :mms_to_sms_fallback: 0
+ :mms_to_sms_fallback_smpp_appname: 'voicemail_smpp'
+ :system_user_id: 'service'
+ :system_user_password: 'personnel'
+ :send_mwioff_on_no_unheard_msg_only: 'false'
+ #mms_from_number_replace_prefix example: 408-1408|510-1510|61-0. prefix 408 will be replaced with 1408, prefix 510 with 1510, prefix 61 with 0 
+ :mms_from_number_replace_prefix: ''
+ # mailbox_quota_mode: 'usemdd' means the text string is configured in /opt/mcp/config/notification.yml # default
+ # mailbox_quota_mode: 'useflags' means the text string is configured in /opt/mcp/config/smsflags.conf
+ :mailbox_quota_mode: 'usemdd'
+ #database_vip should be set to the virtual ip of the database node. This is needed to be done on DB nodes only. 
+ #This is required in MS+DB node when there more than one virtual IP assigned to the DB node.
+ :database_vip: ''
+ #subless_db_list should be set to | separated list of (virtual IPs of different database:template_type_7_mailbox) in the MULTIPLE DB setup. For example :subless_db_list: '157.230.167.178:9992833424 | 157.230.167.190:9992832424' where 9992833424 is type 7 mailbox on DB 157.230.167.178 and 9992832424 is type 7 mailbox on DB 157.230.167.190. mdd uses this parameter to distribute the load for subscriber less MCN and V2T transciption request. 
+ :subless_db_list: ''
+ :unknown_from_number: 'Private'
+ #By default, user primary number is used as from number in system_notification messages like quota notification. To use fixed number, set the system_notification_from_number to appropriate number
+ :system_notification_from_number: ''
+ #by default MDD directly deposits the message for users belonging to different organizations. Set inter_org_addressing to 'false' if you want MDD to use outcall for deposting the message across organizations.
+ :inter_org_addressing: 'true'
+ #number_translation_rules: This parameter is used to translate the TO,FROM and GROUP ADDRESS in the Message.
+ #number_translation_rules example: '0-61|61-61|-61'. if prefix 0 is present, it will be replaced with 61, else if prefix 61 is present, it will stay as it is otherwise 61 will be prepended to the number.
+ :number_translation_rules: ''
+ #family_mailbox_mwi_filter: set this parameter to '|' separated list of MWI application name. When unheard message count is 0 in the mailbox and this parameter is set, MDD looks into the other memebers of the family mailbox to see if mwi light should be kept on. When unheard message count is greater than 0, familiy mailboxes are not checked. For example: :family_mailbox_mwi_filter: 'sip'
+ :family_mailbox_mwi_filter: ''
+ #use v2t_text_send_limit to set the amount of text to send in V2T transcription. The default value is 0 which means send all the text. If this limit is set to non negative number and the V2T transcribed text is more thatn this, MDD will not send V2T notification and trigger fallback SMS notification.
+ :v2t_text_send_limit: '0'
+ :sent_folder_name: 'Sent'
+
+ #set below to true if called number prefixed with 1 needs to be stripped
+ #Example 17702831000 will be converted to 7702831000
+ :sipsubscribe_calledparty_stripone_enabled: 'false'
+ #database_vip should be set to the virtual ip of the database node. This is needed to be done on DB nodes only.
+ #mdd uses this parameter to distribute the load for subscriber less MCN and V2T transciption request.
+ :multiple_db_vip_lists: ''

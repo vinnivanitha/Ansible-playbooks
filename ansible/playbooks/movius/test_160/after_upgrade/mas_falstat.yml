@@ -1,0 +1,23 @@
+---
+- name: check falstat for all servers
+  hosts: nano
+  gather_facts: no
+  become: yes
+  tasks:
+      
+
+       - name: falstat for spm
+         shell: /opt/mcp/falcon/fmc -v | grep "{{ nanovars.falstat }}"
+         register: output
+       - name: print falstat
+         debug:
+           msg: "{{ output }}"
+       - name: mail the output
+         mail:
+           to: "{{ myvars.mail }}"
+           subject:  service is not running on {{ inventory_hostname }}
+           body: " service is not running on {{ inventory_hostname }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}"
+         when: nanovars.falstat == "{{ item }}"
+         with_items: 
+              - nanovars.falstat
+                   

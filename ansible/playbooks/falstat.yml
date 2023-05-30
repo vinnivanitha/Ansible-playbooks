@@ -1,0 +1,3 @@
+---
+- name: check falstat for mas1
+  hosts: mas1

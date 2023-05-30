@@ -1,0 +1,7 @@
+---
+- hosts: local_10
+  become: yes
+  gather_facts: no
+  tasks:
+   - name: run role
+     include: fal2.yml

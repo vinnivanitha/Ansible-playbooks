@@ -1,0 +1,21 @@
+   - block:
+
+     - name: add software
+       command: spm_util -c addsw -f /root/builds/3.4/"{{ myvars.tar }}"
+       register: software_output 
+
+     rescue:
+
+     - name: send mail
+       mail:
+         to: "{{ myvars.mail }}"
+         subject: adding software is failed
+         body: adding software to repository is failed
+         when: software_output is failed
+
+     - name: pause the task
+       meta: end_play
+       when: software_output is failed
+   
+  
+

@@ -1,0 +1,11 @@
+---
+- name: Compare playbook #3
+  hosts: all
+  gather_facts: true
+
+  tasks:
+  - name: Compare Sip.conf file
+    stat:
+      path: /etc/asterisk/sip.conf
+      get_checksum: yes
+    register: compare_sip

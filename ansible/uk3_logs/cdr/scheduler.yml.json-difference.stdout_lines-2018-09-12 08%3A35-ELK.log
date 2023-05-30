@@ -1,0 +1,140 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/scheduler.yml", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr2b/scheduler.yml"
+        ], 
+        "delta": "0:00:00.001731", 
+        "end": "2018-09-12 08:35:32.437084", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/scheduler.yml /etc/ansible/playbooks/uk3/cdr/cdr2b/scheduler.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr2b", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-12 08:35:32.435353", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "2c2,3\n<  :sms_gateway_addresses: 'localhost' # if more than one,   '157.230.161.209,157.230.161.234' \n---\n>  #:sms_gateway_addresses: '10.164.133.210,10.164.133.211' # if more than one,   '157.230.161.209,157.230.161.234' \n>  :sms_gateway_addresses: '10.164.133.210' # if more than one,   '157.230.161.209,157.230.161.234' \n13c14\n<  :replication: 'true'\n---\n>  :replication: 'false'", 
+        "stdout_lines": [
+            "2c2,3", 
+            "<  :sms_gateway_addresses: 'localhost' # if more than one,   '157.230.161.209,157.230.161.234' ", 
+            "---", 
+            ">  #:sms_gateway_addresses: '10.164.133.210,10.164.133.211' # if more than one,   '157.230.161.209,157.230.161.234' ", 
+            ">  :sms_gateway_addresses: '10.164.133.210' # if more than one,   '157.230.161.209,157.230.161.234' ", 
+            "13c14", 
+            "<  :replication: 'true'", 
+            "---", 
+            ">  :replication: 'false'"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/scheduler.yml", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr2a/scheduler.yml"
+        ], 
+        "delta": "0:00:00.001662", 
+        "end": "2018-09-12 08:35:32.686281", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/scheduler.yml /etc/ansible/playbooks/uk3/cdr/cdr2a/scheduler.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr2a", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-12 08:35:32.684619", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "2c2,3\n<  :sms_gateway_addresses: 'localhost' # if more than one,   '157.230.161.209,157.230.161.234' \n---\n>  #:sms_gateway_addresses: '10.164.133.210,10.164.133.211' # if more than one,   '157.230.161.209,157.230.161.234' \n>  :sms_gateway_addresses: '10.164.133.210' # if more than one,   '157.230.161.209,157.230.161.234' \n13c14\n<  :replication: 'true'\n---\n>  :replication: 'false'", 
+        "stdout_lines": [
+            "2c2,3", 
+            "<  :sms_gateway_addresses: 'localhost' # if more than one,   '157.230.161.209,157.230.161.234' ", 
+            "---", 
+            ">  #:sms_gateway_addresses: '10.164.133.210,10.164.133.211' # if more than one,   '157.230.161.209,157.230.161.234' ", 
+            ">  :sms_gateway_addresses: '10.164.133.210' # if more than one,   '157.230.161.209,157.230.161.234' ", 
+            "13c14", 
+            "<  :replication: 'true'", 
+            "---", 
+            ">  :replication: 'false'"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/scheduler.yml", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr1a/scheduler.yml"
+        ], 
+        "delta": "0:00:00.001749", 
+        "end": "2018-09-12 08:35:32.908175", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/scheduler.yml /etc/ansible/playbooks/uk3/cdr/cdr1a/scheduler.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr1a", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-12 08:35:32.906426", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "2c2,3\n<  :sms_gateway_addresses: 'localhost' # if more than one,   '157.230.161.209,157.230.161.234' \n---\n>  #:sms_gateway_addresses: '10.164.133.210,10.164.133.211' # if more than one,   '157.230.161.209,157.230.161.234' \n>  :sms_gateway_addresses: '10.164.133.210' # if more than one,   '157.230.161.209,157.230.161.234' \n13c14\n<  :replication: 'true'\n---\n>  :replication: 'false'", 
+        "stdout_lines": [
+            "2c2,3", 
+            "<  :sms_gateway_addresses: 'localhost' # if more than one,   '157.230.161.209,157.230.161.234' ", 
+            "---", 
+            ">  #:sms_gateway_addresses: '10.164.133.210,10.164.133.211' # if more than one,   '157.230.161.209,157.230.161.234' ", 
+            ">  :sms_gateway_addresses: '10.164.133.210' # if more than one,   '157.230.161.209,157.230.161.234' ", 
+            "13c14", 
+            "<  :replication: 'true'", 
+            "---", 
+            ">  :replication: 'false'"
+        ]
+    }
+]

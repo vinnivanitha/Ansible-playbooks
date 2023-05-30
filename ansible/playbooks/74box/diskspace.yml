@@ -1,0 +1,16 @@
+---
+- hosts: ansible
+  become: yes
+  gather_facts: no
+  tasks:
+      - name: Gather the free disk space for each server
+        shell: df -TP / | tail -n 1 | awk '{print $6}' | cut -d'%' -f1 
+        register: result
+      - name: Display the result
+        debug: 
+          msg: "{{ result }}"
+     
+            
+
+~                                    
+                    

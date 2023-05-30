@@ -1,0 +1,16 @@
+# This playbook executes multiple playbooks to cdr_compare specific files between two different hosts
+# Example usage: ansible-playbook cdr_compare_master.yml
+
+---
+- name: Master config audit playbook
+  hosts: ansible
+  gather_facts: true
+
+- include: cdr_compare_scheduler.yml.yml
+- include: cdr_compare_pgbouncer.ini.yml
+- include: cdr_compare_ha.yml.yml
+- include: cdr_compare_sms.conf.yml
+- include: cdr_compare_etl.conf.yml
+- include: cdr_compare_billing.conf.yml
+- include: cdr_compare_billing.sh.yml
+- include: cdr_compare_cdr_offload_filter.yml

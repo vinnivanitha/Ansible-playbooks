@@ -1,0 +1,15 @@
+
+---
+- hosts: local_152
+  gather_facts: true
+  vars:
+    mas: "{{ dev_servers }}"
+  tasks:
+#  - debug: msg="Host is  "
+   - action: command ifconfig
+     register: myname
+#    when: inventory_hostname == "local_152"
+     delegate_to: local_10
+
+   - name: Print myname
+     debug: msg="{{ myname.stdout }}"

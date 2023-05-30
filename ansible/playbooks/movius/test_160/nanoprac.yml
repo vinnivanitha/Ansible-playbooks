@@ -1,0 +1,39 @@
+     - block:
+       - name: ping server
+         ping:
+         register: ping_output
+       - name: print ping
+         debug:
+           msg: "{{ ping_output }}"
+       
+ 
+       - name: check version on nano
+         command: version
+         register: version_output
+       - name: print version
+         debug:
+           msg: "{{ version_output }}"
+
+       - name: copy tar file from 198 to 160
+         include: copy.yml
+
+       - name: to add software
+         include: addsofware.yml
+
+       - name: to upgrade 
+         command: spm_util -c upgrade "{{ tar }}" -s "{{ version }}"
+         register: upgrade_output
+       - name: print output
+         debug: 
+           msg: "{{ upgrade_output }}"
+
+
+       rescue: 
+       - name: send email for failure
+         mail:
+            to: "{{ mail }}"
+            subject: "fail to run playbook"
+            body: "go and check in playbook"
+         when: version_output|failed or copyoutput|failed or software_output|failed or upgrade_output|failed
+
+ 

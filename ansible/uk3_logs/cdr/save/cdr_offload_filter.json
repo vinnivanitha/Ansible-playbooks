@@ -1,0 +1,127 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/cdr_offload_filter", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr2b/cdr_offload_filter"
+        ], 
+        "delta": "0:00:00.020574", 
+        "end": "2018-10-08 01:32:19.555217", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/cdr_offload_filter /etc/ansible/playbooks/uk3/cdr/cdr2b/cdr_offload_filter", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr2b", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-10-08 01:32:19.534643", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "1,10c1,6\n< auto-attendant  dial ANSWER\n< auto-attendant  end-call\n< auto-attendant  transfer ANSWER\n< handle-outdials external-deposit success\n< handle-outdials mwi-outdial success\n< voicemail       announce-and-transfer\n< voicemail       caller-operator-transfer\n< voicemail       subscriber-operator-transfer\n< voicemail       transfer-to-forward\n< broadcaster\t    broadcastreciever\n---\n> sls incoming-call\n> sls outgoing-call\n> sls outgoing-sms-details\n> sls incoming-sms-details\n> sms-receiver outgoing-sms\n> ", 
+        "stdout_lines": [
+            "1,10c1,6", 
+            "< auto-attendant  dial ANSWER", 
+            "< auto-attendant  end-call", 
+            "< auto-attendant  transfer ANSWER", 
+            "< handle-outdials external-deposit success", 
+            "< handle-outdials mwi-outdial success", 
+            "< voicemail       announce-and-transfer", 
+            "< voicemail       caller-operator-transfer", 
+            "< voicemail       subscriber-operator-transfer", 
+            "< voicemail       transfer-to-forward", 
+            "< broadcaster\t    broadcastreciever", 
+            "---", 
+            "> sls incoming-call", 
+            "> sls outgoing-call", 
+            "> sls outgoing-sms-details", 
+            "> sls incoming-sms-details", 
+            "> sms-receiver outgoing-sms", 
+            "> "
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/cdr_offload_filter", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr2a/cdr_offload_filter"
+        ], 
+        "delta": "0:00:00.009257", 
+        "end": "2018-10-08 01:32:19.789579", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/cdr_offload_filter /etc/ansible/playbooks/uk3/cdr/cdr2a/cdr_offload_filter", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr2a", 
+        "rc": 0, 
+        "start": "2018-10-08 01:32:19.780322", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/cdr_offload_filter", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr1a/cdr_offload_filter"
+        ], 
+        "delta": "0:00:00.001541", 
+        "end": "2018-10-08 01:32:20.016357", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/cdr_offload_filter /etc/ansible/playbooks/uk3/cdr/cdr1a/cdr_offload_filter", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr1a", 
+        "rc": 0, 
+        "start": "2018-10-08 01:32:20.014816", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

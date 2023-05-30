@@ -1,0 +1,107 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/ha.yml", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr2b/ha.yml"
+        ], 
+        "delta": "0:00:00.030332", 
+        "end": "2018-10-08 01:32:09.067171", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/ha.yml /etc/ansible/playbooks/uk3/cdr/cdr2b/ha.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr2b", 
+        "rc": 0, 
+        "start": "2018-10-08 01:32:09.036839", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/ha.yml", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr2a/ha.yml"
+        ], 
+        "delta": "0:00:00.001844", 
+        "end": "2018-10-08 01:32:09.311130", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/ha.yml /etc/ansible/playbooks/uk3/cdr/cdr2a/ha.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr2a", 
+        "rc": 0, 
+        "start": "2018-10-08 01:32:09.309286", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/ha.yml", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr1a/ha.yml"
+        ], 
+        "delta": "0:00:00.001601", 
+        "end": "2018-10-08 01:32:09.534520", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/ha.yml /etc/ansible/playbooks/uk3/cdr/cdr1a/ha.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr1a", 
+        "rc": 0, 
+        "start": "2018-10-08 01:32:09.532919", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

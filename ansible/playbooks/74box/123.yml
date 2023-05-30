@@ -1,0 +1,22 @@
+---
+- hosts: nanoserver
+  become: yes
+  gather_facts: yes
+  tasks:
+   - block:
+     - name: copy file
+       copy: 
+         src: /root/builds/3.4/MCP-3.4.110-23.tar
+         dest: /root/builds/3.4/
+       register: output
+     - name: print output
+       debug: 
+         msg: "{{ output }}"
+     rescue:
+     - name: send email
+       mail:
+         from: vinnivanitha99@gmail.com  
+         to: vanithavuppalapati@outlook.com
+         subject: "copy failure"
+         body: "copy fails"
+       when: output is failed

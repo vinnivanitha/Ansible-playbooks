@@ -1,0 +1,19 @@
+# This playbook executes multiple playbooks to compare specific files between two different hosts
+# Example usage: ansible-playbook compare_nanoter.yml
+
+---
+- name: Master config audit playbook
+  hosts: ansible
+  gather_facts: true
+
+- include: nano_compare_sip.conf.yml
+- include: nano_compare_mmail.conf.yml
+- include: nano_compare_scheduler.yml.yml
+- include: nano_compare_pgbouncer.ini.yml
+- include: nano_compare_mcp.yml.yml
+- include: nano_compare_manager.conf.yml
+- include: nano_compare_http.conf.yml
+- include: nano_compare_indications.conf.yml
+- include: nano_compare_ha.yml.yml
+- include: nano_compare_sms_gateway.yml.yml
+- include: nano_compare_smsMcpkannel.conf.yml

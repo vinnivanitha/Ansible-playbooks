@@ -1,0 +1,12 @@
+---
+- name: Master config playbook
+  hosts: ansible
+  gather_facts: true
+
+- include: db1_compare_etl.conf.yml
+- include: db1_compare_scheduler.yml
+- include: db1_compare_sms_gateway.yml.yml
+- include: db1_compare_ha.yml.yml
+- include: db1_compare_pgbouncer.ini.yml
+- include: db1_compare_sms.conf.yml
+- include: db1_compare_smsMcpKannel.conf.yml

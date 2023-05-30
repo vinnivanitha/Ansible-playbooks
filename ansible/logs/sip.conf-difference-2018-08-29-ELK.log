@@ -1,0 +1,1 @@
+{"stderr_lines": [], "cmd": ["diff", "/etc/ansible/playbooks/master/mas/sip.conf", "/etc/ansible/playbooks/uk3/mas/mas1/sip.conf"], "stdout": "", "delta": "0:00:00.001996", "stdout_lines": [], "failed_when_result": false, "end": "2018-08-29 04:51:35.051104", "start": "2018-08-29 04:51:35.049108", "changed": false, "failed": false, "stderr": "", "rc": 0}

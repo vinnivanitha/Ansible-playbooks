@@ -1,0 +1,1 @@
+{"stderr_lines": [], "cmd": ["diff", "/etc/ansible/playbooks/master/db/ha.yml", "/etc/ansible/playbooks/uk3/db/db1a/ha.yml"], "stdout": "", "delta": "0:00:00.002029", "stdout_lines": [], "failed_when_result": false, "end": "2018-08-29 05:32:23.565693", "start": "2018-08-29 05:32:23.563664", "changed": false, "failed": false, "stderr": "", "rc": 0}

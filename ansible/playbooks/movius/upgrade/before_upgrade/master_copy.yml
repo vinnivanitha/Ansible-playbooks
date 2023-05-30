@@ -1,0 +1,11 @@
+#This playbook executes multiple playbooks to copy specific files between different hosts
+# Example usage: ansible-playbook master_copy.yml
+
+---
+
+
+- include: mas_copy.yml
+- include: db_copy.yml
+- include: cdr_copy.yml
+- include: userdb_copy.yml
+- include: vap_copy.yml

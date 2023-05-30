@@ -1,0 +1,125 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/mmail.conf", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr2b/mmail.conf"
+        ], 
+        "delta": "0:00:00.001859", 
+        "end": "2018-09-12 08:34:14.220872", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/mmail.conf /etc/ansible/playbooks/uk3/cdr/cdr2b/mmail.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr2b", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-12 08:34:14.219013", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "56c56\n< setParam MMAIL_GEO_REPLICATION \"1\"\n---\n> setParam MMAIL_GEO_REPLICATION \"0\"", 
+        "stdout_lines": [
+            "56c56", 
+            "< setParam MMAIL_GEO_REPLICATION \"1\"", 
+            "---", 
+            "> setParam MMAIL_GEO_REPLICATION \"0\""
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/mmail.conf", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr2a/mmail.conf"
+        ], 
+        "delta": "0:00:00.001689", 
+        "end": "2018-09-12 08:34:14.472192", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/mmail.conf /etc/ansible/playbooks/uk3/cdr/cdr2a/mmail.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr2a", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-12 08:34:14.470503", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "56c56\n< setParam MMAIL_GEO_REPLICATION \"1\"\n---\n> setParam MMAIL_GEO_REPLICATION \"0\"", 
+        "stdout_lines": [
+            "56c56", 
+            "< setParam MMAIL_GEO_REPLICATION \"1\"", 
+            "---", 
+            "> setParam MMAIL_GEO_REPLICATION \"0\""
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/mmail.conf", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr1a/mmail.conf"
+        ], 
+        "delta": "0:00:00.001691", 
+        "end": "2018-09-12 08:34:14.702686", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/mmail.conf /etc/ansible/playbooks/uk3/cdr/cdr1a/mmail.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr1a", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-12 08:34:14.700995", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "56c56\n< setParam MMAIL_GEO_REPLICATION \"1\"\n---\n> setParam MMAIL_GEO_REPLICATION \"0\"", 
+        "stdout_lines": [
+            "56c56", 
+            "< setParam MMAIL_GEO_REPLICATION \"1\"", 
+            "---", 
+            "> setParam MMAIL_GEO_REPLICATION \"0\""
+        ]
+    }
+]

@@ -1,0 +1,107 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/userdb/etl.conf", 
+            "/etc/ansible/playbooks/uk3/userdb/user2b/etl.conf"
+        ], 
+        "delta": "0:00:00.001604", 
+        "end": "2018-09-18 01:30:12.512359", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/userdb/etl.conf /etc/ansible/playbooks/uk3/userdb/user2b/etl.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "user2b", 
+        "rc": 0, 
+        "start": "2018-09-18 01:30:12.510755", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/userdb/etl.conf", 
+            "/etc/ansible/playbooks/uk3/userdb/user2a/etl.conf"
+        ], 
+        "delta": "0:00:00.001610", 
+        "end": "2018-09-18 01:30:12.765618", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/userdb/etl.conf /etc/ansible/playbooks/uk3/userdb/user2a/etl.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "user2a", 
+        "rc": 0, 
+        "start": "2018-09-18 01:30:12.764008", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/userdb/etl.conf", 
+            "/etc/ansible/playbooks/uk3/userdb/user1/etl.conf"
+        ], 
+        "delta": "0:00:00.001612", 
+        "end": "2018-09-18 01:30:12.991175", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/userdb/etl.conf /etc/ansible/playbooks/uk3/userdb/user1/etl.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "user1", 
+        "rc": 0, 
+        "start": "2018-09-18 01:30:12.989563", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

@@ -1,0 +1,129 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/scheduler.yml", 
+            "/etc/ansible/playbooks/uk3/db/db1a/scheduler.yml"
+        ], 
+        "delta": "0:00:00.026346", 
+        "end": "2018-09-16 04:05:16.917773", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/scheduler.yml /etc/ansible/playbooks/uk3/db/db1a/scheduler.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db1a", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-16 04:05:16.891427", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "2,3c2\n<  #:sms_gateway_addresses: '10.164.133.210,10.164.133.211' # if more than one,   '157.230.161.209,157.230.161.234' \n<  :sms_gateway_addresses: '10.164.133.210' # if more than one,   '157.230.161.209,157.230.161.234' \n---\n>  :sms_gateway_addresses: 'localhost' # if more than one,   '157.230.161.209,157.230.161.234' \n14c13\n<  :replication: 'false'\n---\n>  :replication: 'true'", 
+        "stdout_lines": [
+            "2,3c2", 
+            "<  #:sms_gateway_addresses: '10.164.133.210,10.164.133.211' # if more than one,   '157.230.161.209,157.230.161.234' ", 
+            "<  :sms_gateway_addresses: '10.164.133.210' # if more than one,   '157.230.161.209,157.230.161.234' ", 
+            "---", 
+            ">  :sms_gateway_addresses: 'localhost' # if more than one,   '157.230.161.209,157.230.161.234' ", 
+            "14c13", 
+            "<  :replication: 'false'", 
+            "---", 
+            ">  :replication: 'true'"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/scheduler.yml", 
+            "/etc/ansible/playbooks/uk3/db/db2a/scheduler.yml"
+        ], 
+        "delta": "0:00:00.017908", 
+        "end": "2018-09-16 04:05:17.178602", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/scheduler.yml /etc/ansible/playbooks/uk3/db/db2a/scheduler.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db2a", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-16 04:05:17.160694", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "2,3c2\n<  #:sms_gateway_addresses: '10.164.133.210,10.164.133.211' # if more than one,   '157.230.161.209,157.230.161.234' \n<  :sms_gateway_addresses: '10.164.133.210' # if more than one,   '157.230.161.209,157.230.161.234' \n---\n>  :sms_gateway_addresses: 'localhost' # if more than one,   '157.230.161.209,157.230.161.234' \n14c13\n<  :replication: 'false'\n---\n>  :replication: 'true'", 
+        "stdout_lines": [
+            "2,3c2", 
+            "<  #:sms_gateway_addresses: '10.164.133.210,10.164.133.211' # if more than one,   '157.230.161.209,157.230.161.234' ", 
+            "<  :sms_gateway_addresses: '10.164.133.210' # if more than one,   '157.230.161.209,157.230.161.234' ", 
+            "---", 
+            ">  :sms_gateway_addresses: 'localhost' # if more than one,   '157.230.161.209,157.230.161.234' ", 
+            "14c13", 
+            "<  :replication: 'false'", 
+            "---", 
+            ">  :replication: 'true'"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/scheduler.yml", 
+            "/etc/ansible/playbooks/uk3/db/db2b/scheduler.yml"
+        ], 
+        "delta": "0:00:00.027900", 
+        "end": "2018-09-16 04:05:17.428327", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/scheduler.yml /etc/ansible/playbooks/uk3/db/db2b/scheduler.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db2b", 
+        "rc": 0, 
+        "start": "2018-09-16 04:05:17.400427", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

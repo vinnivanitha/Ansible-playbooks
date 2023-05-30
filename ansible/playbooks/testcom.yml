@@ -1,0 +1,15 @@
+---
+
+- hosts: mas1
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: "Compare scheduler.yml"
+      command: diff 1.txt 1.txt
+      args:
+       chdir: "/root/"
+      changed_when: false
+      failed_when: "diff.rc > 1"
+      register: diff
+    - name: debug output
+      debug: msg="{{ diff }}"

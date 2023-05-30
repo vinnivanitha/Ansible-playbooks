@@ -1,0 +1,7 @@
+---
+- hosts: nano
+  gather_facts: yes
+  become: yes
+    
+   - include: before_upgrade
+   - include: after_upgrade

@@ -1,0 +1,1 @@
+{"stderr_lines": [], "cmd": ["diff", "/etc/ansible/playbooks/master/db/mmail.conf", "/etc/ansible/playbooks/uk3/db/db1a/mmail.conf"], "stdout": "", "delta": "0:00:00.001932", "stdout_lines": [], "failed_when_result": false, "end": "2018-08-29 05:32:20.448575", "start": "2018-08-29 05:32:20.446643", "changed": false, "failed": false, "stderr": "", "rc": 0}

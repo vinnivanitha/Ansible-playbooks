@@ -1,0 +1,15 @@
+{
+    "changed": true, 
+    "cmd": "/opt/mcp/falcon/fmc -v | grep spm", 
+    "delta": "0:00:01.014210", 
+    "end": "2018-09-20 02:09:55.693975", 
+    "failed": false, 
+    "rc": 0, 
+    "start": "2018-09-20 02:09:54.679765", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "spm               5   3   running     1     749408     start/running    2837                   ", 
+    "stdout_lines": [
+        "spm               5   3   running     1     749408     start/running    2837                   "
+    ]
+}

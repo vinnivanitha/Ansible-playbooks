@@ -1,0 +1,35 @@
+---
+- name: 'Compare indications.conf  files'
+  hosts: ansible
+  gather_facts: yes
+  tasks:
+  - name: 'Compare indications.conf  files'
+    command:
+      diff /etc/ansible/playbooks/movius/test_160/before_upgrade/nano/indications.conf /etc/ansible/playbooks/movius/test_160/after_upgrade/{{ item }}/indications.conf
+      chdir=/etc/ansible/playbooks/
+    register: difference
+    failed_when: difference.rc > 1
+    cindications.confnged_when: difference.rc == 1
+    with_inventory_hostnames:
+          - nano_server
+
+  - name: Print differences
+    debug: msg='{{ difference }}'
+
+  - name: Create output file
+    local_action: copy content='{{ item.value | list | to_nice_json }}' dest='/etc/ansible/nano_logs/compare/nano/indications.conf-{{ item.variable }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}-{{ ansible_hostname }}.log'
+    register: output
+    with_items:
+          - variable: difference.stdout_lines
+            value: "{{ difference.results }}"
+
+  - name: copy output file
+    local_action: copy content='{{ item.value | list | to_nice_json }}' dest='/etc/ansible/nano_logs/compare/nano/save/indications.conf.json'
+    with_items:
+          - variable: difference.stdout_lines
+            value: "{{ difference.results }}"
+
+
+
+  - name: send an email of compare files
+    shell: mail -a "/etc/ansible/nano_logs/compare/nano/save/indications.conf.json" -s "nano_indications.conf"  "{{ myvars.mail }}"

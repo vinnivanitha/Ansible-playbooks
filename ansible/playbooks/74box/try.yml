@@ -1,0 +1,22 @@
+---
+- hosts: nanoserver
+  become: yes
+  gather_facts: yes
+  tasks:
+    - action: ping
+
+    - name: check version Buildserver
+      command: vesrion
+      shell: version | grep MCP |  cut -d "-" -f 2-
+      delegate_to: Buildserver
+      register: var1
+
+    - name: check version on nano
+      command: version
+      shell: version |grep MCP |  cut -d "-" -f 2-
+      delegate_to: nanoserver
+      register: var2
+
+    - name: copy tar file
+      copy: src=/root/builds/3.4/  dest=/root/builds/3.4/
+      when: var1<var2

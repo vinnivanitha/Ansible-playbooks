@@ -1,0 +1,125 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/etl.conf", 
+            "/etc/ansible/playbooks/uk3/db/db1a/etl.conf"
+        ], 
+        "delta": "0:00:00.001873", 
+        "end": "2018-09-12 08:24:36.360122", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/etl.conf /etc/ansible/playbooks/uk3/db/db1a/etl.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db1a", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-12 08:24:36.358249", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "51c51\n< mas_provider = \"10.165.46.10:8000\"\n---\n> mas_provider = \"10.165.46.40:8000\"", 
+        "stdout_lines": [
+            "51c51", 
+            "< mas_provider = \"10.165.46.10:8000\"", 
+            "---", 
+            "> mas_provider = \"10.165.46.40:8000\""
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/etl.conf", 
+            "/etc/ansible/playbooks/uk3/db/db2a/etl.conf"
+        ], 
+        "delta": "0:00:00.001631", 
+        "end": "2018-09-12 08:24:36.606588", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/etl.conf /etc/ansible/playbooks/uk3/db/db2a/etl.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db2a", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-12 08:24:36.604957", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "51c51\n< mas_provider = \"10.165.46.10:8000\"\n---\n> mas_provider = \"10.165.46.40:8000\"", 
+        "stdout_lines": [
+            "51c51", 
+            "< mas_provider = \"10.165.46.10:8000\"", 
+            "---", 
+            "> mas_provider = \"10.165.46.40:8000\""
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/etl.conf", 
+            "/etc/ansible/playbooks/uk3/db/db2b/etl.conf"
+        ], 
+        "delta": "0:00:00.001541", 
+        "end": "2018-09-12 08:24:36.831890", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/etl.conf /etc/ansible/playbooks/uk3/db/db2b/etl.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db2b", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-12 08:24:36.830349", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "51c51\n< mas_provider = \"10.165.46.10:8000\"\n---\n> mas_provider = \"10.165.46.40:8000\"", 
+        "stdout_lines": [
+            "51c51", 
+            "< mas_provider = \"10.165.46.10:8000\"", 
+            "---", 
+            "> mas_provider = \"10.165.46.40:8000\""
+        ]
+    }
+]

@@ -1,0 +1,23 @@
+---
+- name: compare mmail.conf files
+  hosts: ansible
+  gather_facts: yes
+  tasks:
+   - name: 'Compare mcp.yml files'
+     command:
+       diff /etc/ansible/playbooks/master/mas/mmail.conf /etc/ansible/playbooks/uk3/mas/mas1/mmail.conf
+       chdir=/etc/ansible/playbooks/
+     register: difference
+     failed_when: difference.rc > 1
+     changed_when: difference.rc == 1
+
+   - name: Print differences
+     debug: msg='{{ difference.stdout }}'
+
+   - name: Create output file
+     local_action: copy content='{{ item.value }}' dest='/etc/ansible/uk3_logs/mas1/mmail.conf-{{ item.variable }}-{{ ansible_date_time.date }}-{{ ansible_hostname }}.log'
+     with_items:
+       - variable: difference
+         value: '{{ difference }}'
+     no_log: true
+ 

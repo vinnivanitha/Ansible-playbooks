@@ -1,0 +1,23 @@
+---
+- name: Compare playbook #4
+  hosts: mas1_ip
+  tasks:
+  - name: Check first Sip.conf file
+    stat:
+      path: /etc/asterisk/sip.conf
+      get_checksum: yes
+    register: compare_sip1
+
+- hosts: mas2_ip
+  gather_facts: true
+
+  tasks:
+  - name: Check second Sip.conf file
+    stat:
+      path: /etc/asterisk/sip.conf
+      get_checksum: yes
+    register: compare_sip2
+
+#  - name: Block run if files are different
+#    command: /bin/true
+#    when: compare_sip1.stat.checksum == compare_sip2.stat.checksum

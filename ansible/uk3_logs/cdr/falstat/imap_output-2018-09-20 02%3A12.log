@@ -1,0 +1,15 @@
+{
+    "changed": true, 
+    "cmd": "/opt/mcp/falcon/fmc -v | grep imap", 
+    "delta": "0:00:01.015764", 
+    "end": "2018-09-20 02:14:28.925281", 
+    "failed": false, 
+    "rc": 0, 
+    "start": "2018-09-20 02:14:27.909517", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "imap              9   3   running     2     137964     start/running    24687                  ", 
+    "stdout_lines": [
+        "imap              9   3   running     2     137964     start/running    24687                  "
+    ]
+}

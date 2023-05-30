@@ -1,0 +1,8 @@
+     - name: check disk space
+       shell: df | tail --lines=+2 | sed s/%//g | awk '{ if($5 > 40) print $0;}'| mail -s "space alert on $(hostname)" "{{ myvars.mail }}"
+
+       register: result
+     - name: print df
+       debug:
+         msg: "{{ result }}"
+

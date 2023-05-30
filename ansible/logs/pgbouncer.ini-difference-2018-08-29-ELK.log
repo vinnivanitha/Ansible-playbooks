@@ -1,0 +1,1 @@
+{"stderr_lines": [], "cmd": ["diff", "/etc/ansible/playbooks/master/db/pgbouncer.ini", "/etc/ansible/playbooks/uk3/db/db1a/pgbouncer.ini"], "stdout": "", "delta": "0:00:00.001668", "stdout_lines": [], "failed_when_result": false, "end": "2018-08-29 05:32:22.617805", "start": "2018-08-29 05:32:22.616137", "changed": false, "failed": false, "stderr": "", "rc": 0}

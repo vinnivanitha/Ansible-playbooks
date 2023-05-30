@@ -1,0 +1,11 @@
+---
+- hosts: ansible
+  become: yes
+  gather_facts: no
+  vars:
+        mount: "{{ ansible_mounts | selectattr('mount','equalto','/') | list | first }}"
+  tasks:
+    - name: Ensuring that free space on '/' is grater than 30%
+      assert:
+        that: mount.size_available > mount.size_total|float * 0.3
+        msg: disk space has reached 70% threshold

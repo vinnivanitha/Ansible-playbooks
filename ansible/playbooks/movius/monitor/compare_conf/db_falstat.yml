@@ -1,0 +1,128 @@
+---
+- name: check falstat for db servers
+  hosts: db_servers
+  gather_facts: no
+  become: yes
+  tasks:
+
+
+       - name: Check falstat for spm
+         shell: /opt/mcp/falcon/fmc -v | grep spm
+         register: spm_output
+       - name: print falstat
+         debug:
+           msg: "{{ spm_output }}"
+       - name: mail the output
+         mail:
+           to: "{{ myvars.mail }}"
+           subject: spm service is not running on {{ inventory_hostname }}
+           body: spm is not running on {{ inventory_hostname }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}"
+         when: "'stopped' in spm_output.stdout"
+        
+
+#       - name: pause the task
+ #        pause:
+  #       when: spm_output | join('') | search('stopped')
+
+       - name: Create output file
+         local_action: copy content='{{ item.value | to_nice_json }}' dest='/etc/ansible/uk3_logs/db/falstat/{{ item.variable }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}.log'
+         register: output
+         with_items:
+           - variable: spm_output
+             value: "{{ spm_output }}"
+
+       - name: falstat for scheduler
+         shell: /opt/mcp/falcon/fmc -v | grep scheduler
+         register: scheduler_output
+       - name: print falstat
+         debug:
+           msg: "{{ scheduler_output }}"
+
+       - name: mail the output
+         mail:
+           to: "{{ myvars.mail }}"
+           subject: scheduler service is not running on {{ inventory_hostname }}
+           body: "scheduler service is not running on {{ inventory_hostname }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}"
+         when: "'stopped' in scheduler_output.stdout"
+
+#       - name: pause the task
+#         pause:
+#         when: scheduler_output | join('') | search('stopped')
+       
+       - name: Create output file
+         local_action: copy content='{{ item.value | to_nice_json }}' dest='/etc/ansible/uk3_logs/db/falstat/{{ item.variable }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}.log'
+         register: output
+         with_items:
+           - variable: scheduler_output
+             value: "{{ scheduler_output }}"
+
+       - name: falstat for httpd
+         shell: /opt/mcp/falcon/fmc -v | grep httpd
+         register: httpd_output
+       - name: print falstat
+         debug:
+           msg: "{{ httpd_output }}"
+       - name: mail the output
+         mail:
+           to: "{{ myvars.mail }}"
+           subject: httpd service is not running on {{ inventory_hostname }} 
+           body: "httpd service is not running on {{ inventory_hostname }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}"
+         when: "'stopped' in httpd_output.stdout"
+
+#       - name: pause the task
+ #        pause:
+  #       when: httpd_output | join('') | search('stopped')
+    
+       - name: Create output file
+         local_action: copy content='{{ item.value | to_nice_json }}' dest='/etc/ansible/uk3_logs/db/falstat/{{ item.variable }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}.log'
+         register: output
+         with_items:
+           - variable: httpd_output
+             value: "{{ httpd_output }}"
+
+       - name: falstat for pgbouncer
+         shell: /opt/mcp/falcon/fmc -v | grep pgbouncer
+         register: pgbouncer_output
+       - name: print falstat
+         debug:
+           msg: "{{ pgbouncer_output }}"
+       - name: mail the output
+         mail:
+           to: "{{ myvars.mail }}"
+           subject: pgbouncer service is not running {{ inventory_hostname }}
+           body: "pgbouncer service is not running on {{ inventory_hostname }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}"
+         when: "'stopped' in pgbouncer_output.stdout"
+
+       - name: Create output file
+         local_action: copy content='{{ item.value | to_nice_json }}' dest='/etc/ansible/uk3_logs/db/falstat/{{ item.variable }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}.log'
+         register: output
+         with_items:
+           - variable: pgbouncer_output
+             value: "{{ pgbouncer_output }}"
+#       - name: pause the task
+ #        pause:
+  #       when: pgbouncer_output | join('') | search('stopped')
+
+       - name: falstat for ptp
+         shell: /opt/mcp/falcon/fmc -v | grep ptp
+         register: ptp_output
+       - name: print falstat
+         debug:
+           msg: "{{ ptp_output }}"
+       - name: mail the output
+         mail:
+           to: "{{ myvars.mail }}"
+           subject: ptp service is not running {{ inventory_hostname }}
+           body: "ptp service is not running on {{ inventory_hostname }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}"
+         when: "'stopped' in ptp_output.stdout"
+
+       - name: Create output file
+         local_action: copy content='{{ item.value | to_nice_json }}' dest='/etc/ansible/uk3_logs/db/falstat/{{ item.variable }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}.log'
+         register: output
+         with_items:
+           - variable: ptp_output
+             value: "{{ ptp_output }}"
+    
+#       - name: pause the task
+ #        pause:
+  #       when: ptp_output.stdout | join('') | search('stopped')

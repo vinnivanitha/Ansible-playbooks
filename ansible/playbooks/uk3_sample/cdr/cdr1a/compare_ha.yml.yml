@@ -1,0 +1,24 @@
+---
+- name: 'Compare ha.yml  files'
+  hosts: ansible
+  gather_facts: yes
+  tasks:
+  - name: 'Compare ha.yml  files'
+    command:
+      diff /etc/ansible/playbooks/master/cdr/ha.yml /etc/ansible/playbooks/uk3/cdr/{{ item }}/ha.yml
+      chdir=/etc/ansible/playbooks/
+    register: difference_{{ item }}
+    failed_when: difference_{{ item }}.rc > 1
+    changed_when: difference_{{ item }}.rc == 1
+    with_inventory_hostnames:
+          - cdr_servers
+
+  - name: Print differences
+    debug: msg='{{ difference_{{ item }}.stdout_lines }}'
+
+  - name: Create output file
+    local_action: copy content='{{ item.value }}' dest='/etc/ansible/uk3_logs/cdr/etl.conf-{{ item.variable }}-{{ ansible_date_time.date }}-{{ ansible_hostname }}.log'
+    with_items:
+      - variable: difference
+        value: '{{ difference }}'
+    no_log: true

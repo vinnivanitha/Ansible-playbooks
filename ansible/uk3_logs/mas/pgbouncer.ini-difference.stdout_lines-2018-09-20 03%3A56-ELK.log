@@ -1,0 +1,166 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/pgbouncer.ini", 
+            "/etc/ansible/playbooks/uk3/mas/mas4/pgbouncer.ini"
+        ], 
+        "delta": "0:00:00.001602", 
+        "end": "2018-09-20 03:56:39.222042", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/pgbouncer.ini /etc/ansible/playbooks/uk3/mas/mas4/pgbouncer.ini", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas4", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:56:39.220440", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "4c4\n< common = host=10.165.46.10 dbname=mcp_production user=postgres \n---\n> common = host=10.165.46.10 dbname=mcp_production user=postgres", 
+        "stdout_lines": [
+            "4c4", 
+            "< common = host=10.165.46.10 dbname=mcp_production user=postgres ", 
+            "---", 
+            "> common = host=10.165.46.10 dbname=mcp_production user=postgres"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/pgbouncer.ini", 
+            "/etc/ansible/playbooks/uk3/mas/mas3/pgbouncer.ini"
+        ], 
+        "delta": "0:00:00.001635", 
+        "end": "2018-09-20 03:56:39.450911", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/pgbouncer.ini /etc/ansible/playbooks/uk3/mas/mas3/pgbouncer.ini", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas3", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:56:39.449276", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "4c4\n< common = host=10.165.46.10 dbname=mcp_production user=postgres \n---\n> common = host=10.165.46.10 dbname=mcp_production user=postgres", 
+        "stdout_lines": [
+            "4c4", 
+            "< common = host=10.165.46.10 dbname=mcp_production user=postgres ", 
+            "---", 
+            "> common = host=10.165.46.10 dbname=mcp_production user=postgres"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/pgbouncer.ini", 
+            "/etc/ansible/playbooks/uk3/mas/mas2/pgbouncer.ini"
+        ], 
+        "delta": "0:00:00.001659", 
+        "end": "2018-09-20 03:56:39.676823", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/pgbouncer.ini /etc/ansible/playbooks/uk3/mas/mas2/pgbouncer.ini", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas2", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:56:39.675164", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "4c4\n< common = host=10.165.46.10 dbname=mcp_production user=postgres \n---\n> common = host=10.165.46.10 dbname=mcp_production user=postgres", 
+        "stdout_lines": [
+            "4c4", 
+            "< common = host=10.165.46.10 dbname=mcp_production user=postgres ", 
+            "---", 
+            "> common = host=10.165.46.10 dbname=mcp_production user=postgres"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/pgbouncer.ini", 
+            "/etc/ansible/playbooks/uk3/mas/mas1/pgbouncer.ini"
+        ], 
+        "delta": "0:00:00.001657", 
+        "end": "2018-09-20 03:56:39.901901", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/pgbouncer.ini /etc/ansible/playbooks/uk3/mas/mas1/pgbouncer.ini", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas1", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:56:39.900244", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "4c4\n< common = host=10.165.46.10 dbname=mcp_production user=postgres \n---\n> common = host=10.165.46.10 dbname=mcp_production user=postgres", 
+        "stdout_lines": [
+            "4c4", 
+            "< common = host=10.165.46.10 dbname=mcp_production user=postgres ", 
+            "---", 
+            "> common = host=10.165.46.10 dbname=mcp_production user=postgres"
+        ]
+    }
+]

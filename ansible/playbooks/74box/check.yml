@@ -1,0 +1,16 @@
+---
+- hosts: ansible_server
+  gather_facts: yes
+  tasks:
+    - block: 
+       - name: create file
+         command: touchfile
+         register: fileoutput
+      rescue:
+       - name: send mail
+         mail:   
+             host: ansible_server
+             to: vinnivanitha99@gmail.com
+             body: "something"
+             subject: "something"
+         when: fileoutput is failure

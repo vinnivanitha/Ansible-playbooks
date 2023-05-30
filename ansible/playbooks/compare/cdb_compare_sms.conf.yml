@@ -1,0 +1,24 @@
+# Example usage: ansible-playbook compare_sms.conf.yml
+
+---
+- name: Compare sms.conf file Playbook
+  hosts: ansible
+  gather_facts: true
+
+  tasks:
+  - name: 'Compare sms.conf files'
+    command: 
+      diff /root/config/before_upgrade/cdb/sms.conf /root/config/after_upgrade/cdb/sms.conf
+      chdir=/root/config/
+    register: difference
+    failed_when: difference.rc > 1
+    changed_when: difference.rc == 1
+
+  - name: Print differences
+    debug: msg='{{ difference.stdout }}'
+
+  - name: Create output file
+    local_action: copy content='{{ item.value }}' dest='/etc/ansible/logs/sms.conf-{{ item.variable }}-{{ ansible_date_time.date }}-{{ ansible_hostname }}.log'
+    with_items:
+      - variable: difference
+        value: '{{ difference }}'

@@ -1,0 +1,53 @@
+---
+- hosts: ansible_server
+  gather_facts: no
+  become: yes
+  tasks:
+   - block:
+     - name: ping the server
+       ping: 
+       register: ping_output
+ 
+     rescue:
+     - name: send mail
+       mail:
+         from: vinnivanitha99@gmail.com
+         to: vanithavuppalapati@outlook.com
+         subject: "failure ping"
+         body: "ping fails"
+       when: ping_out|failed
+
+   - block:
+     - name: copy tar file from ansible to nano
+       copy:
+        src=/root/builds/3.4/MCP-3.4.110-33.ta
+
+        dest=/root/builds/3.4/
+       register: copyoutput
+
+     rescue:
+     - name: send mail
+       mail:
+         from: vinnivanitha99@gmail.com
+         to: vanithavuppalapati@outlook.com
+         subject: "failure to copy tar file"
+         body: "failure coping from ansible to nano"
+       when: copyoutput|failed
+
+   - block:
+     - name: to upgrade
+       command: spm_util -c upgrade ind-01 -s MCP-3.4.110
+       delegate_to: ansible_server
+       register: upgrade_output
+     - name: print output
+       debug:
+         msg: "{{ upgrade_output }}"
+
+     rescue:
+     - name: send mail
+       mail:
+         from: vinnivanitha99@gmail.com
+         to: vanithavuppalapati@outlook.com
+         subject: "upgarde  failed"
+         body: "upgarading the software is fails"
+       when: upgrade_output|failed  

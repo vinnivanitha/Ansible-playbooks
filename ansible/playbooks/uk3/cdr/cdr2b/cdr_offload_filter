@@ -1,0 +1,6 @@
+sls incoming-call
+sls outgoing-call
+sls outgoing-sms-details
+sls incoming-sms-details
+sms-receiver outgoing-sms
+

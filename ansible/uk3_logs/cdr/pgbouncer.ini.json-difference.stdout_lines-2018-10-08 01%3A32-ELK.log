@@ -1,0 +1,126 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/pgbouncer.ini", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr2b/pgbouncer.ini"
+        ], 
+        "delta": "0:00:00.022933", 
+        "end": "2018-10-08 01:32:07.046071", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/pgbouncer.ini /etc/ansible/playbooks/uk3/cdr/cdr2b/pgbouncer.ini", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr2b", 
+        "rc": 0, 
+        "start": "2018-10-08 01:32:07.023138", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/pgbouncer.ini", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr2a/pgbouncer.ini"
+        ], 
+        "delta": "0:00:00.018326", 
+        "end": "2018-10-08 01:32:07.289550", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/pgbouncer.ini /etc/ansible/playbooks/uk3/cdr/cdr2a/pgbouncer.ini", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr2a", 
+        "rc": 0, 
+        "start": "2018-10-08 01:32:07.271224", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/pgbouncer.ini", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr1a/pgbouncer.ini"
+        ], 
+        "delta": "0:00:00.001662", 
+        "end": "2018-10-08 01:32:07.534631", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/pgbouncer.ini /etc/ansible/playbooks/uk3/cdr/cdr1a/pgbouncer.ini", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr1a", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-10-08 01:32:07.532969", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "4,6c4,8\n< localhost = host=127.0.0.1 dbname=mcp_production\n< common = host=127.0.0.1 dbname=mcp_production \n< ltq = host=127.0.0.1 port=5435 dbname=ltq\n---\n> localhost = host=127.0.0.1 dbname=mcp_production user=postgres\n> common = host=127.0.0.1 dbname=mcp_production  user=postgres\n> 10.165.46.40 = host=10.165.46.40  dbname=mcp_production user=postgres\n> 10.165.46.30 = host=10.165.46.30  dbname=mcp_production user=postgres\n> ltq = host=127.0.0.1 port=5435 dbname=ltq user=postgres\n8,9d9\n< \n< \n12c12\n< 10.165.46.40 = host=10.165.46.40  dbname=mcp_production\n---\n> 10.165.46.30_sms = host=10.165.46.30 port=5434 dbname=sms_production", 
+        "stdout_lines": [
+            "4,6c4,8", 
+            "< localhost = host=127.0.0.1 dbname=mcp_production", 
+            "< common = host=127.0.0.1 dbname=mcp_production ", 
+            "< ltq = host=127.0.0.1 port=5435 dbname=ltq", 
+            "---", 
+            "> localhost = host=127.0.0.1 dbname=mcp_production user=postgres", 
+            "> common = host=127.0.0.1 dbname=mcp_production  user=postgres", 
+            "> 10.165.46.40 = host=10.165.46.40  dbname=mcp_production user=postgres", 
+            "> 10.165.46.30 = host=10.165.46.30  dbname=mcp_production user=postgres", 
+            "> ltq = host=127.0.0.1 port=5435 dbname=ltq user=postgres", 
+            "8,9d9", 
+            "< ", 
+            "< ", 
+            "12c12", 
+            "< 10.165.46.40 = host=10.165.46.40  dbname=mcp_production", 
+            "---", 
+            "> 10.165.46.30_sms = host=10.165.46.30 port=5434 dbname=sms_production"
+        ]
+    }
+]

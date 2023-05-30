@@ -1,0 +1,154 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/http.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas4/http.conf"
+        ], 
+        "delta": "0:00:00.008197", 
+        "end": "2018-10-08 02:21:40.945940", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/http.conf /etc/ansible/playbooks/uk3/mas/mas4/http.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas4", 
+        "rc": 0, 
+        "start": "2018-10-08 02:21:40.937743", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/http.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas3/http.conf"
+        ], 
+        "delta": "0:00:00.002215", 
+        "end": "2018-10-08 02:21:41.175740", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/http.conf /etc/ansible/playbooks/uk3/mas/mas3/http.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas3", 
+        "rc": 0, 
+        "start": "2018-10-08 02:21:41.173525", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/http.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas2/http.conf"
+        ], 
+        "delta": "0:00:00.014026", 
+        "end": "2018-10-08 02:21:41.416757", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/http.conf /etc/ansible/playbooks/uk3/mas/mas2/http.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas2", 
+        "rc": 0, 
+        "start": "2018-10-08 02:21:41.402731", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/http.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas1/http.conf"
+        ], 
+        "delta": "0:00:00.001590", 
+        "end": "2018-10-08 02:21:41.642076", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/http.conf /etc/ansible/playbooks/uk3/mas/mas1/http.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas1", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-10-08 02:21:41.640486", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "59,62c59,62\n< ;tlsenable=yes          ; enable tls - default no.\n< ;tlsbindaddr=0.0.0.0:8089    ; address and port to bind to - default is bindaddr and port 8089.\n< ;tlscertfile=/etc/asterisk/keys/ast.pem ; path to the certificate file (*.pem) only.\n< ;tlsprivatekey=/etc/asterisk/keys/astkey.pem ; path to private key file (*.pem) only.\n---\n> tlsenable=yes          ; enable tls - default no.\n> tlsbindaddr=0.0.0.0:8089    ; address and port to bind to - default is bindaddr and port 8089.\n> tlscertfile=/etc/asterisk/keys/ast.pem ; path to the certificate file (*.pem) only.\n> tlsprivatekey=/etc/asterisk/keys/astkey.pem ; path to private key file (*.pem) only.", 
+        "stdout_lines": [
+            "59,62c59,62", 
+            "< ;tlsenable=yes          ; enable tls - default no.", 
+            "< ;tlsbindaddr=0.0.0.0:8089    ; address and port to bind to - default is bindaddr and port 8089.", 
+            "< ;tlscertfile=/etc/asterisk/keys/ast.pem ; path to the certificate file (*.pem) only.", 
+            "< ;tlsprivatekey=/etc/asterisk/keys/astkey.pem ; path to private key file (*.pem) only.", 
+            "---", 
+            "> tlsenable=yes          ; enable tls - default no.", 
+            "> tlsbindaddr=0.0.0.0:8089    ; address and port to bind to - default is bindaddr and port 8089.", 
+            "> tlscertfile=/etc/asterisk/keys/ast.pem ; path to the certificate file (*.pem) only.", 
+            "> tlsprivatekey=/etc/asterisk/keys/astkey.pem ; path to private key file (*.pem) only."
+        ]
+    }
+]

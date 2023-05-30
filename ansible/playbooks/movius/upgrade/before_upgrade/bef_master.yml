@@ -1,0 +1,11 @@
+---
+- hosts: mas_servers,db_servers,vap_servers,userdb_servers,cdr_servers
+  gather_facts: yes
+  become: yes
+  tasks:
+    - name: check disk space before upgrade
+      include: disk_space.yml
+    - name: check falstat services before upgrade
+      include: disk_space.yml
+    - name: copy conf files before upgrade
+      include: master_copy.yml

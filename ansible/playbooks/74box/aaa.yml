@@ -1,0 +1,23 @@
+---
+- hosts: ansible
+  become: yes
+  gather_facts: no
+  tasks: 
+    - name: check disk space
+      shell: df -TP "{{ item }}" | tail -n 1 | awk '{print $6}' | cut -d'%' -f1
+      with_items: 
+        - /
+        - /dev
+        - /boot
+      register: output
+    - name: print disk space
+      debug: 
+        msg: "{{ item.stdout }}"     
+      with_items: "{{ output.results }}"     
+  
+    - name: send an email
+      mail:
+        to: vinnivanitha99@gmail.com
+        subject: something
+        body: change it later
+      when: item.stdout | int > 50 | int                                                          

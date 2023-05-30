@@ -1,0 +1,1 @@
+{"stderr_lines": [], "cmd": ["diff", "/root/config/before_upgrade/db1/sms.conf", "/root/config/after_upgrade/db1/sms.conf"], "stdout": "", "delta": "0:00:00.016892", "stdout_lines": [], "failed_when_result": false, "end": "2018-08-21 02:53:12.120993", "start": "2018-08-21 02:53:12.104101", "changed": false, "failed": false, "stderr": "", "rc": 0}

@@ -1,0 +1,33 @@
+---
+- hosts: local_10
+  become: yes
+  gather_facts: yes
+  tasks:
+
+    - name: check version on nano
+      command: version 
+      register: version
+      delegate_to: local_10
+    - name: print version 
+      debug:
+        msg: "{{ version }}"
+
+    - name: copy tar file from ansible to nano
+      copy:
+        src=/root/builds/3.4/MCP-3.4.110-62.tar
+  
+        dest=/root/builds/3.4/
+
+    - name: to add software
+      command: spm_util -c addsw -f /root/builds/3.4/MCP-3.4.110-62.tar
+      delegate_to: local_10
+
+    - name: to upgrade 
+      command: spm_util -c upgrade ind-nano-001 -s MCP-3.4.110
+      delegate_to: local_10
+      register: output
+    - name: print output
+      debug: 
+        msg: "{{ output }}"
+
+

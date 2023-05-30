@@ -1,0 +1,72 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/vap/kamailio.cfg", 
+            "/etc/ansible/playbooks/uk3/vap/vap2/kamailio.cfg"
+        ], 
+        "delta": "0:00:00.001774", 
+        "end": "2018-09-18 02:59:27.476161", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/vap/kamailio.cfg /etc/ansible/playbooks/uk3/vap/vap2/kamailio.cfg", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "vap2", 
+        "rc": 0, 
+        "start": "2018-09-18 02:59:27.474387", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/vap/kamailio.cfg", 
+            "/etc/ansible/playbooks/uk3/vap/vap1/kamailio.cfg"
+        ], 
+        "delta": "0:00:00.001744", 
+        "end": "2018-09-18 02:59:27.726150", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/vap/kamailio.cfg /etc/ansible/playbooks/uk3/vap/vap1/kamailio.cfg", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "vap1", 
+        "rc": 0, 
+        "start": "2018-09-18 02:59:27.724406", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

@@ -1,0 +1,164 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/pgbouncer.ini", 
+            "/etc/ansible/playbooks/uk3/db/db1a/pgbouncer.ini"
+        ], 
+        "delta": "0:00:00.027770", 
+        "end": "2018-09-16 03:57:08.808645", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/pgbouncer.ini /etc/ansible/playbooks/uk3/db/db1a/pgbouncer.ini", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db1a", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-16 03:57:08.780875", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "5,7c5\n< common = host=10.165.46.10 dbname=mcp_production \n< 10.165.46.10 = host=10.165.46.10 dbname=mcp_production user=postgres\n< 10.165.46.60 = host=10.165.46.60 dbname=mcp_production user=postgres\n---\n> common = host=127.0.0.1 dbname=mcp_production \n8a7\n> sms = host=127.0.0.1 port=5434 dbname=sms_production user=postgres\n10,12c9,12\n< localhost_sms = host=127.0.0.1 port=5434 dbname=sms_production user=postgres\n< 10.165.46.10_sms = host=10.165.46.10 port-5434 dbname=sms_production\n< 10.165.46.60_sms = host=10.165.46.60 port=5434 dbname=sms_production\n---\n> \n> localhost_sms = host=127.0.0.1 port=5434 dbname=sms_production\n> 10.165.46.40_sms = host=10.165.46.40 port=5434 dbname=sms_production\n> 10.165.46.40 = host=10.165.46.40  dbname=mcp_production", 
+        "stdout_lines": [
+            "5,7c5", 
+            "< common = host=10.165.46.10 dbname=mcp_production ", 
+            "< 10.165.46.10 = host=10.165.46.10 dbname=mcp_production user=postgres", 
+            "< 10.165.46.60 = host=10.165.46.60 dbname=mcp_production user=postgres", 
+            "---", 
+            "> common = host=127.0.0.1 dbname=mcp_production ", 
+            "8a7", 
+            "> sms = host=127.0.0.1 port=5434 dbname=sms_production user=postgres", 
+            "10,12c9,12", 
+            "< localhost_sms = host=127.0.0.1 port=5434 dbname=sms_production user=postgres", 
+            "< 10.165.46.10_sms = host=10.165.46.10 port-5434 dbname=sms_production", 
+            "< 10.165.46.60_sms = host=10.165.46.60 port=5434 dbname=sms_production", 
+            "---", 
+            "> ", 
+            "> localhost_sms = host=127.0.0.1 port=5434 dbname=sms_production", 
+            "> 10.165.46.40_sms = host=10.165.46.40 port=5434 dbname=sms_production", 
+            "> 10.165.46.40 = host=10.165.46.40  dbname=mcp_production"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/pgbouncer.ini", 
+            "/etc/ansible/playbooks/uk3/db/db2a/pgbouncer.ini"
+        ], 
+        "delta": "0:00:00.124928", 
+        "end": "2018-09-16 03:57:09.179145", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/pgbouncer.ini /etc/ansible/playbooks/uk3/db/db2a/pgbouncer.ini", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db2a", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-16 03:57:09.054217", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "5,7c5\n< common = host=10.165.46.10 dbname=mcp_production \n< 10.165.46.10 = host=10.165.46.10 dbname=mcp_production user=postgres\n< 10.165.46.60 = host=10.165.46.60 dbname=mcp_production user=postgres\n---\n> common = host=127.0.0.1 dbname=mcp_production \n8a7\n> sms = host=127.0.0.1 port=5434 dbname=sms_production user=postgres\n10,12c9,12\n< localhost_sms = host=127.0.0.1 port=5434 dbname=sms_production user=postgres\n< 10.165.46.10_sms = host=10.165.46.10 port-5434 dbname=sms_production\n< 10.165.46.60_sms = host=10.165.46.60 port=5434 dbname=sms_production\n---\n> \n> localhost_sms = host=127.0.0.1 port=5434 dbname=sms_production\n> 10.165.46.40_sms = host=10.165.46.40 port=5434 dbname=sms_production\n> 10.165.46.40 = host=10.165.46.40  dbname=mcp_production", 
+        "stdout_lines": [
+            "5,7c5", 
+            "< common = host=10.165.46.10 dbname=mcp_production ", 
+            "< 10.165.46.10 = host=10.165.46.10 dbname=mcp_production user=postgres", 
+            "< 10.165.46.60 = host=10.165.46.60 dbname=mcp_production user=postgres", 
+            "---", 
+            "> common = host=127.0.0.1 dbname=mcp_production ", 
+            "8a7", 
+            "> sms = host=127.0.0.1 port=5434 dbname=sms_production user=postgres", 
+            "10,12c9,12", 
+            "< localhost_sms = host=127.0.0.1 port=5434 dbname=sms_production user=postgres", 
+            "< 10.165.46.10_sms = host=10.165.46.10 port-5434 dbname=sms_production", 
+            "< 10.165.46.60_sms = host=10.165.46.60 port=5434 dbname=sms_production", 
+            "---", 
+            "> ", 
+            "> localhost_sms = host=127.0.0.1 port=5434 dbname=sms_production", 
+            "> 10.165.46.40_sms = host=10.165.46.40 port=5434 dbname=sms_production", 
+            "> 10.165.46.40 = host=10.165.46.40  dbname=mcp_production"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/pgbouncer.ini", 
+            "/etc/ansible/playbooks/uk3/db/db2b/pgbouncer.ini"
+        ], 
+        "delta": "0:00:00.013648", 
+        "end": "2018-09-16 03:57:09.417619", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/pgbouncer.ini /etc/ansible/playbooks/uk3/db/db2b/pgbouncer.ini", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db2b", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-16 03:57:09.403971", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "5,7c5\n< common = host=10.165.46.10 dbname=mcp_production \n< 10.165.46.10 = host=10.165.46.10 dbname=mcp_production user=postgres\n< 10.165.46.60 = host=10.165.46.60 dbname=mcp_production user=postgres\n---\n> common = host=127.0.0.1 dbname=mcp_production \n8a7\n> sms = host=127.0.0.1 port=5434 dbname=sms_production user=postgres\n10,12c9,12\n< localhost_sms = host=127.0.0.1 port=5434 dbname=sms_production user=postgres\n< 10.165.46.10_sms = host=10.165.46.10 port-5434 dbname=sms_production\n< 10.165.46.60_sms = host=10.165.46.60 port=5434 dbname=sms_production\n---\n> \n> localhost_sms = host=127.0.0.1 port=5434 dbname=sms_production\n> 10.165.46.40_sms = host=10.165.46.40 port=5434 dbname=sms_production\n> 10.165.46.40 = host=10.165.46.40  dbname=mcp_production", 
+        "stdout_lines": [
+            "5,7c5", 
+            "< common = host=10.165.46.10 dbname=mcp_production ", 
+            "< 10.165.46.10 = host=10.165.46.10 dbname=mcp_production user=postgres", 
+            "< 10.165.46.60 = host=10.165.46.60 dbname=mcp_production user=postgres", 
+            "---", 
+            "> common = host=127.0.0.1 dbname=mcp_production ", 
+            "8a7", 
+            "> sms = host=127.0.0.1 port=5434 dbname=sms_production user=postgres", 
+            "10,12c9,12", 
+            "< localhost_sms = host=127.0.0.1 port=5434 dbname=sms_production user=postgres", 
+            "< 10.165.46.10_sms = host=10.165.46.10 port-5434 dbname=sms_production", 
+            "< 10.165.46.60_sms = host=10.165.46.60 port=5434 dbname=sms_production", 
+            "---", 
+            "> ", 
+            "> localhost_sms = host=127.0.0.1 port=5434 dbname=sms_production", 
+            "> 10.165.46.40_sms = host=10.165.46.40 port=5434 dbname=sms_production", 
+            "> 10.165.46.40 = host=10.165.46.40  dbname=mcp_production"
+        ]
+    }
+]

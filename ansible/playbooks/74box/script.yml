@@ -1,0 +1,7 @@
+ # This playbook will mail if disk space on / (root) partition is reached 80% threshold
+   - name: run shell script
+     command: sh /root/script.sh
+     register: script 
+   - name: print script
+     debug: 
+       msg: "{{ script }}"

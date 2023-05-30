@@ -1,0 +1,14 @@
+---
+- name: check disk space 
+  hosts: ansible
+  gather_facts: no
+  become: yes
+  tasks: 
+     - name: check disk space
+       shell: df | tail --lines=+2 | sed s/%//g | awk '{ if($5 > 70) print $0;}' | echo "Reaches grearthan or equal to 70%  diskspace  $partition  ${usep%%%} on $(hostname) as on $(date)" | mail -s "space alert on $(hostname)"  vinnivanitha99@gmail.com 
+
+       register: result
+     - name: print df
+       debug:
+         msg: "{{ result }}"
+

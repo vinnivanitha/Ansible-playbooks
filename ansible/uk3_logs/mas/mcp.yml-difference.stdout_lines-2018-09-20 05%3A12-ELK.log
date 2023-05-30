@@ -1,0 +1,182 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/mcp.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas4/mcp.yml"
+        ], 
+        "delta": "0:00:00.001702", 
+        "end": "2018-09-20 05:12:58.779673", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/mcp.yml /etc/ansible/playbooks/uk3/mas/mas4/mcp.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas4", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 05:12:58.777971", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "10c10\n< jasperserverip: 10.165.46.20\n---\n> jasperserverip: 10.165.46.50\n42c42\n< opennms_uri: http://10.165.46.20:8980/opennms\n---\n> opennms_uri: http://10.165.46.50:8980/opennms", 
+        "stdout_lines": [
+            "10c10", 
+            "< jasperserverip: 10.165.46.20", 
+            "---", 
+            "> jasperserverip: 10.165.46.50", 
+            "42c42", 
+            "< opennms_uri: http://10.165.46.20:8980/opennms", 
+            "---", 
+            "> opennms_uri: http://10.165.46.50:8980/opennms"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/mcp.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas3/mcp.yml"
+        ], 
+        "delta": "0:00:00.001670", 
+        "end": "2018-09-20 05:12:59.015508", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/mcp.yml /etc/ansible/playbooks/uk3/mas/mas3/mcp.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas3", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 05:12:59.013838", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "10c10\n< jasperserverip: 10.165.46.20\n---\n> jasperserverip: 10.165.46.50\n42c42\n< opennms_uri: http://10.165.46.20:8980/opennms\n---\n> opennms_uri: http://10.165.46.50:8980/opennms", 
+        "stdout_lines": [
+            "10c10", 
+            "< jasperserverip: 10.165.46.20", 
+            "---", 
+            "> jasperserverip: 10.165.46.50", 
+            "42c42", 
+            "< opennms_uri: http://10.165.46.20:8980/opennms", 
+            "---", 
+            "> opennms_uri: http://10.165.46.50:8980/opennms"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/mcp.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas2/mcp.yml"
+        ], 
+        "delta": "0:00:00.001625", 
+        "end": "2018-09-20 05:12:59.242199", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/mcp.yml /etc/ansible/playbooks/uk3/mas/mas2/mcp.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas2", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 05:12:59.240574", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "10c10\n< jasperserverip: 10.165.46.20\n---\n> jasperserverip: 10.165.46.50\n42c42\n< opennms_uri: http://10.165.46.20:8980/opennms\n---\n> opennms_uri: http://10.165.46.50:8980/opennms", 
+        "stdout_lines": [
+            "10c10", 
+            "< jasperserverip: 10.165.46.20", 
+            "---", 
+            "> jasperserverip: 10.165.46.50", 
+            "42c42", 
+            "< opennms_uri: http://10.165.46.20:8980/opennms", 
+            "---", 
+            "> opennms_uri: http://10.165.46.50:8980/opennms"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/mcp.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas1/mcp.yml"
+        ], 
+        "delta": "0:00:00.001748", 
+        "end": "2018-09-20 05:12:59.474489", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/mcp.yml /etc/ansible/playbooks/uk3/mas/mas1/mcp.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas1", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 05:12:59.472741", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "10c10\n< jasperserverip: 10.165.46.20\n---\n> jasperserverip: 10.165.46.50\n42c42\n< opennms_uri: http://10.165.46.20:8980/opennms\n---\n> opennms_uri: http://10.165.46.50:8980/opennms", 
+        "stdout_lines": [
+            "10c10", 
+            "< jasperserverip: 10.165.46.20", 
+            "---", 
+            "> jasperserverip: 10.165.46.50", 
+            "42c42", 
+            "< opennms_uri: http://10.165.46.20:8980/opennms", 
+            "---", 
+            "> opennms_uri: http://10.165.46.50:8980/opennms"
+        ]
+    }
+]

@@ -1,0 +1,148 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sms_gateway.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas4/sms_gateway.yml"
+        ], 
+        "delta": "0:00:00.002689", 
+        "end": "2018-10-08 02:21:47.337785", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sms_gateway.yml /etc/ansible/playbooks/uk3/mas/mas4/sms_gateway.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas4", 
+        "rc": 0, 
+        "start": "2018-10-08 02:21:47.335096", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sms_gateway.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas3/sms_gateway.yml"
+        ], 
+        "delta": "0:00:00.001948", 
+        "end": "2018-10-08 02:21:47.566053", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sms_gateway.yml /etc/ansible/playbooks/uk3/mas/mas3/sms_gateway.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas3", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-10-08 02:21:47.564105", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "29c29\n<  :kannel_sendsms_url: 'http://10.164.133.210:13013/cgi-bin/sendsms'\n---\n>  :kannel_sendsms_url: 'http://10.164.133.212:13013/cgi-bin/sendsms'", 
+        "stdout_lines": [
+            "29c29", 
+            "<  :kannel_sendsms_url: 'http://10.164.133.210:13013/cgi-bin/sendsms'", 
+            "---", 
+            ">  :kannel_sendsms_url: 'http://10.164.133.212:13013/cgi-bin/sendsms'"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sms_gateway.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas2/sms_gateway.yml"
+        ], 
+        "delta": "0:00:00.001942", 
+        "end": "2018-10-08 02:21:47.792552", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sms_gateway.yml /etc/ansible/playbooks/uk3/mas/mas2/sms_gateway.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas2", 
+        "rc": 0, 
+        "start": "2018-10-08 02:21:47.790610", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sms_gateway.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas1/sms_gateway.yml"
+        ], 
+        "delta": "0:00:00.001535", 
+        "end": "2018-10-08 02:21:48.020081", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sms_gateway.yml /etc/ansible/playbooks/uk3/mas/mas1/sms_gateway.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas1", 
+        "rc": 0, 
+        "start": "2018-10-08 02:21:48.018546", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

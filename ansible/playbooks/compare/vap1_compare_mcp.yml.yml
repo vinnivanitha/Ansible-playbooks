@@ -1,0 +1,14 @@
+---
+- name: Compare mcp.yml file Playbook
+  hosts: ansible
+  gather_facts: true
+
+  tasks:
+  - name: 'Compare mcp.yml files'
+    command: 
+      diff /root/config/before_upgrade/vap1/mcp.yml /root/config/after_upgrade/vap1/mcp.yml
+      chdir=/root/config/
+    register: difference
+    failed_when: difference.rc > 1
+    changed_when: difference.rc == 1
+

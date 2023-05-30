@@ -1,0 +1,14 @@
+# This playbook executes multiple playbooks to compare specific files between two different hosts
+# Example usage: ansible-playbook compare_vapter.yml
+
+---
+
+- name: Master config audit playbook
+  hosts: ansible
+  gather_facts: true
+
+- include: mas_compare_master.yml
+- include: db_compare_master.yml
+- include: cdr_compare_master.yml
+- include: userdb_compare_master.yml
+- include: vap_compare_master.yml

@@ -1,0 +1,166 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/mcp.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas4/mcp.yml"
+        ], 
+        "delta": "0:00:00.001695", 
+        "end": "2018-09-20 03:58:26.456052", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/mcp.yml /etc/ansible/playbooks/uk3/mas/mas4/mcp.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas4", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:58:26.454357", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "36c36\n< loglevel: debug\n---\n> loglevel: error", 
+        "stdout_lines": [
+            "36c36", 
+            "< loglevel: debug", 
+            "---", 
+            "> loglevel: error"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/mcp.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas3/mcp.yml"
+        ], 
+        "delta": "0:00:00.001661", 
+        "end": "2018-09-20 03:58:26.685711", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/mcp.yml /etc/ansible/playbooks/uk3/mas/mas3/mcp.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas3", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:58:26.684050", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "36c36\n< loglevel: debug\n---\n> loglevel: error", 
+        "stdout_lines": [
+            "36c36", 
+            "< loglevel: debug", 
+            "---", 
+            "> loglevel: error"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/mcp.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas2/mcp.yml"
+        ], 
+        "delta": "0:00:00.001755", 
+        "end": "2018-09-20 03:58:26.914108", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/mcp.yml /etc/ansible/playbooks/uk3/mas/mas2/mcp.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas2", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:58:26.912353", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "36c36\n< loglevel: debug\n---\n> loglevel: error", 
+        "stdout_lines": [
+            "36c36", 
+            "< loglevel: debug", 
+            "---", 
+            "> loglevel: error"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/mcp.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas1/mcp.yml"
+        ], 
+        "delta": "0:00:00.001710", 
+        "end": "2018-09-20 03:58:27.141789", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/mcp.yml /etc/ansible/playbooks/uk3/mas/mas1/mcp.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas1", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:58:27.140079", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "36c36\n< loglevel: debug\n---\n> loglevel: error", 
+        "stdout_lines": [
+            "36c36", 
+            "< loglevel: debug", 
+            "---", 
+            "> loglevel: error"
+        ]
+    }
+]

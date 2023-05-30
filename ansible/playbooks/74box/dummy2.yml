@@ -1,0 +1,18 @@
+---
+- hosts: ansible_server
+  become: yes
+  gather_facts: yes
+  tasks: 
+  - name: crete file
+    command: touchfile
+    register: file
+
+    file: $(ansible-playbook dummy2.yml -K)
+
+    if [ $? != 0 ]: then
+    echo "playbook failed! file: ${file}" | mail -s "playbook results" vinnivanitha99@gmail.com
+    else
+    echo "playbook executed successfully!" | mail -s "playbook results" vinnivanitha99@gmail.com
+    fi
+
+

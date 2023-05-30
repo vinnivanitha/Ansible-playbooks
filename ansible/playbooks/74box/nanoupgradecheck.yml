@@ -1,0 +1,68 @@
+---
+- hosts: local_10
+  become: yes
+  gather_facts: no
+  any_errors_fatal: true
+  tasks:
+     - block:
+       - name: ping server
+         ping:
+         register: ping_output
+       - name: print ping
+         debug:
+           msg: "{{ ping_output }}"
+       
+       - name: check disk sapce
+         shell:  df -hTP /
+         register: disk_output
+       - name: print disk_space
+         debug: 
+           msg: "{{ disk_output }}"
+
+       - name: run shell script
+         shell: sh /root/script.sh
+         register: script
+       - name: print script
+         debug:
+           msg: "{{ script }}"
+ 
+       - name: run falstat.yml
+         include: falstat.yml
+ 
+       - name: check version on nano
+         command: version
+         register: version_output
+       - name: print version
+         debug:
+           msg: "{{ version_output }}"
+
+       - name: copy tar file from 74 to 10
+         copy:
+            src=/root/builds/3.4/MCP-3.4.110-33.tar
+            dest=/root/builds/3.4/
+         register: copyoutput
+       - name: pause the task
+         pause:
+         when: copyoutput is failed
+
+       - name: to add software
+         command: spm_util -c addsw -f /root/builds/3.4/MCP-3.4.110-44.tar
+         register: software_output
+
+       - name: to upgrade 
+         command: spm_util -c upgrade ind -s MCP-3.4
+         register: upgrade_output
+       - name: print output
+         debug: 
+           msg: "{{ upgrade_output }}"
+
+
+       rescue: 
+       - name: send email for failure
+         mail:
+            to: vinnivanitha99@gmail.com
+            subject: "fail to run playbook"
+            body: "go and check in playbook"
+         when: version_output|failed or copyoutput|failed or software_output|failed or upgrade_output|failed
+
+ 

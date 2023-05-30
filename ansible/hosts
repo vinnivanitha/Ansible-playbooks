@@ -1,0 +1,38 @@
+#Inventory file for Movius CM Environment
+
+#[dev_servers]
+#local_152 ansible_ssh_host=172.16.1.152
+#local_10 ansible_ssh_host=172.16.1.10
+
+#[dev_servers:vars]
+#ansible_user=root
+#ansible_ssh_pass=movius
+#ansible_become_user=root
+#ansible_become_pass=movius
+
+#[ansible_servers]
+#cm1 ansible_ssh_host=172.16.1.198
+
+#[ansible_servers:vars]
+#ansible_user=root
+#ansible_ssh_pass=elkmovius
+#ansible_become_user=root
+#ansible_become_pass=elkmovius
+
+
+[ansible_server]
+ansible ansible_ssh_host=172.16.1.198
+
+[db_servers]
+db1 ansible_ssh_host=10.176.141.137
+
+[commondb_servers]
+cdb ansible_ssh_host=10.176.141.147
+
+[mas_servers]
+mas1 ansible_ssh_host=10.176.35.80
+
+[vap_servers]
+vap1 ansible_ssh_host=10.176.35.71
+vap2 ansible_ssh_host=10.176.35.72
+

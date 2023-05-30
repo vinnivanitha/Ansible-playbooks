@@ -1,0 +1,19 @@
+---
+- name: disk space 
+  hosts: ansible
+  gather_facts: no
+  become: yes
+  tasks:
+     - name: check disk space
+       shell: df | tail --lines=+2 | sed s/%//g | awk '{ if($5 > 40) print $0;}'| awk '{ print $5}' 
+
+       register: result
+     - name: send mail
+       mail:
+         to: vinnivanitha99@gmail.com
+         body: disk space
+         subject: something
+       when: result.stdout | int > 40 | int
+     - name: print df
+       debug:
+         msg: "{{ result }}"

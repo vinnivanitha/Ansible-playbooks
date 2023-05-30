@@ -1,0 +1,15 @@
+{
+    "changed": true, 
+    "cmd": "/opt/mcp/falcon/fmc -v | grep ptp", 
+    "delta": "0:00:01.015809", 
+    "end": "2018-09-20 02:14:17.932534", 
+    "failed": false, 
+    "rc": 0, 
+    "start": "2018-09-20 02:14:16.916725", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "ptp               14  3   running     2     137952     start/running    24746                  ", 
+    "stdout_lines": [
+        "ptp               14  3   running     2     137952     start/running    24746                  "
+    ]
+}

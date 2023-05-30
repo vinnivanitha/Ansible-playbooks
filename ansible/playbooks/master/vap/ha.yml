@@ -1,0 +1,15 @@
+
+ha_init:
+ nodetype: mas
+ virtualip: 10.165.46.10
+ haside: A
+ hapeer: 127.0.0.1
+ falconMonitorAlarm: minor # major, minor, none
+
+services_monitor:
+ service: name=wait-network-ready,priority=5,synchronous=1
+ service: name=spm,priority=2,synchronous=1
+ service: name=pgbouncer,priority=3,synchronous=1
+ service: name=sysdMonitor,priority=2,synchronous=0
+ service: name=vap,priority=2,synchronous=0
+ service: name=stun-server,priority=2,synchronous=0

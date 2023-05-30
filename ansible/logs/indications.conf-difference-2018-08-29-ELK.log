@@ -1,0 +1,1 @@
+{"stderr_lines": [], "cmd": ["diff", "/etc/ansible/playbooks/master/mas/indications.conf", "/etc/ansible/playbooks/uk3/mas/mas1/indications.conf"], "stdout": "", "delta": "0:00:00.001836", "stdout_lines": [], "failed_when_result": false, "end": "2018-08-29 04:51:42.928440", "start": "2018-08-29 04:51:42.926604", "changed": false, "failed": false, "stderr": "", "rc": 0}

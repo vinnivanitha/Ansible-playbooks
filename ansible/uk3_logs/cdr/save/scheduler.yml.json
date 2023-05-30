@@ -1,0 +1,119 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/scheduler.yml", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr2b/scheduler.yml"
+        ], 
+        "delta": "0:00:00.047499", 
+        "end": "2018-10-08 01:32:04.810313", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/scheduler.yml /etc/ansible/playbooks/uk3/cdr/cdr2b/scheduler.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr2b", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-10-08 01:32:04.762814", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "14c14\n<  :replication: 'true'\n---\n>  :replication: 'false'", 
+        "stdout_lines": [
+            "14c14", 
+            "<  :replication: 'true'", 
+            "---", 
+            ">  :replication: 'false'"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/scheduler.yml", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr2a/scheduler.yml"
+        ], 
+        "delta": "0:00:00.018771", 
+        "end": "2018-10-08 01:32:05.052447", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/scheduler.yml /etc/ansible/playbooks/uk3/cdr/cdr2a/scheduler.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr2a", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-10-08 01:32:05.033676", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "14c14\n<  :replication: 'true'\n---\n>  :replication: 'false'", 
+        "stdout_lines": [
+            "14c14", 
+            "<  :replication: 'true'", 
+            "---", 
+            ">  :replication: 'false'"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/scheduler.yml", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr1a/scheduler.yml"
+        ], 
+        "delta": "0:00:00.001673", 
+        "end": "2018-10-08 01:32:05.278349", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/scheduler.yml /etc/ansible/playbooks/uk3/cdr/cdr1a/scheduler.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr1a", 
+        "rc": 0, 
+        "start": "2018-10-08 01:32:05.276676", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

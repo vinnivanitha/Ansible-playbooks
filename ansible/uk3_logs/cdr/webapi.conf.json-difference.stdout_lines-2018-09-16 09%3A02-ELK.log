@@ -1,0 +1,107 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/webapi.conf", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr2b/webapi.conf"
+        ], 
+        "delta": "0:00:00.041844", 
+        "end": "2018-09-16 09:02:54.712117", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/webapi.conf /etc/ansible/playbooks/uk3/cdr/cdr2b/webapi.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr2b", 
+        "rc": 0, 
+        "start": "2018-09-16 09:02:54.670273", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/webapi.conf", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr2a/webapi.conf"
+        ], 
+        "delta": "0:00:00.033111", 
+        "end": "2018-09-16 09:02:54.990124", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/webapi.conf /etc/ansible/playbooks/uk3/cdr/cdr2a/webapi.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr2a", 
+        "rc": 0, 
+        "start": "2018-09-16 09:02:54.957013", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/cdr/webapi.conf", 
+            "/etc/ansible/playbooks/uk3/cdr/cdr1a/webapi.conf"
+        ], 
+        "delta": "0:00:00.013155", 
+        "end": "2018-09-16 09:02:55.229507", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/cdr/webapi.conf /etc/ansible/playbooks/uk3/cdr/cdr1a/webapi.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cdr1a", 
+        "rc": 0, 
+        "start": "2018-09-16 09:02:55.216352", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

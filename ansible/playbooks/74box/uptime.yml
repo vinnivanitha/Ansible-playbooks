@@ -1,0 +1,16 @@
+---
+- name: 'Compare etl.conf  files'
+  hosts: mas1
+  gather_facts: yes
+  tasks:
+      - name: Read the machine uptime 
+        command: uptime 
+        register: uptime 
+      - name: Send the uptime via e-mail 
+        mail:
+          from: vinnivanitha97@gmail.com 
+          to: vinnivantha99@gmail.com 
+          subject: Ansible-report 
+          body: 'Local system uptime is {{ uptime.stdout }}.' 
+
+

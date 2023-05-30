@@ -1,0 +1,17 @@
+---
+- hosts: ansible
+  become: yes
+  tasks:
+
+   - name: test for available disk space
+     assert:
+       that: 
+          - not {{ item.mount == '/' and ( item.size_available < item.size_total - ( item.size_total|float * 0.8 ) ) }}
+          - not {{ item.mount == '/var' and ( item.size_available < item.size_total - ( item.size_total|float * 0.8 ) ) }}
+     with_items: ansible_mounts
+     ignore_errors: yes
+     register: disk_free
+
+   - name: free disk space
+     command: "/some/command/that/fixes/it"
+     when: disk_free|failed

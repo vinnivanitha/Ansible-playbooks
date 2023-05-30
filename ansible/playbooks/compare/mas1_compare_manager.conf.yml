@@ -1,0 +1,16 @@
+---
+- name: Compare manager.conf file Playbook
+  hosts: ansible
+  gather_facts: true
+
+  tasks:
+  - name: 'Compare manager.conf files'
+    command: 
+      diff /root/config/before_upgrade/mas1/manager.conf /root/config/after_upgrade/mas1/manager.conf 
+      chdir=/root/config/
+    register: difference
+    failed_when: difference.rc > 1
+    changed_when: difference.rc == 1
+
+  - name: Print differences
+    debug: msg='{{ difference.stdout }}'

@@ -1,0 +1,72 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/vap/pgbouncer.ini", 
+            "/etc/ansible/playbooks/uk3/vap/vap2/pgbouncer.ini"
+        ], 
+        "delta": "0:00:00.001681", 
+        "end": "2018-09-20 07:57:05.291768", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/vap/pgbouncer.ini /etc/ansible/playbooks/uk3/vap/vap2/pgbouncer.ini", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "vap2", 
+        "rc": 0, 
+        "start": "2018-09-20 07:57:05.290087", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/vap/pgbouncer.ini", 
+            "/etc/ansible/playbooks/uk3/vap/vap1/pgbouncer.ini"
+        ], 
+        "delta": "0:00:00.001713", 
+        "end": "2018-09-20 07:57:05.541185", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/vap/pgbouncer.ini /etc/ansible/playbooks/uk3/vap/vap1/pgbouncer.ini", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "vap1", 
+        "rc": 0, 
+        "start": "2018-09-20 07:57:05.539472", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

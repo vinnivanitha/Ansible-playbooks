@@ -1,0 +1,41 @@
+# This playbook compares a specific file from two different hosts
+# Example usage: ansible-playbook compare_http.conf.yml
+
+---
+- name: Compare http.conf file Playbook
+  hosts: mas1_ip
+  gather_facts: true
+
+  tasks:
+  - name: Fetch first http.conf file
+    fetch: dest=save/mas1_ip/http.conf src=/etc/asterisk/http.conf flat=true validate_checksum=true
+
+- hosts: mas2_ip
+  gather_facts: true
+
+  tasks:
+  - name: Fetch second http.conf file
+    fetch: dest=save/mas2_ip/http.conf src=/etc/asterisk/http.conf flat=true validate_checksum=true
+
+- hosts: cm1
+  gather_facts: true
+
+  tasks:
+  - name: 'Compare http.conf files'
+    command: 
+      diff /etc/ansible/playbooks/monitor/save/mas1_ip/http.conf /etc/ansible/playbooks/monitor/save/mas2_ip/http.conf
+      chdir=/etc/ansible/logs
+    register: difference
+    failed_when: difference.rc > 1
+    changed_when: difference.rc == 1
+
+  - name: Print differences
+    debug: msg='{{ difference.stdout }}'
+
+  - name: Create output file
+    local_action: copy content='{{ item.value }}' dest='/etc/ansible/logs/http.conf-{{ item.variable }}-{{ ansible_date_time.date }}-{{ ansible_hostname }}.log'
+    with_items:
+      - variable: difference
+        value: '{{ difference }}'
+    no_log: true
+

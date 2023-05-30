@@ -1,0 +1,10 @@
+---
+- hosts: nanoserver
+  gather_facts: true
+  tasks:
+   - name: run ifconfig
+   - shell: ifconfig
+     register: myname
+     delegate_to: nanoserver
+   - name: Print myname
+     debug: msg="{{ myname.stdout }}"

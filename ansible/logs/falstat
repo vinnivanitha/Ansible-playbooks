@@ -1,0 +1,162 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": "/opt/mcp/falcon/fmc -v | grep \"asterisk\"", 
+        "delta": "0:00:01.007111", 
+        "end": "2019-04-17 18:54:38.381029", 
+        "failed": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "/opt/mcp/falcon/fmc -v | grep \"asterisk\"", 
+                "_uses_shell": true, 
+                "chdir": null, 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "asterisk", 
+        "rc": 0, 
+        "start": "2019-04-17 18:54:37.373918", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "asterisk          30  3   running     1     352753     start/running    7835                   ", 
+        "stdout_lines": [
+            "asterisk          30  3   running     1     352753     start/running    7835                   "
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": "/opt/mcp/falcon/fmc -v | grep \"opennms\"", 
+        "delta": "0:00:01.007148", 
+        "end": "2019-04-17 18:54:39.586417", 
+        "failed": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "/opt/mcp/falcon/fmc -v | grep \"opennms\"", 
+                "_uses_shell": true, 
+                "chdir": null, 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "opennms", 
+        "rc": 0, 
+        "start": "2019-04-17 18:54:38.579269", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "opennms           34  3   running     1     352611     start/running    25013                  ", 
+        "stdout_lines": [
+            "opennms           34  3   running     1     352611     start/running    25013                  "
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": "/opt/mcp/falcon/fmc -v | grep \"sls\"", 
+        "delta": "0:00:01.006916", 
+        "end": "2019-04-17 18:54:40.780107", 
+        "failed": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "/opt/mcp/falcon/fmc -v | grep \"sls\"", 
+                "_uses_shell": true, 
+                "chdir": null, 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "sls", 
+        "rc": 0, 
+        "start": "2019-04-17 18:54:39.773191", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "sls               22  2   running     1     352770     start/running    6957                   ", 
+        "stdout_lines": [
+            "sls               22  2   running     1     352770     start/running    6957                   "
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": "/opt/mcp/falcon/fmc -v | grep \"voicemail\"", 
+        "delta": "0:00:01.007213", 
+        "end": "2019-04-17 18:54:41.960961", 
+        "failed": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "/opt/mcp/falcon/fmc -v | grep \"voicemail\"", 
+                "_uses_shell": true, 
+                "chdir": null, 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "voicemail", 
+        "rc": 0, 
+        "start": "2019-04-17 18:54:40.953748", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "voicemail         15  3   running     1     352780     start/running    6466                   ", 
+        "stdout_lines": [
+            "voicemail         15  3   running     1     352780     start/running    6466                   "
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": "/opt/mcp/falcon/fmc -v | grep \"cna\"", 
+        "delta": "0:00:01.007050", 
+        "end": "2019-04-17 18:54:43.132669", 
+        "failed": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "/opt/mcp/falcon/fmc -v | grep \"cna\"", 
+                "_uses_shell": true, 
+                "chdir": null, 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "cna", 
+        "rc": 0, 
+        "start": "2019-04-17 18:54:42.125619", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "cna               45  2   unused      0     0                                                  ", 
+        "stdout_lines": [
+            "cna               45  2   unused      0     0                                                  "
+        ]
+    }
+]

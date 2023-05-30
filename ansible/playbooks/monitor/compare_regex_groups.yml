@@ -1,0 +1,41 @@
+# This playbook compares a specific file from two different hosts
+# Example usage: ansible-playbook compare_regex_groups.yml
+
+---
+- name: Compare regex_groups file Playbook
+  hosts: vap1_ip
+  gather_facts: true
+
+  tasks:
+  - name: Fetch first regex_groups file
+    fetch: dest=save/vap1_ip/regex_groups src=/usr/local/etc/kamailio/regex_groups flat=true validate_checksum=true
+
+- hosts: vap2_ip
+  gather_facts: true
+
+  tasks:
+  - name: Fetch second regex_groups file
+    fetch: dest=save/vap2_ip/regex_groups src=/usr/local/etc/kamailio/regex_groups flat=true validate_checksum=true
+
+- hosts: cm1
+  gather_facts: true
+
+  tasks:
+  - name: 'Compare regex_groups files'
+    command: 
+      diff /etc/ansible/playbooks/monitor/save/vap1_ip/regex_groups /etc/ansible/playbooks/monitor/save/vap2_ip/regex_groups
+      chdir=/etc/ansible/logs
+    register: difference
+    failed_when: difference.rc > 1
+    changed_when: difference.rc == 1
+
+  - name: Print differences
+    debug: msg='{{ difference.stdout }}'
+
+  - name: Create output file
+    local_action: copy content='{{ item.value }}' dest='/etc/ansible/logs/regex_groups-{{ item.variable }}-{{ ansible_date_time.date }}-{{ ansible_hostname }}.log'
+    with_items:
+      - variable: difference
+        value: '{{ difference }}'
+    no_log: true
+

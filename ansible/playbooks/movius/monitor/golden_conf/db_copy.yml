@@ -1,0 +1,21 @@
+---
+- name: copy config files from db
+  hosts: db_servers
+  gather_facts: yes
+  become: yes
+  tasks:
+     - name: fetch the conf file
+       fetch: dest=/etc/ansible/playbooks/master/db/ src=/opt/mcp/config/sms.conf flat=true validate_checksum=true
+     - name: fetch
+       fetch: dest=/etc/ansible/playbooks/master/db/ src=/opt/mcp/config/scheduler.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/etc/ansible/playbooks/master/db/ src=/opt/mcp/config/ha.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/etc/ansible/playbooks/master/db/ src=/opt/mcp/config/pgbouncer.ini flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/etc/ansible/playbooks/master/db/ src=/opt/mcp/courier/conf/mmail.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/etc/ansible/playbooks/master/db/ src=/opt/cdrtool/etc/etl.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/etc/ansible/playbooks/master/db/ src=/opt/cdrtool/etc/webapi.conf flat=true validate_checksum=true
+

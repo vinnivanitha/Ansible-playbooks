@@ -1,0 +1,54 @@
+
+ha_init:
+ nodetype: mas
+ virtualip: 10.165.46.10
+ haside: A
+ hapeer: 127.0.0.1
+ falconMonitorAlarm: minor # major, minor, none
+
+services_monitor:
+ #service: name=set-falcon-debug,priority=5,synchronous=1,arg1=6
+ service: name=wait-network-ready,priority=5,synchronous=1
+ service: name=spm,priority=2,synchronous=1
+ service: name=pgbouncer,priority=3,synchronous=1
+ service: name=dispatcher,priority=3,synchronous=1
+ service: name=mdd,priority=3,synchronous=1
+ service: name=imap,priority=3,synchronous=1
+ service: name=voicemail,priority=3,synchronous=1
+ service: name=auto-attendant,priority=3,synchronous=0
+ service: name=out-dialer,priority=3,synchronous=0
+ service: name=handle-outdials,priority=3,synchronous=0
+ service: name=sc-playback,priority=3,synchronous=0
+ service: name=prepaid,priority=2,synchronous=0
+ service: name=auto-provision,priority=3,synchronous=0
+ service: name=sls,priority=2,synchronous=0
+ service: name=mbuni,priority=2,synchronous=0
+ service: name=sysdMonitor,priority=2,synchronous=0
+ service: name=memcached,priority=3,synchronous=1
+ service: name=ci,priority=2,synchronous=0
+ service: name=httpd,priority=3,synchronous=0
+ service: name=sms-receiver,priority=2,synchronous=0
+#jwh  service: name=vap,priority=2,synchronous=0
+ service: name=asterisk,priority=3,synchronous=0 
+ service: name=stun-server,priority=2,synchronous=0
+ service: name=v2t_expired,priority=2,synchronous=0
+ service: name=v2t-prov,priority=2,synchronous=0
+ service: name=vvm-iphone,priority=2,synchronous=0
+ service: name=vvm-omtp,priority=2,synchronous=0
+ service: name=vvm-ios-omtp,priority=2,synchronous=0
+ service: name=sms-callback,priority=2,synchronous=0
+ service: name=sms-activation,priority=2,synchronous=0
+#jwh  service: name=openvpn,priority=2,synchronous=0,unused=1
+#jwh   service: name=radius,priority=2,synchronous=0,unused=1
+#jwh   service: name=data-proxy,priority=2,synchronous=0,unused=1
+#jwh   service: name=ios-mdm,priority=2,synchronous=0,unused=1
+#jwh   service: name=cna,priority=2,synchronous=0,unused=1
+#jwh   service: name=announcement-server,priority=2,synchronous=0,unused=1
+#jwh   service: name=media-gateway,priority=2,synchronous=0,unused=1
+#jwh   service: name=cvactivate,priority=2,synchronous=0,unused=1
+ service: name=drn,priority=2,synchronous=0
+ service: name=transactional-numbers,priority=2,synchronous=0
+ service: name=post_start_script,priority=5,synchronous=0
+ #service: name=set-falcon-debug,priority=5,synchronous=1,arg1=0
+
+

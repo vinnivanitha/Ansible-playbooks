@@ -1,0 +1,11 @@
+---
+- hosts: nano
+  gather_facts: no 
+  become: yes
+  tasks:
+    - name: check disk space before upgrade
+      include: disk_space.yml
+    - name: check falstat services before upgrade
+      include: nano_falstat.yml
+    - name: copy conf files before upgrade
+      include: nano_copy.yml

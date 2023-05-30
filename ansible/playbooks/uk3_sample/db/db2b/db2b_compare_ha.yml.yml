@@ -1,0 +1,22 @@
+---
+- name: 'Compare ha.yml  files'
+  hosts: ansible
+  gather_facts: yes
+  tasks:
+  - name: 'Compare ha.yml  files'
+    command:
+      diff /etc/ansible/playbooks/master/db/ha.yml /etc/ansible/playbooks/uk3/db/db2b/ha.yml
+      chdir=/etc/ansible/playbooks/
+    register: difference
+    failed_when: difference.rc > 1
+    changed_when: difference.rc == 1
+
+  - name: Print differences
+    debug: msg='{{ difference.stdout }}'
+
+  - name: Create output file
+    local_action: copy content='{{ item.value }}' dest='/etc/ansible/uk3_logs/db2b/ha.yml-{{ item.variable }}-{{ ansible_date_time.date }}-{{ ansible_hostname }}.log'
+    with_items:
+      - variable: difference
+        value: '{{ difference }}'
+    no_log: true

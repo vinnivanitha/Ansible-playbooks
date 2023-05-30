@@ -1,0 +1,15 @@
+{
+    "changed": true, 
+    "cmd": "/opt/mcp/falcon/fmc -v | grep asterisk", 
+    "delta": "0:00:01.006865", 
+    "end": "2019-04-19 18:32:05.422538", 
+    "failed": false, 
+    "rc": 0, 
+    "start": "2019-04-19 18:32:04.415673", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "asterisk          30  3   running     1     524200     start/running    7835                   ", 
+    "stdout_lines": [
+        "asterisk          30  3   running     1     524200     start/running    7835                   "
+    ]
+}

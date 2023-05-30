@@ -1,0 +1,14 @@
+     - name: check disk space
+       shell: df -TP / | tail -n 1 | awk '{print $6}' | cut -d'%' -f1
+       register: result
+     - name: print df
+       debug: 
+         msg: "{{ result.stdout }}"
+
+     - name: sent a mail
+       mail: 
+         to: vinnivanitha99@gmail.com
+         subject: disk space check
+         body: "{{ inventory_hostname }} is running low on disk space. Currently {{ result.stdout }}% used."
+       when: result.stdout | int > 80 | int
+

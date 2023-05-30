@@ -1,0 +1,53 @@
+---
+- hosts: nano
+  gather_facts: no
+  become: yes
+  tasks:       
+       - name: falstat for sls  
+         shell: /opt/mcp/falcon/fmc -v | grep sls
+         register: sls_output
+       - name: print falstat
+         debug: 
+           msg: "{{ sls_output }}"
+       - name: mail the output
+         mail:
+           to:  "{{ myvars.mail }}"
+           subject: sls service is not running
+           body: sls service on $(hostname) is not running 
+         when: sls_output.stdout | join('') | search('running')
+       - name: pause the task
+         pause:
+         when: sls_output.stdout | join('') | search('running')
+
+       - name: falstat for asterisk
+         shell: /opt/mcp/falcon/fmc -v | grep asterisk
+         register: asterisk_output
+       - name: print falstat
+         debug:
+           msg: "{{ asterisk_output }}"
+       - name: mail the output
+         mail:
+           to:  "{{ myvars.mail }}"
+           subject: falstat
+           body: falsfat
+         when: asterisk_output.stdout | join('') | search('stopped')
+       - name: pause the task
+         pause:
+         when: asterisk_output.stdout | join('') | search('stopped')
+
+ 
+       - name: falstat for httpd
+         shell: /opt/mcp/falcon/fmc -v | grep httpd
+         register: httpd_output
+       - name: print falstat
+         debug:
+           msg: "{{ httpd_output }}"
+       - name: mail the output
+         mail:
+           to:  "{{ myvars.mail }}"
+           subject: httpd service is not running
+           body: httpd service is not running on $(hostname)
+         when: httpd_output.stdout | join('') | search('stopped')
+       - name: pause the task
+         pause:
+         when: httpd_output.stdout | join('') | search('stopped')

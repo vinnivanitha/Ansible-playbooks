@@ -1,0 +1,15 @@
+---
+- name: compare ha.yml
+  hosts: ansible
+  gather_facts: yes
+
+  tasks:
+   - name: 'Compare ha.yml files'
+     command: 
+       diff /root/config/before_upgrade/vap1/ha.yml /root/config/after_upgrade/vap1/ha.yml
+       chdir=/root/config/
+     register: difference
+     failed_when: difference.rc > 1
+     changed_when: difference.rc == 1
+   - name: Print differences
+     debug: msg='{{ difference.stdout }}'

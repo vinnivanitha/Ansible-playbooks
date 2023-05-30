@@ -1,0 +1,166 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sip.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas4/sip.conf"
+        ], 
+        "delta": "0:00:00.001827", 
+        "end": "2018-09-20 03:58:17.554552", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sip.conf /etc/ansible/playbooks/uk3/mas/mas4/sip.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas4", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:58:17.552725", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "18c18\n< prack=no\n---\n> prack=yes", 
+        "stdout_lines": [
+            "18c18", 
+            "< prack=no", 
+            "---", 
+            "> prack=yes"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sip.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas3/sip.conf"
+        ], 
+        "delta": "0:00:00.001629", 
+        "end": "2018-09-20 03:58:17.781973", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sip.conf /etc/ansible/playbooks/uk3/mas/mas3/sip.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas3", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:58:17.780344", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "18c18\n< prack=no\n---\n> prack=yes", 
+        "stdout_lines": [
+            "18c18", 
+            "< prack=no", 
+            "---", 
+            "> prack=yes"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sip.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas2/sip.conf"
+        ], 
+        "delta": "0:00:00.001613", 
+        "end": "2018-09-20 03:58:18.019179", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sip.conf /etc/ansible/playbooks/uk3/mas/mas2/sip.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas2", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:58:18.017566", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "18c18\n< prack=no\n---\n> prack=yes", 
+        "stdout_lines": [
+            "18c18", 
+            "< prack=no", 
+            "---", 
+            "> prack=yes"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sip.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas1/sip.conf"
+        ], 
+        "delta": "0:00:00.001707", 
+        "end": "2018-09-20 03:58:18.245799", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sip.conf /etc/ansible/playbooks/uk3/mas/mas1/sip.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas1", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:58:18.244092", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "18c18\n< prack=no\n---\n> prack=yes", 
+        "stdout_lines": [
+            "18c18", 
+            "< prack=no", 
+            "---", 
+            "> prack=yes"
+        ]
+    }
+]

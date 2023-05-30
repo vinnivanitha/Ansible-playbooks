@@ -1,0 +1,15 @@
+# This playbook executes multiple playbooks to compare specific files between two different hosts
+# Example usage: ansible-playbook compare_master.yml
+
+---
+- name: Master config audit playbook
+  hosts: ansible
+  gather_facts: true
+
+
+- include: userdb_compare_mmail.conf.yml
+- include: userdb_compare_scheduler.yml.yml
+- include: userdb_compare_pgbouncer.ini.yml
+- include: userdb_compare_ha.yml.yml
+- include: userdb_compare_sms.conf.yml
+- include: userdb_compare_etl.conf.yml

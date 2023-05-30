@@ -1,0 +1,9 @@
+---
+- name: fetch
+  hosts: nano
+  gather_facts: no
+  become: yes
+  tasks: 
+     - name: fetch
+       fetch: dest=/root/builds/3.4/  src=/root/builds/3.4/111.txt  validate_checksum=true
+

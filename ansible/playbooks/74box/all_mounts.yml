@@ -1,0 +1,14 @@
+---
+- hosts: ansible
+  become: yes
+  gather_facts: no
+  tasks: 
+    
+    - name: check all the mounts disk spaces
+      shell: df | tail --lines=+2 | sed s/%//g | awk '{ if($5 > 60) print $0;}'| mail -s "space alert" vinnivanitha99@gmail.com
+      register: result
+     
+    - name: print the result
+      debug: 
+        msg: "{{ result }}"
+

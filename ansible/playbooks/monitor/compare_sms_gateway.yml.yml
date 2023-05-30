@@ -1,0 +1,41 @@
+# This playbook compares a specific file from two different hosts
+# Example usage: ansible-playbook compare_sms_gateway.yml.yml
+
+---
+- name: Compare sms_gateway.yml Playbook
+  hosts: mas1_ip
+  gather_facts: true
+
+  tasks:
+  - name: Fetch first sms_gateway.yml file
+    fetch: dest=save/mas1_ip/sms_gateway.yml src=/opt/mcp/config/sms_gateway.yml flat=true validate_checksum=true
+
+- hosts: mas2_ip
+  gather_facts: true
+
+  tasks:
+  - name: Fetch second sms_gateway.yml file
+    fetch: dest=save/mas2_ip/sms_gateway.yml src=/opt/mcp/config/sms_gateway.yml flat=true validate_checksum=true
+
+- hosts: cm1
+  gather_facts: true
+
+  tasks:
+  - name: 'Compare sms_gateway.yml files'
+    command: 
+      diff /etc/ansible/playbooks/monitor/save/mas1_ip/sms_gateway.yml /etc/ansible/playbooks/monitor/save/mas2_ip/sms_gateway.yml
+      chdir=/etc/ansible/logs
+    register: difference
+    failed_when: difference.rc > 1
+    changed_when: difference.rc == 1
+
+  - name: Print differences
+    debug: msg='{{ difference.stdout }}'
+
+  - name: Create output file
+    local_action: copy content='{{ item.value }}' dest='/etc/ansible/logs/sms_gateway.yml-{{ item.variable }}-{{ ansible_date_time.date }}-{{ ansible_hostname }}.log'
+    with_items:
+      - variable: difference
+        value: '{{ difference }}'
+    no_log: true
+

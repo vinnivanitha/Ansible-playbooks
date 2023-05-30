@@ -1,0 +1,6 @@
+    - name: check disk space before upgrade
+      include: disk_space.yml
+    - name: check falstat services before upgrade
+      include: nano_falstat.yml
+    - name: copy conf files before upgrade
+      include: nano_after_copy.yml

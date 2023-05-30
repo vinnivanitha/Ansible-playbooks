@@ -1,0 +1,50 @@
+---
+- name: copy conf files before upgrade
+  hosts: vap_servers
+  gather_facts: no
+  tasks:
+     - name: Fetch the kamailio files
+       fetch: dest=/etc/ansible/playbooks/movius/upgrade/before_upgrade/vap/{{ item }}/ src=/usr/local/etc/kamailio/kamailio.cfg flat=true validate_checksum=true
+       with_inventory_hostnames:
+          - vap_servers
+       when: inventory_hostname == "{{ item }}"
+     - name: Fetch http.conf files
+       fetch: dest=/etc/ansible/playbooks/movius/upgrade/before_upgrade/vap/{{ item }}/ src=/etc/asterisk/http.conf flat=true validate_checksum=true
+       with_inventory_hostnames:
+          - vap_servers
+       when: inventory_hostname == "{{ item }}"
+     - name: fetch scheduler file
+       fetch: dest=/etc/ansible/playbooks/movius/upgrade/before_upgrade/vap/{{ item }}/ src=/opt/mcp/config/scheduler.yml flat=true validate_checksum=true
+       with_inventory_hostnames:
+          - vap_servers
+       when: inventory_hostname == "{{ item }}"
+     - name: fetch the ha files
+       fetch: dest=/etc/ansible/playbooks/movius/upgrade/before_upgrade/vap/{{ item }}/ src=/opt/mcp/config/ha.yml flat=true validate_checksum=true
+       with_inventory_hostnames:
+          - vap_servers
+       when: inventory_hostname == "{{ item }}"
+     - name: fetch the manager files
+       fetch: dest=/etc/ansible/playbooks/movius/upgrade/before_upgrade/vap/{{ item }}/  src=/etc/asterisk/manager.conf flat=true validate_checksum=true
+       with_inventory_hostnames:
+          - vap_servers
+       when: inventory_hostname == "{{ item }}"
+     - name: fetch the mmail files
+       fetch: dest=/etc/ansible/playbooks/movius/upgrade/before_upgrade/vap/{{ item }}/ src=/opt/mcp/courier/conf/mmail.conf flat=true validate_checksum=true
+       with_inventory_hostnames:
+          - vap_servers
+       when: inventory_hostname == "{{ item }}"
+     - name: fetch the  pgbouncer files
+       fetch: dest=/etc/ansible/playbooks/movius/upgrade/before_upgrade/vap/{{ item }}/ src=/opt/mcp/config/pgbouncer.ini flat=true validate_checksum=true
+       with_inventory_hostnames:
+          - vap_servers
+       when: inventory_hostname == "{{ item }}"
+     - name: Fetch first regex_groups file
+       fetch: dest=/etc/ansible/playbooks/movius/upgrade/before_upgrade/vap/{{ item }}/ src=/usr/local/etc/kamailio/regex_groups flat=true validate_checksum=true
+       with_inventory_hostnames:
+          - vap_servers
+       when: inventory_hostname == "{{ item }}"
+     - name: Fetch lvs.cf
+       fetch: dest=/etc/ansible/playbooks/movius/upgrade/before_upgrade/vap/{{ item }}/ src=/etc/sysconfig/ha/lvs.cf flat=true validate_checksum=true
+       with_inventory_hostnames:
+          - vap_servers
+       when: inventory_hostname == "{{ item }}"

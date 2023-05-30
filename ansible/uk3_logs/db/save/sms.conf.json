@@ -1,0 +1,107 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/sms.conf", 
+            "/etc/ansible/playbooks/uk3/db/db1a/sms.conf"
+        ], 
+        "delta": "0:00:00.024006", 
+        "end": "2018-09-16 09:00:36.608360", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/sms.conf /etc/ansible/playbooks/uk3/db/db1a/sms.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db1a", 
+        "rc": 0, 
+        "start": "2018-09-16 09:00:36.584354", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/sms.conf", 
+            "/etc/ansible/playbooks/uk3/db/db2a/sms.conf"
+        ], 
+        "delta": "0:00:00.023808", 
+        "end": "2018-09-16 09:00:36.871729", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/sms.conf /etc/ansible/playbooks/uk3/db/db2a/sms.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db2a", 
+        "rc": 0, 
+        "start": "2018-09-16 09:00:36.847921", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/sms.conf", 
+            "/etc/ansible/playbooks/uk3/db/db2b/sms.conf"
+        ], 
+        "delta": "0:00:00.015860", 
+        "end": "2018-09-16 09:00:37.112428", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/sms.conf /etc/ansible/playbooks/uk3/db/db2b/sms.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db2b", 
+        "rc": 0, 
+        "start": "2018-09-16 09:00:37.096568", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

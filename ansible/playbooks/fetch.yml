@@ -1,0 +1,11 @@
+---
+- hosts: ansible
+  gather_facts: yes
+  become: yes
+  tasks: 
+      
+     - name: fetch the file
+       fetch:
+           src: /root/fetch.txt
+           dest: /root/builds/
+           falt: true

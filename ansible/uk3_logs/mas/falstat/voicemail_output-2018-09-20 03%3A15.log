@@ -1,0 +1,15 @@
+{
+    "changed": true, 
+    "cmd": "/opt/mcp/falcon/fmc -v | grep voicemail", 
+    "delta": "0:00:01.015752", 
+    "end": "2018-09-20 03:17:54.953792", 
+    "failed": false, 
+    "rc": 0, 
+    "start": "2018-09-20 03:17:53.938040", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "voicemail         7   3   running     1     659186     start/running    3190                   ", 
+    "stdout_lines": [
+        "voicemail         7   3   running     1     659186     start/running    3190                   "
+    ]
+}

@@ -1,0 +1,103 @@
+
+      
+
+       - name: falstat for spm
+         shell: /opt/mcp/falcon/fmc -v | grep spm
+         register: spm_output
+       - name: print falstat
+         debug:
+           msg: "{{ spm_output }}"
+       - name: mail the output
+         mail:
+           to: "{{ myvars.mail }}"
+           subject: spm service is not running on {{ inventory_hostname }}
+           body: "spm service is not running on {{ inventory_hostname }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}"
+         when: "'stopped' in spm_output.stdout"
+ 
+       - name: Create output file
+         local_action: copy content='{{ item.value | to_nice_json }}' dest='/etc/ansible/nano_logs/falstat/{{ item.variable }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}.log'
+         register: output
+         with_items:
+           - variable: spm_output
+             value: "{{ spm_output }}"
+           
+       - name: falstat for sls
+         shell: /opt/mcp/falcon/fmc -v | grep sls
+         register: sls_output
+       - name: print falstat
+         debug:
+           msg: "{{ sls_output }}"
+       - name: mail the output
+         mail:
+           to: "{{ myvars.mail }}"
+           subject: sls service is not running on {{ inventory_hostname }}
+           body: "sls service is not running on {{ inventory_hostname }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}"
+         when: "'stopped' in sls_output.stdout"
+
+       - name: Create output file
+         local_action: copy content='{{ item.value | to_nice_json }}' dest='/etc/ansible/nano_logs/falstat/{{ item.variable }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}.log'
+         register: output
+         with_items:
+           - variable: sls_output
+             value: "{{ sls_output }}"
+
+       - name: falstat for httpd
+         shell: /opt/mcp/falcon/fmc -v | grep httpd
+         register: httpd_output
+       - name: print falstat
+         debug:
+           msg: "{{ httpd_output }}"
+       - name: mail the output
+         mail:
+           to: "{{ myvars.mail }}"
+           subject: httpd service is not running on {{ inventory_hostname }}
+           body: "httpd service is not running on {{ inventory_hostname }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}"
+         when: "'stopped' in httpd_output.stdout"
+
+       - name: Create output file
+         local_action: copy content='{{ item.value | to_nice_json }}' dest='/etc/ansible/nano_logs/falstat/{{ item.variable }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}.log'
+         register: output
+         with_items:
+           - variable: httpd_output
+             value: "{{ httpd_output }}"
+
+       - name: falstat for asterisk
+         shell: /opt/mcp/falcon/fmc -v | grep asterisk
+         register: asterisk_output
+       - name: print falstat
+         debug:
+           msg: "{{ asterisk_output }}"
+       - name: mail the output
+         mail:
+           to: "{{ myvars.mail }}"
+           subject: asterisk service is not running {{ inventory_hostname }}
+           body: "asterisk service is not running on {{ inventory_hostname }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}"
+         when: "'stopped' in asterisk_output.stdout"
+    
+       - name: Create output file
+         local_action: copy content='{{ item.value | to_nice_json }}' dest='/etc/ansible/nano_logs/falstat/{{ item.variable }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}.log'
+         register: output
+         with_items:
+           - variable: asterisk_output
+             value: "{{ asterisk_output }}"
+    
+       - name: falstat for voicemail
+         shell: /opt/mcp/falcon/fmc -v | grep voicemail
+         register: voicemail_output
+       - name: print falstat
+         debug:
+           msg: "{{ voicemail_output }}"
+       - name: mail the output
+         mail:
+           to: "{{ myvars.mail }}"
+           subject: voicemail  service is not running on {{ inventory_hostname }}
+           body: "voicemail service is not running on {{ inventory_hostname }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}"
+         when: "'stopped' in voicemail_output.stdout"
+
+
+       - name: Create output file
+         local_action: copy content='{{ item.value | to_nice_json }}' dest='/etc/ansible/nano_logs/falstat/{{ item.variable }}-{{ lookup('pipe','date \"+%Y-%m-%d %H:%M\"')}}.log'
+         register: output
+         with_items:
+           - variable: voicemail_output
+             value: "{{ voicemail_output }}"

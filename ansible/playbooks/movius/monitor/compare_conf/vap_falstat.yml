@@ -1,0 +1,87 @@
+---
+- name: check falstat for VAP servers
+  hosts: vap_servers
+  gather_facts: yes
+  become: yes
+  tasks:
+
+
+       - name: falstat for spm
+         shell: /opt/mcp/falcon/fmc -v | grep spm
+         register: spm_output
+       - name: print falstat
+         debug:
+           msg: "{{ spm_output }}"
+       - name: mail the output
+         mail:
+           to: vinnivanitha99@gmail.com
+           subject: falstat
+           body: spm is not running on {{ inventory_hostname }}
+         when: spm_output.stdout | join('') | search('stopped')
+       - name: pause the task
+         pause:
+         when: spm_output | join('') | search('stopped')
+
+       - name: falstat for pgbouncer
+         shell: /opt/mcp/falcon/fmc -v | grep pgbouncer
+         register: pgbouncer_output
+       - name: print falstat
+         debug:
+           msg: "{{ pgbouncer_output }}"
+       - name: mail the output
+         mail:
+           to: vinnivanitha99@gmail.com
+           subject: pgbouncer service is not running
+           body: pgbouncer service is not running on {{ inventory_hostname }}
+         when: pgbouncer_output.stdout | join('') | search('stopped')
+       - name: pause the task
+         pause:
+         when: pgbouncer_output | join('') | search('stopped')
+
+       - name: falstat for sysdmonitor
+         shell: /opt/mcp/falcon/fmc -v | grep sysdMonitor
+         register: sysdmonitor_output
+       - name: print falstat
+         debug:
+           msg: "{{ sysdmonitor_output }}"
+       - name: mail the output
+         mail:
+           to: vinnivanitha99@gmail.com
+           subject: sysdmonitor service is not running
+           body: sysdmonitor service is not running on {{ inventory_hostname }}
+         when: sysdmonitor_output.stdout | join('') | search('stopped')
+       - name: pause the task
+         pause:
+         when: sysdmonitor_output | join('') | search('stopped')
+
+       - name: falstat for stun-server
+         shell: /opt/mcp/falcon/fmc -v | grep stun-server
+         register: stunserver_output
+       - name: print falstat
+         debug:
+           msg: "{{ stunserver_output }}"
+       - name: mail the output
+         mail:
+           to: vinnivanitha99@gmail.com
+           subject: stun-server service is not running
+           body: stun-server service is not running on {{ inventory_hostname }}
+         when: stunserver_output | join('') | search('stopped')
+       - name: pause the task
+         pause:
+         when: stunserver_output | join('') | search('stopped')
+
+       - name: falstat for vap
+         shell: /opt/mcp/falcon/fmc -v | grep vap
+         register: vap_output
+       - name: print falstat
+         debug:
+           msg: "{{ vap_output }}"
+       - name: mail the output
+         mail:
+           to: vinnivanitha99@gmail.com
+           subject: vap service is not running
+           body: vap service is not running on {{ inventory_hostname }}
+         when: vap_output.stdout | join('') | search('stopped')
+       - name: pause the task
+         pause:
+         when: vap_output.stdout | join('') | search('stopped')

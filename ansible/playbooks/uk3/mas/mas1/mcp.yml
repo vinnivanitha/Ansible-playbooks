@@ -1,0 +1,124 @@
+---
+apiip: 10.165.46.10
+port: '8000'
+adkip: 127.0.0.1
+masip: 127.0.0.1
+stun_url: stun:stun.l.google.com:19302
+clam_scan_port: '3310'
+clam_scan: 'false'
+adk_port: '8020'
+jasperserverip: 10.165.46.50
+jasperserver_port: '8080'
+mcpext: "/mcp/mcpwebapi"
+spmext: "/mcp/mcpspmapi"
+callext: "/adk/services"
+jasperserverext: "/jasperserver"
+adk_use_ssl: false
+api_use_ssl: false
+session_timeout: '5'
+timeout: '2000'
+cdr: true
+cdr_query_limit: '45000'
+cdr_local_folder_in_server: "/opt/mcp/oam/reports"
+snmp_statistics: true
+asterisk_ip: uk3.moviuscorp.net
+ws_port: '8088'
+wss_port: '8089'
+outbound_proxy_port: '5060'
+default_time_zone: America/New_York
+help_url_admin: "/Help/webhelp_out_admin/Publishables/cafe_mp_00000000_00_onboard-help-admin_final.html#"
+help_url_subscriber: "/Help/webhelp_out_subscriber/Publishables/cafe_mp_00000000_00_onboard-help-subscriber.html#"
+cdrip: http://127.0.0.1:8030/cdr/cdrtool
+IDS_logfilename: "../log/account_access.log"
+IDS_logfilesize: '107374182'
+IDS_logfileage: '10'
+logfilename: "../log/webgui.log"
+loglevel: debug
+logfilesize: '107374182'
+logfileage: '10'
+imaplog: false
+subscriber_only: false
+admin_port: '543'
+opennms_uri: http://10.165.46.50:8980/opennms
+opennms_uri_ssl: https://10.165.46.50:8443/opennms
+opennms_page: "/j_spring_security_check"
+opennms_image: "/charts?chart-name=sample-bar-chart"
+opennms_user: admin
+opennms_password: admin
+mas:
+- upgrade
+- rollback
+- backup
+- restore
+- reboot
+- lock
+- unlock
+nano:
+- upgrade
+- rollback
+- backup
+- restore
+- reboot
+- lock
+- unlock
+db:
+- upgrade
+- rollback
+- backup
+- restore
+- reboot
+- lock
+- unlock
+net_deviceid:
+  cc: bond0
+  ccvirtual: bond0.1
+  signaling: bond0.2
+  rtp: bond0.3
+  web: bond0.4
+  mgmt: bond0.5
+cdrfilter_login: true
+cdrfilter_logout: true
+cdrfilter_add: true
+cdrfilter_modify: true
+cdrfilter_delete: true
+cdrfilter_admin_notify_email: false
+nano-devices:
+- 0
+db-devices:
+- 0
+- 1
+- 2
+- 3
+imap_server_port: 143
+use_ssl: false
+certs_path: 
+verify: false
+per_page: 10
+moviusstats: 'false'
+mode2_grt_priorities:
+  second: '1'
+  absence: '2'
+  holiday: '3'
+  busy: '4'
+  schedule: '5:8'
+  main: '9'
+  cli: '10:12'
+  in_announcement: '1000'
+  out_announcement: '1001'
+ssl_cookies: true
+login_help: 'false'
+help_needed: 'false'
+myid_app_link: https://play.google.com/store/apps/details?id=com.moviuscorp.movius&hl=en
+myid_apple_app_link: https://itunes.apple.com/us/app/movius/id1126222366?mt=8
+movius_agent_app_link: https://play.google.com/store/apps/details?id=com.moviuscorp.datasplitbilling&hl=en
+movius_ios_agent_app_link: https://itunes.apple.com/us/app/movius/id1126222366?mt=8
+report_collection_delay_interval: 60
+days_remaining: 5
+eap_admin_login_theme: enterprise.theme
+report_record_search: '31'
+report_download_alert: '100000'
+offset_increment_value: '50'
+connect_to_mongodb: 'false'
+js_error_log: false
+perf_log_enabled: true
+service_login_ips: ''

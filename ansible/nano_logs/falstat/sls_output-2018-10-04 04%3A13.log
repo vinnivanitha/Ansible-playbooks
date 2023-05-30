@@ -1,0 +1,15 @@
+{
+    "changed": true, 
+    "cmd": "/opt/mcp/falcon/fmc -v | grep sls", 
+    "delta": "0:00:01.006663", 
+    "end": "2019-04-20 15:33:32.840352", 
+    "failed": false, 
+    "rc": 0, 
+    "start": "2019-04-20 15:33:31.833689", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "sls               22  2   running     1     599902     start/running    6957                   ", 
+    "stdout_lines": [
+        "sls               22  2   running     1     599902     start/running    6957                   "
+    ]
+}

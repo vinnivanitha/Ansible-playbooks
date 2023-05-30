@@ -1,0 +1,107 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/mmail.conf", 
+            "/etc/ansible/playbooks/uk3/db/db1a/mmail.conf"
+        ], 
+        "delta": "0:00:00.001918", 
+        "end": "2018-09-14 03:26:26.001850", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/mmail.conf /etc/ansible/playbooks/uk3/db/db1a/mmail.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db1a", 
+        "rc": 0, 
+        "start": "2018-09-14 03:26:25.999932", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/mmail.conf", 
+            "/etc/ansible/playbooks/uk3/db/db2a/mmail.conf"
+        ], 
+        "delta": "0:00:00.001594", 
+        "end": "2018-09-14 03:26:26.249186", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/mmail.conf /etc/ansible/playbooks/uk3/db/db2a/mmail.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db2a", 
+        "rc": 0, 
+        "start": "2018-09-14 03:26:26.247592", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/mmail.conf", 
+            "/etc/ansible/playbooks/uk3/db/db2b/mmail.conf"
+        ], 
+        "delta": "0:00:00.001613", 
+        "end": "2018-09-14 03:26:26.480172", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/mmail.conf /etc/ansible/playbooks/uk3/db/db2b/mmail.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db2b", 
+        "rc": 0, 
+        "start": "2018-09-14 03:26:26.478559", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

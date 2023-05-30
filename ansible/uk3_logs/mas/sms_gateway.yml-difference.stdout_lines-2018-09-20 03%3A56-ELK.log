@@ -1,0 +1,210 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sms_gateway.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas4/sms_gateway.yml"
+        ], 
+        "delta": "0:00:00.001654", 
+        "end": "2018-09-20 03:56:51.970242", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sms_gateway.yml /etc/ansible/playbooks/uk3/mas/mas4/sms_gateway.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas4", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:56:51.968588", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "29,34c29,35\n<  :kannel_sendsms_url: 'http://10.164.133.210:13013/cgi-bin/sendsms'\n<  :kannel_username: 'movius'\n<  :kannel_password: 'movius'\n<  :kannel_charset: 'utf-8'\n<  :kannel_coding: '2'\n<  :sprint_calea: 'false'\n---\n>  :kannel_sendsms_url: \n>  :kannel_username: \n>  :kannel_password: \n>  :kannel_charset: \n>  :kannel_coding: \n>  :sprint_calea: 'false' \n> ", 
+        "stdout_lines": [
+            "29,34c29,35", 
+            "<  :kannel_sendsms_url: 'http://10.164.133.210:13013/cgi-bin/sendsms'", 
+            "<  :kannel_username: 'movius'", 
+            "<  :kannel_password: 'movius'", 
+            "<  :kannel_charset: 'utf-8'", 
+            "<  :kannel_coding: '2'", 
+            "<  :sprint_calea: 'false'", 
+            "---", 
+            ">  :kannel_sendsms_url: ", 
+            ">  :kannel_username: ", 
+            ">  :kannel_password: ", 
+            ">  :kannel_charset: ", 
+            ">  :kannel_coding: ", 
+            ">  :sprint_calea: 'false' ", 
+            "> "
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sms_gateway.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas3/sms_gateway.yml"
+        ], 
+        "delta": "0:00:00.001634", 
+        "end": "2018-09-20 03:56:52.198564", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sms_gateway.yml /etc/ansible/playbooks/uk3/mas/mas3/sms_gateway.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas3", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:56:52.196930", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "29,34c29,35\n<  :kannel_sendsms_url: 'http://10.164.133.210:13013/cgi-bin/sendsms'\n<  :kannel_username: 'movius'\n<  :kannel_password: 'movius'\n<  :kannel_charset: 'utf-8'\n<  :kannel_coding: '2'\n<  :sprint_calea: 'false'\n---\n>  :kannel_sendsms_url: \n>  :kannel_username: \n>  :kannel_password: \n>  :kannel_charset: \n>  :kannel_coding: \n>  :sprint_calea: 'false' \n> ", 
+        "stdout_lines": [
+            "29,34c29,35", 
+            "<  :kannel_sendsms_url: 'http://10.164.133.210:13013/cgi-bin/sendsms'", 
+            "<  :kannel_username: 'movius'", 
+            "<  :kannel_password: 'movius'", 
+            "<  :kannel_charset: 'utf-8'", 
+            "<  :kannel_coding: '2'", 
+            "<  :sprint_calea: 'false'", 
+            "---", 
+            ">  :kannel_sendsms_url: ", 
+            ">  :kannel_username: ", 
+            ">  :kannel_password: ", 
+            ">  :kannel_charset: ", 
+            ">  :kannel_coding: ", 
+            ">  :sprint_calea: 'false' ", 
+            "> "
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sms_gateway.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas2/sms_gateway.yml"
+        ], 
+        "delta": "0:00:00.001656", 
+        "end": "2018-09-20 03:56:52.437212", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sms_gateway.yml /etc/ansible/playbooks/uk3/mas/mas2/sms_gateway.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas2", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:56:52.435556", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "29,34c29,35\n<  :kannel_sendsms_url: 'http://10.164.133.210:13013/cgi-bin/sendsms'\n<  :kannel_username: 'movius'\n<  :kannel_password: 'movius'\n<  :kannel_charset: 'utf-8'\n<  :kannel_coding: '2'\n<  :sprint_calea: 'false'\n---\n>  :kannel_sendsms_url: \n>  :kannel_username: \n>  :kannel_password: \n>  :kannel_charset: \n>  :kannel_coding: \n>  :sprint_calea: 'false' \n> ", 
+        "stdout_lines": [
+            "29,34c29,35", 
+            "<  :kannel_sendsms_url: 'http://10.164.133.210:13013/cgi-bin/sendsms'", 
+            "<  :kannel_username: 'movius'", 
+            "<  :kannel_password: 'movius'", 
+            "<  :kannel_charset: 'utf-8'", 
+            "<  :kannel_coding: '2'", 
+            "<  :sprint_calea: 'false'", 
+            "---", 
+            ">  :kannel_sendsms_url: ", 
+            ">  :kannel_username: ", 
+            ">  :kannel_password: ", 
+            ">  :kannel_charset: ", 
+            ">  :kannel_coding: ", 
+            ">  :sprint_calea: 'false' ", 
+            "> "
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sms_gateway.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas1/sms_gateway.yml"
+        ], 
+        "delta": "0:00:00.001707", 
+        "end": "2018-09-20 03:56:52.662924", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sms_gateway.yml /etc/ansible/playbooks/uk3/mas/mas1/sms_gateway.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas1", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:56:52.661217", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "29,34c29,35\n<  :kannel_sendsms_url: 'http://10.164.133.210:13013/cgi-bin/sendsms'\n<  :kannel_username: 'movius'\n<  :kannel_password: 'movius'\n<  :kannel_charset: 'utf-8'\n<  :kannel_coding: '2'\n<  :sprint_calea: 'false'\n---\n>  :kannel_sendsms_url: \n>  :kannel_username: \n>  :kannel_password: \n>  :kannel_charset: \n>  :kannel_coding: \n>  :sprint_calea: 'false' \n> ", 
+        "stdout_lines": [
+            "29,34c29,35", 
+            "<  :kannel_sendsms_url: 'http://10.164.133.210:13013/cgi-bin/sendsms'", 
+            "<  :kannel_username: 'movius'", 
+            "<  :kannel_password: 'movius'", 
+            "<  :kannel_charset: 'utf-8'", 
+            "<  :kannel_coding: '2'", 
+            "<  :sprint_calea: 'false'", 
+            "---", 
+            ">  :kannel_sendsms_url: ", 
+            ">  :kannel_username: ", 
+            ">  :kannel_password: ", 
+            ">  :kannel_charset: ", 
+            ">  :kannel_coding: ", 
+            ">  :sprint_calea: 'false' ", 
+            "> "
+        ]
+    }
+]

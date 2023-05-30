@@ -1,0 +1,40 @@
+
+ha_init:
+ nodetype: db
+ haside: B
+ hapeer: 10.165.46.41
+ virtualip: 10.165.46.10
+ maxpingfailures: 6
+ maxdiscfailures: 6
+ falconMonitorAlarm: minor # major, minor, none
+
+services_monitor:
+ #service: name=set-falcon-debug,priority=5,synchronous=1,arg1=6,alwaysstart=1
+ service: name=wait-network-ready,priority=5,synchronous=1,alwaysstart=1
+ service: name=mounts,priority=5,synchronous=1
+ service: name=vip,priority=5,synchronous=1
+ service: name=sysdMonitor,priority=2,synchronous=0,alwaysstart=1
+ service: name=spm,priority=3,synchronous=1,alwaysstart=1
+ service: name=pgsql,priority=3,synchronous=1,maxwait=120
+ service: name=pgsql-ltq,priority=3,synchronous=1
+ service: name=pgsql-sms,priority=2,synchronous=0
+ service: name=imap,priority=3,synchronous=1
+ service: name=httpd,priority=3,synchronous=1
+ service: name=pgbouncer,priority=3,synchronous=1
+ service: name=scheduler,priority=3,synchronous=1
+ service: name=notifications,priority=3,synchronous=1
+ service: name=ptp,priority=3,synchronous=1
+ service: name=memcached,priority=3,synchronous=1
+ service: name=ms_notif,priority=2,synchronous=0
+# service: name=mbuni,priority=2,synchronous=0
+# service: name=clamav,priority=2,synchronous=0,unused=1
+ service: name=sms-reliability,priority=2,synchronous=0
+ service: name=purge,priority=2,synchronous=0
+#  service: name=pgsql-cdr,priority=2,synchronous=1
+ service: name=tomcat,priority=2,synchronous=1,maxwait=400
+# service: name=opennms,priority=2,synchronous=1
+# service: name=etlcycle,priority=2,synchronous=0
+ service: name=post_start_script,priority=5,synchronous=0
+#service: name=set-falcon-debug,priority=5,synchronous=1,alwaysstart=1,arg1=0
+
+

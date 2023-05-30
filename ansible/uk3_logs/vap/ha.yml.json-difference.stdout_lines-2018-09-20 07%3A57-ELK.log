@@ -1,0 +1,72 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/vap/ha.yml", 
+            "/etc/ansible/playbooks/uk3/vap/vap2/ha.yml"
+        ], 
+        "delta": "0:00:00.001582", 
+        "end": "2018-09-20 07:57:10.429643", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/vap/ha.yml /etc/ansible/playbooks/uk3/vap/vap2/ha.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "vap2", 
+        "rc": 0, 
+        "start": "2018-09-20 07:57:10.428061", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/vap/ha.yml", 
+            "/etc/ansible/playbooks/uk3/vap/vap1/ha.yml"
+        ], 
+        "delta": "0:00:00.001645", 
+        "end": "2018-09-20 07:57:10.717075", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/vap/ha.yml /etc/ansible/playbooks/uk3/vap/vap1/ha.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "vap1", 
+        "rc": 0, 
+        "start": "2018-09-20 07:57:10.715430", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

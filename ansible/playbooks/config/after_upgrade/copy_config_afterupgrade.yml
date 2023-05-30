@@ -1,0 +1,129 @@
+---
+- name: copy conf files before upgrade
+  hosts: mas1
+  gather_facts: no
+  tasks:
+    
+     - name: check disk space
+       shell: df
+       register: disk
+     - name: print disk
+       debug:
+         msg: "{{ disk }}"
+
+#       COPY THE CONF FILES
+
+     - name: Fetch .conf files
+       fetch: dest=/root/config/after_upgrade/mas1/ src=/etc/asterisk/http.conf flat=true validate_checksum=true
+     - name: fetch 
+       fetch: dest=/root/config/after_upgrade/mas1/ src=/opt/mcp/config/scheduler.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/mas1/ src=/opt/mcp/config/ha.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/mas1/ src=/etc/asterisk/indications.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/mas1/  src=/etc/asterisk/manager.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/mas1/ src=/opt/mcp/courier/conf/mmail.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/mas1/ src=/opt/mcp/config/pgbouncer.ini flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/mas1/ src=/opt/mcp/config/sms_gateway.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/mas1/ src=/opt/mcp/sms_receiver/config/smsMcpKannel.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/mas1/ src=/etc/asterisk/sip.conf flat=true validate_checksum=true                                                                                                                                                              
+- hosts: db1
+  gather_facts: yes
+  become: yes
+  tasks:
+     - name: fetch the conf file
+       fetch: dest=/root/config/after_upgrade/db1/ src=/opt/cdrtool/etc/etl.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/db1/ src=/opt/mcp/config/sms.conf flat=true validate_checksum=true
+     - name: fetch
+       fetch: dest=/root/config/after_upgrade/db1/ src=/opt/mcp/config/scheduler.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/db1/ src=/opt/mcp/config/ha.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/db1/ src=/opt/mcp/courier/conf/mmail.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/db1/ src=/opt/mcp/config/pgbouncer.ini flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/db1/ src=/opt/mcp/config/sms_gateway.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/db1/ src=/opt/mcp/sms_receiver/config/smsMcpKannel.conf flat=true validate_checksum=true
+- hosts: cdb
+  gather_facts: yes
+  become: yes
+  tasks:
+     - name: fetch the conf file
+       fetch: dest=/root/config/after_upgrade/cdb/ src=/opt/cdrtool/etc/etl.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/cdb/ src=/opt/mcp/config/sms.conf flat=true validate_checksum=true
+     - name: fetch
+       fetch: dest=/root/config/after_upgrade/cdb/ src=/opt/mcp/config/scheduler.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/cdb/ src=/opt/mcp/config/ha.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/cdb/ src=/opt/mcp/courier/conf/mmail.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/cdb/ src=/opt/mcp/config/pgbouncer.ini flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/cdb/ src=/opt/mcp/config/sms_gateway.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/cdb/ src=/opt/mcp/sms_receiver/config/smsMcpKannel.conf flat=true validate_checksum=true
+- name: Compare regex_groups file Playbook
+  hosts: vap1
+  gather_facts: true
+
+  tasks:
+     - name: Fetch first regex_groups file
+       fetch: dest=/root/config/after_upgrade/vap1/ src=/usr/local/etc/kamailio/regex_groups flat=true validate_checksum=true
+     - name: Fetch .conf files
+       fetch: dest=/root/config/after_upgrade/vap1/ src=/etc/asterisk/http.conf flat=true validate_checksum=true
+     - name: fetch 
+       fetch: dest=/root/config/after_upgrade/vap1/ src=/opt/mcp/config/scheduler.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/vap1/ src=/opt/mcp/config/ha.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/vap1/ src=/etc/asterisk/indications.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/vap1/  src=/etc/asterisk/manager.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/vap1/ src=/opt/mcp/courier/conf/mmail.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/vap1/ src=/opt/mcp/config/pgbouncer.ini flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/vap1/ src=/opt/mcp/config/sms_gateway.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/vap1/ src=/opt/mcp/sms_receiver/config/smsMcpKannel.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/vap1/ src=/etc/asterisk/sip.conf flat=true validate_checksum=true                                              
+
+- hosts: vap2
+  gather_facts: true
+
+  tasks:
+     - name: Fetch second regex_groups file
+       fetch: dest=/root/config/after_upgrade/vap2/ src=/usr/local/etc/kamailio/regex_groups flat=true validate_checksum=true
+     - name: Fetch .conf files
+       fetch: dest=/root/config/after_upgrade/vap2/ src=/etc/asterisk/http.conf flat=true validate_checksum=true
+     - name: fetch 
+       fetch: dest=/root/config/after_upgrade/vap2/ src=/opt/mcp/config/scheduler.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/vap2/ src=/opt/mcp/config/ha.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/vap2/ src=/etc/asterisk/indications.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/vap2/  src=/etc/asterisk/manager.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/vap2/ src=/opt/mcp/courier/conf/mmail.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/vap2/ src=/opt/mcp/config/pgbouncer.ini flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/vap2/ src=/opt/mcp/config/sms_gateway.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/vap2/ src=/opt/mcp/sms_receiver/config/smsMcpKannel.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/root/config/after_upgrade/vap2/ src=/etc/asterisk/sip.conf flat=true validate_checksum=true 

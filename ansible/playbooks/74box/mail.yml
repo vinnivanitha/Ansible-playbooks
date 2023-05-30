@@ -1,0 +1,20 @@
+---
+- hosts: dummy
+  become: yes
+  gather_facts: no
+  tasks:
+   - block:
+     - name: ping the server
+       ping:
+       register: output
+     - name: print output
+       debug: 
+         msg: "{{ output }}"
+     rescue:
+     - name: send email
+       mail:
+         from: vinnivanitha99@gmail.com  
+         to: vanithavuppalapati@outlook.com
+         subject: "failure"
+         body: "fails"
+       when: output|failed

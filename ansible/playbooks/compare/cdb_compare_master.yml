@@ -1,0 +1,13 @@
+---
+- name: Master config playbook
+  hosts: ansible
+  gather_facts: true
+
+- include: cdb_compare_etl.conf.yml  
+- include: cdb_compare_mmail.conf.yml     
+- include: cdb_compare_scheduler.yml  
+- include: cdb_compare_sms_gateway.yml.yml
+- include: cdb_compare_ha.yml.yml    
+- include: cdb_compare_pgbouncer.ini.yml  
+- include: cdb_compare_sms.conf.yml   
+- include: cdb_compare_smsMcpKannel.conf.yml

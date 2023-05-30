@@ -1,0 +1,15 @@
+---
+- hosts: mas1
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: "Compare scheduler.yml"
+      command: diff scheduler.yml scheduler.yml
+      args:
+       chdir: "/opt/mcp/config/"
+      changed_when: false
+      failed_when: "diff.rc > 1"
+      register: diff
+    - name: debug output
+      debug: msg="{{ diff }}"
+  

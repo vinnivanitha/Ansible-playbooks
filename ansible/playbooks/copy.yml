@@ -1,0 +1,10 @@
+---
+- hosts: ansible
+  gather_facts: yes
+  become: yes
+  tasks:
+     - name: copy file
+       copy:
+          src=/root/{{ myvars.file }}
+          dest=/root/vanitha/
+       register: copyoutput

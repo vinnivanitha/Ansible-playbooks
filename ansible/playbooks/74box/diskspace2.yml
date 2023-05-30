@@ -1,0 +1,12 @@
+---
+- hosts: local_10
+  gather_facts: no
+  tasks:
+   - name: test for available disk space
+     assert:
+       that: 
+         - not {{ item.mount== '/' and ( item.size_available < item.size_total - ( item.size_total|float * 0.5 ) ) }}
+     with_items: "{{ ansible_mounts }}"
+     ignore_errors: yes
+     register: disk_free
+

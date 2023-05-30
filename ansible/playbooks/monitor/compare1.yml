@@ -1,0 +1,75 @@
+---
+- name: Compare playbook #1
+  hosts: all
+  gather_facts: true
+
+  tasks:
+   - name: "Compare sip.conf"
+     command: diff sip.conf sip.conf
+     args:
+       chdir: "/etc/asterisk/"
+     changed_when: false
+     failed_when: "diff.rc > 1"
+     register: diff
+   - name: debug output
+     debug: msg="{{ diff.stdout }}"
+
+   - name: "Compare smsMcpKannel.conf"
+     command: diff smsMcpKannel.conf smsMcpKannel.conf
+     args:
+       chdir: "/opt/mcp/sms_receiver/config/"
+     changed_when: false
+     failed_when: "diff.rc > 1"
+     register: diff
+   - name: debug output
+     debug: msg="{{ diff.stdout }}"
+
+   - name: "Compare sms_gateway.yml"
+     command: diff sms_gateway.yml sms_gateway.yml 
+     args:
+       chdir: "/opt/mcp/config/"
+     changed_when: false
+     failed_when: "diff.rc > 1"
+     register: diff
+   - name: debug output
+     debug: msg="{{ diff.stdout }}"
+
+   - name: "Compare hosts"
+     command: diff hosts hosts 
+     args:
+       chdir: "/etc/"
+     changed_when: false
+     failed_when: "diff.rc > 1"
+     register: diff
+   - name: debug output
+     debug: msg="{{ diff.stdout }}"
+
+   - name: "Compare mmail.conf"
+     command: diff mmail.conf mmail.conf 
+     args:
+       chdir: "/opt/mcp/courier/conf/"
+     changed_when: false
+     failed_when: "diff.rc > 1"
+     register: diff
+   - name: debug output
+     debug: msg="{{ diff.stdout }}"
+
+   - name: "Compare scheduler.yml"
+     command: diff scheduler.yml scheduler.yml
+     args:
+       chdir: "/opt/mcp/config/"
+     changed_when: false
+     failed_when: "diff.rc > 1"
+     register: diff
+   - name: debug output
+     debug: msg="{{ diff.stdout }}"
+
+   - name: "Compare pgbouncer.ini"
+     command: diff pgbouncer.ini pgbouncer.ini
+     args:
+       chdir: "/opt/mcp/config/"
+     changed_when: false
+     failed_when: "diff.rc > 1"
+     register: diff
+   - name: debug output
+     debug: msg="{{ diff.stdout }}"

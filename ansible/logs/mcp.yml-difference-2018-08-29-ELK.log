@@ -1,0 +1,1 @@
+{"stderr_lines": [], "cmd": ["diff", "/etc/ansible/playbooks/master/mas/mcp.yml", "/etc/ansible/playbooks/uk3/mas/mas1/mcp.yml"], "stdout": "", "delta": "0:00:00.001683", "stdout_lines": [], "failed_when_result": false, "end": "2018-08-29 04:51:40.059666", "start": "2018-08-29 04:51:40.057983", "changed": false, "failed": false, "stderr": "", "rc": 0}

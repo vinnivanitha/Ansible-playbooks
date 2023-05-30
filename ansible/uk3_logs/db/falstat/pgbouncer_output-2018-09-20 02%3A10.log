@@ -1,0 +1,15 @@
+{
+    "changed": true, 
+    "cmd": "/opt/mcp/falcon/fmc -v | grep pgbouncer", 
+    "delta": "0:00:01.016455", 
+    "end": "2018-09-20 02:12:19.235012", 
+    "failed": false, 
+    "rc": 0, 
+    "start": "2018-09-20 02:12:18.218557", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "pgbouncer         11  3   running     2     134104     start/running    24488                  ", 
+    "stdout_lines": [
+        "pgbouncer         11  3   running     2     134104     start/running    24488                  "
+    ]
+}

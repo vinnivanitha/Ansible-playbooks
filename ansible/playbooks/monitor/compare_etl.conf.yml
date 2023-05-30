@@ -1,0 +1,41 @@
+# This playbook compares a specific file from two different hosts
+# Example usage: ansible-playbook compare_etl.conf.yml
+
+---
+- name: Compare etl.conf file Playbook
+  hosts: db1_vip
+  gather_facts: true
+
+  tasks:
+  - name: Fetch first etl.conf file
+    fetch: dest=save/db1_vip/etl.conf src=/opt/cdrtool/etc/etl.conf flat=true validate_checksum=true
+
+- hosts: db2_vip
+  gather_facts: true
+
+  tasks:
+  - name: Fetch second etl.conf file
+    fetch: dest=save/db2_vip/etl.conf src=/opt/cdrtool/etc/etl.conf flat=true validate_checksum=true
+
+- hosts: cm1
+  gather_facts: true
+
+  tasks:
+  - name: 'Compare etl.conf files'
+    command: 
+      diff /etc/ansible/playbooks/monitor/save/db1_vip/etl.conf /etc/ansible/playbooks/monitor/save/db2_vip/etl.conf
+      chdir=/etc/ansible/logs
+    register: difference
+    failed_when: difference.rc > 1
+    changed_when: difference.rc == 1
+
+  - name: Print differences
+    debug: msg='{{ difference.stdout }}'
+
+  - name: Create output file
+    local_action: copy content='{{ item.value }}' dest='/etc/ansible/logs/etl.conf-{{ item.variable }}-{{ ansible_date_time.date }}-{{ ansible_hostname }}.log'
+    with_items:
+      - variable: difference
+        value: '{{ difference }}'
+    no_log: true
+

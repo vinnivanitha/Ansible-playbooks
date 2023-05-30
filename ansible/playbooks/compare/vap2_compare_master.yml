@@ -1,0 +1,17 @@
+---
+- name: Master config playbook
+  hosts: ansible
+  gather_facts: true
+
+- include: vap2_compare_ha.yml.yml           
+- include: vap2_compare_manager.conf.yml 
+- include: vap2_compare_pgbouncer.ini.yml 
+- include: vap2_compare_sip.conf.yml
+- include: vap2_compare_http.conf.yml         
+- include: vap2_compare_mcp.yml.yml       
+- include: vap2_compare_regex_groups.yml   
+- include: vap2_compare_sms_gateway.yml.yml
+- include: vap2_compare_indications.conf.yml 
+- include: vap2_compare_mmail.conf.yml   
+- include: vap2_compare_scheduler.yml    
+- include: vap2_compare_smsMcpKannel.conf.yml

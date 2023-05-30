@@ -1,0 +1,190 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/mmail.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas4/mmail.conf"
+        ], 
+        "delta": "0:00:00.001740", 
+        "end": "2018-09-20 03:58:19.919563", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/mmail.conf /etc/ansible/playbooks/uk3/mas/mas4/mmail.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas4", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:58:19.917823", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "39c39\n< setParam MMAIL_LOCATOR_DATABASE \"10.165.46.10\"\n---\n> setParam MMAIL_LOCATOR_DATABASE \"localhost\"\n59,60c59,60\n< #setParam MMAIL_START_SSL \"NO\"\n< setParam MMAIL_START_SSL \"YES\"\n---\n> setParam MMAIL_START_SSL \"NO\"\n> #setParam MMAIL_START_SSL \"YES\"", 
+        "stdout_lines": [
+            "39c39", 
+            "< setParam MMAIL_LOCATOR_DATABASE \"10.165.46.10\"", 
+            "---", 
+            "> setParam MMAIL_LOCATOR_DATABASE \"localhost\"", 
+            "59,60c59,60", 
+            "< #setParam MMAIL_START_SSL \"NO\"", 
+            "< setParam MMAIL_START_SSL \"YES\"", 
+            "---", 
+            "> setParam MMAIL_START_SSL \"NO\"", 
+            "> #setParam MMAIL_START_SSL \"YES\""
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/mmail.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas3/mmail.conf"
+        ], 
+        "delta": "0:00:00.001669", 
+        "end": "2018-09-20 03:58:20.153059", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/mmail.conf /etc/ansible/playbooks/uk3/mas/mas3/mmail.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas3", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:58:20.151390", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "39c39\n< setParam MMAIL_LOCATOR_DATABASE \"10.165.46.10\"\n---\n> setParam MMAIL_LOCATOR_DATABASE \"localhost\"\n59,60c59,60\n< #setParam MMAIL_START_SSL \"NO\"\n< setParam MMAIL_START_SSL \"YES\"\n---\n> setParam MMAIL_START_SSL \"NO\"\n> #setParam MMAIL_START_SSL \"YES\"", 
+        "stdout_lines": [
+            "39c39", 
+            "< setParam MMAIL_LOCATOR_DATABASE \"10.165.46.10\"", 
+            "---", 
+            "> setParam MMAIL_LOCATOR_DATABASE \"localhost\"", 
+            "59,60c59,60", 
+            "< #setParam MMAIL_START_SSL \"NO\"", 
+            "< setParam MMAIL_START_SSL \"YES\"", 
+            "---", 
+            "> setParam MMAIL_START_SSL \"NO\"", 
+            "> #setParam MMAIL_START_SSL \"YES\""
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/mmail.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas2/mmail.conf"
+        ], 
+        "delta": "0:00:00.001719", 
+        "end": "2018-09-20 03:58:20.396765", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/mmail.conf /etc/ansible/playbooks/uk3/mas/mas2/mmail.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas2", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:58:20.395046", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "39c39\n< setParam MMAIL_LOCATOR_DATABASE \"10.165.46.10\"\n---\n> setParam MMAIL_LOCATOR_DATABASE \"localhost\"\n59,60c59,60\n< #setParam MMAIL_START_SSL \"NO\"\n< setParam MMAIL_START_SSL \"YES\"\n---\n> setParam MMAIL_START_SSL \"NO\"\n> #setParam MMAIL_START_SSL \"YES\"", 
+        "stdout_lines": [
+            "39c39", 
+            "< setParam MMAIL_LOCATOR_DATABASE \"10.165.46.10\"", 
+            "---", 
+            "> setParam MMAIL_LOCATOR_DATABASE \"localhost\"", 
+            "59,60c59,60", 
+            "< #setParam MMAIL_START_SSL \"NO\"", 
+            "< setParam MMAIL_START_SSL \"YES\"", 
+            "---", 
+            "> setParam MMAIL_START_SSL \"NO\"", 
+            "> #setParam MMAIL_START_SSL \"YES\""
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/mmail.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas1/mmail.conf"
+        ], 
+        "delta": "0:00:00.001724", 
+        "end": "2018-09-20 03:58:20.621655", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/mmail.conf /etc/ansible/playbooks/uk3/mas/mas1/mmail.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas1", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:58:20.619931", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "39c39\n< setParam MMAIL_LOCATOR_DATABASE \"10.165.46.10\"\n---\n> setParam MMAIL_LOCATOR_DATABASE \"localhost\"\n59,60c59,60\n< #setParam MMAIL_START_SSL \"NO\"\n< setParam MMAIL_START_SSL \"YES\"\n---\n> setParam MMAIL_START_SSL \"NO\"\n> #setParam MMAIL_START_SSL \"YES\"", 
+        "stdout_lines": [
+            "39c39", 
+            "< setParam MMAIL_LOCATOR_DATABASE \"10.165.46.10\"", 
+            "---", 
+            "> setParam MMAIL_LOCATOR_DATABASE \"localhost\"", 
+            "59,60c59,60", 
+            "< #setParam MMAIL_START_SSL \"NO\"", 
+            "< setParam MMAIL_START_SSL \"YES\"", 
+            "---", 
+            "> setParam MMAIL_START_SSL \"NO\"", 
+            "> #setParam MMAIL_START_SSL \"YES\""
+        ]
+    }
+]

@@ -1,0 +1,170 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/ha.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas4/ha.yml"
+        ], 
+        "delta": "0:00:00.001654", 
+        "end": "2018-09-20 03:56:49.809312", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/ha.yml /etc/ansible/playbooks/uk3/mas/mas4/ha.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas4", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:56:49.807658", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "40a41\n>  service: name=sms-activation,priority=2,synchronous=0\n53,54d53\n< \n< ", 
+        "stdout_lines": [
+            "40a41", 
+            ">  service: name=sms-activation,priority=2,synchronous=0", 
+            "53,54d53", 
+            "< ", 
+            "< "
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/ha.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas3/ha.yml"
+        ], 
+        "delta": "0:00:00.001666", 
+        "end": "2018-09-20 03:56:50.039126", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/ha.yml /etc/ansible/playbooks/uk3/mas/mas3/ha.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas3", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:56:50.037460", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "40a41\n>  service: name=sms-activation,priority=2,synchronous=0\n53,54d53\n< \n< ", 
+        "stdout_lines": [
+            "40a41", 
+            ">  service: name=sms-activation,priority=2,synchronous=0", 
+            "53,54d53", 
+            "< ", 
+            "< "
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/ha.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas2/ha.yml"
+        ], 
+        "delta": "0:00:00.001672", 
+        "end": "2018-09-20 03:56:50.288750", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/ha.yml /etc/ansible/playbooks/uk3/mas/mas2/ha.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas2", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:56:50.287078", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "40a41\n>  service: name=sms-activation,priority=2,synchronous=0\n53,54d53\n< \n< ", 
+        "stdout_lines": [
+            "40a41", 
+            ">  service: name=sms-activation,priority=2,synchronous=0", 
+            "53,54d53", 
+            "< ", 
+            "< "
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/ha.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas1/ha.yml"
+        ], 
+        "delta": "0:00:00.001683", 
+        "end": "2018-09-20 03:56:50.516496", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/ha.yml /etc/ansible/playbooks/uk3/mas/mas1/ha.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas1", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-20 03:56:50.514813", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "40a41\n>  service: name=sms-activation,priority=2,synchronous=0\n53,54d53\n< \n< ", 
+        "stdout_lines": [
+            "40a41", 
+            ">  service: name=sms-activation,priority=2,synchronous=0", 
+            "53,54d53", 
+            "< ", 
+            "< "
+        ]
+    }
+]

@@ -1,0 +1,41 @@
+# This playbook compares a specific file from two different hosts
+# Example usage: ansible-playbook compare_sms.conf.yml
+
+---
+- name: Compare sms.conf file Playbook
+  hosts: db1_vip
+  gather_facts: true
+
+  tasks:
+  - name: Fetch first sms.conf file
+    fetch: dest=save/db1_vip/sms.conf src=/opt/mcp/config/sms.conf flat=true validate_checksum=true
+
+- hosts: db2_vip
+  gather_facts: true
+
+  tasks:
+  - name: Fetch second sms.conf file
+    fetch: dest=save/db2_vip/sms.conf src=/opt/mcp/config/sms.conf flat=true validate_checksum=true
+
+- hosts: cm1
+  gather_facts: true
+
+  tasks:
+  - name: 'Compare sms.conf files'
+    command: 
+      diff /etc/ansible/playbooks/monitor/save/db1_vip/sms.conf /etc/ansible/playbooks/monitor/save/db2_vip/sms.conf
+      chdir=/etc/ansible/logs
+    register: difference
+    failed_when: difference.rc > 1
+    changed_when: difference.rc == 1
+
+  - name: Print differences
+    debug: msg='{{ difference.stdout }}'
+
+  - name: Create output file
+    local_action: copy content='{{ item.value }}' dest='/etc/ansible/logs/sms.conf-{{ item.variable }}-{{ ansible_date_time.date }}-{{ ansible_hostname }}.log'
+    with_items:
+      - variable: difference
+        value: '{{ difference }}'
+    no_log: true
+

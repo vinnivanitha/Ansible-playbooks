@@ -1,0 +1,29 @@
+---
+- hosts: ansible
+  gather_facts: yes
+  become: yes
+   
+  tasks:
+   - block:
+     - name: create file
+       command: touch file1
+       register: file1
+     - name: create file2
+       command: touchfile2
+       register: file2
+     - name: create file3
+       command: touchfile3
+       register: file3
+
+     rescue:
+     - name: send an email
+       mail: 
+         to: vinnivanitha99@gmail.com
+         subject: "file1 fails"
+         body: " fails to create file"
+       when: file1|failed or  file2| failed or file3|failed
+    
+
+   
+
+      

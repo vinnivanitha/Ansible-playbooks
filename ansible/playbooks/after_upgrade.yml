@@ -1,0 +1,14 @@
+# AFTER UPGRDAE
+---
+- hosts: mas1
+  gather_facts: true
+  become: yes
+  tasks:
+     
+     - name: check disk space
+       shell: df
+       register: disk
+     - name: print disk
+       debug:
+         msg: "{{ disk }}"
+

@@ -1,0 +1,11 @@
+--- 
+- hosts: nano
+  gather_facts: yes
+  become: yes
+  tasks: 
+      - name: check disk space
+        include: disk_space.yml
+      - name: check falstat services
+        inlcude: falstat.yml
+      - name: copy conf files after upgrade the software
+        include: master.yml

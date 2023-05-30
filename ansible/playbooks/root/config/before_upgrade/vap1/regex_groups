@@ -1,0 +1,31 @@
+### List of User-Agents publishing presence status
+[0]
+
+# myIDs
+^Movius iOS myIDs
+^Movius Android MyIDs
+^Movius Android myIDs beta
+^CSipSimple
+
+# Cafe
+^Cafe MAS
+^CAFE MAS
+
+# Tyntec
+^TynTec B2BUA
+
+# Anveo
+^Anveo Callcontrol
+^Anveo Server
+
+### Blacklisted source IP's
+[1]
+
+^190\.232\.250\.226$
+^122\.5\.27\.125$
+^86\.92\.112\.
+
+#These IPs will not be checked for User-Agent strings.
+[2]
+
+^64\.156\.174\.74$

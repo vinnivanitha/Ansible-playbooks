@@ -1,0 +1,1 @@
+{"stderr_lines": [], "cmd": ["diff", "/etc/ansible/playbooks/master/db/sms.conf", "/etc/ansible/playbooks/uk3/db/db1a/sms.conf"], "stdout": "", "delta": "0:00:00.001894", "stdout_lines": [], "failed_when_result": false, "end": "2018-08-29 05:32:24.498907", "start": "2018-08-29 05:32:24.497013", "changed": false, "failed": false, "stderr": "", "rc": 0}

@@ -1,0 +1,33 @@
+[ansible_server]
+ansible ansible_ssh_host=172.16.1.198
+
+[nano_server]
+nano ansible_ssh_host=172.16.1.160
+
+
+[mas_servers]
+mas1 ansible_ssh_host=10.164.133.210 
+mas2 ansible_ssh_host=10.164.133.211
+mas3 ansible_ssh_host=10.164.133.212
+mas4 ansible_ssh_host=10.164.133.213
+
+[vap_servers]
+vap1 ansible_ssh_host=10.164.133.201
+vap2 ansible_ssh_host=10.164.133.202
+
+[db_servers]
+db1a ansible_ssh_host=10.165.46.11
+db2a ansible_ssh_host=10.165.46.41
+db2b ansible_ssh_host=10.165.46.42
+
+[cdr_servers]
+cdr1a ansible_ssh_host=10.165.46.11
+cdr2a ansible_ssh_host=10.165.46.51
+cdr2b ansible_ssh_host=10.165.46.52
+
+[userdb_servers]
+user1  ansible_ssh_host=10.165.46.31
+user2a ansible_ssh_host=10.165.46.61
+user2b ansible_ssh_host=10.165.46.62
+
+

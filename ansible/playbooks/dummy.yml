@@ -1,0 +1,16 @@
+---
+- hosts: ansible
+  gather_facts: yes
+  become: yes
+  tasks:
+   - block:
+     - name: jjj
+       command: touchh file1
+       register: file
+     rescue:
+     - name: Send status report
+       mail:
+         to: vinnivanitha99@gmail.com
+         subject: upgrading task is  failed
+         body: xyzzzz
+       when: file | failed

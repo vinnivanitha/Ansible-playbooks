@@ -1,0 +1,143 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/ha.yml", 
+            "/etc/ansible/playbooks/uk3/db/db1a/ha.yml"
+        ], 
+        "delta": "0:00:00.002025", 
+        "end": "2018-09-12 09:42:05.097842", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/ha.yml /etc/ansible/playbooks/uk3/db/db1a/ha.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db1a", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-12 09:42:05.095817", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "5,6c5,6\n<  hapeer: 10.165.46.42\n<  virtualip: 10.165.46.10\n---\n>  hapeer: 0.0.0.0\n>  virtualip: 10.165.46.40\n34c34\n<  service: name=tomcat,priority=2,synchronous=1,maxwait=400\n---\n> # service: name=tomcat,priority=2,synchronous=1,maxwait=400", 
+        "stdout_lines": [
+            "5,6c5,6", 
+            "<  hapeer: 10.165.46.42", 
+            "<  virtualip: 10.165.46.10", 
+            "---", 
+            ">  hapeer: 0.0.0.0", 
+            ">  virtualip: 10.165.46.40", 
+            "34c34", 
+            "<  service: name=tomcat,priority=2,synchronous=1,maxwait=400", 
+            "---", 
+            "> # service: name=tomcat,priority=2,synchronous=1,maxwait=400"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/ha.yml", 
+            "/etc/ansible/playbooks/uk3/db/db2a/ha.yml"
+        ], 
+        "delta": "0:00:00.001856", 
+        "end": "2018-09-12 09:42:05.343475", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/ha.yml /etc/ansible/playbooks/uk3/db/db2a/ha.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db2a", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-12 09:42:05.341619", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "5,6c5,6\n<  hapeer: 10.165.46.42\n<  virtualip: 10.165.46.10\n---\n>  hapeer: 0.0.0.0\n>  virtualip: 10.165.46.40\n34c34\n<  service: name=tomcat,priority=2,synchronous=1,maxwait=400\n---\n> # service: name=tomcat,priority=2,synchronous=1,maxwait=400", 
+        "stdout_lines": [
+            "5,6c5,6", 
+            "<  hapeer: 10.165.46.42", 
+            "<  virtualip: 10.165.46.10", 
+            "---", 
+            ">  hapeer: 0.0.0.0", 
+            ">  virtualip: 10.165.46.40", 
+            "34c34", 
+            "<  service: name=tomcat,priority=2,synchronous=1,maxwait=400", 
+            "---", 
+            "> # service: name=tomcat,priority=2,synchronous=1,maxwait=400"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/db/ha.yml", 
+            "/etc/ansible/playbooks/uk3/db/db2b/ha.yml"
+        ], 
+        "delta": "0:00:00.001767", 
+        "end": "2018-09-12 09:42:05.571444", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/db/ha.yml /etc/ansible/playbooks/uk3/db/db2b/ha.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "db2b", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-09-12 09:42:05.569677", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "5,6c5,6\n<  hapeer: 10.165.46.42\n<  virtualip: 10.165.46.10\n---\n>  hapeer: 0.0.0.0\n>  virtualip: 10.165.46.40\n34c34\n<  service: name=tomcat,priority=2,synchronous=1,maxwait=400\n---\n> # service: name=tomcat,priority=2,synchronous=1,maxwait=400", 
+        "stdout_lines": [
+            "5,6c5,6", 
+            "<  hapeer: 10.165.46.42", 
+            "<  virtualip: 10.165.46.10", 
+            "---", 
+            ">  hapeer: 0.0.0.0", 
+            ">  virtualip: 10.165.46.40", 
+            "34c34", 
+            "<  service: name=tomcat,priority=2,synchronous=1,maxwait=400", 
+            "---", 
+            "> # service: name=tomcat,priority=2,synchronous=1,maxwait=400"
+        ]
+    }
+]

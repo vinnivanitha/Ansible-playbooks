@@ -1,0 +1,184 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sip.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas4/sip.conf"
+        ], 
+        "delta": "0:00:00.002039", 
+        "end": "2018-10-03 07:07:17.643708", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sip.conf /etc/ansible/playbooks/uk3/mas/mas4/sip.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas4", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-10-03 07:07:17.641669", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "5,7c5,7\n< udpbindaddr=10.164.133.210:5060\n< tcpbindaddr=10.164.133.210:5060\n< tlsbindaddr=10.164.133.210:5060\n---\n> udpbindaddr=10.164.133.213:5060\n> tcpbindaddr=10.164.133.213:5060\n> tlsbindaddr=10.164.133.213:5060\n152c152\n< host=10.164.133.210\n---\n> host=10.164.133.213", 
+        "stdout_lines": [
+            "5,7c5,7", 
+            "< udpbindaddr=10.164.133.210:5060", 
+            "< tcpbindaddr=10.164.133.210:5060", 
+            "< tlsbindaddr=10.164.133.210:5060", 
+            "---", 
+            "> udpbindaddr=10.164.133.213:5060", 
+            "> tcpbindaddr=10.164.133.213:5060", 
+            "> tlsbindaddr=10.164.133.213:5060", 
+            "152c152", 
+            "< host=10.164.133.210", 
+            "---", 
+            "> host=10.164.133.213"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sip.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas3/sip.conf"
+        ], 
+        "delta": "0:00:00.001970", 
+        "end": "2018-10-03 07:07:17.893593", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sip.conf /etc/ansible/playbooks/uk3/mas/mas3/sip.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas3", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-10-03 07:07:17.891623", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "5,7c5,7\n< udpbindaddr=10.164.133.210:5060\n< tcpbindaddr=10.164.133.210:5060\n< tlsbindaddr=10.164.133.210:5060\n---\n> udpbindaddr=10.164.133.212:5060\n> tcpbindaddr=10.164.133.212:5060\n> tlsbindaddr=10.164.133.212:5060\n152c152\n< host=10.164.133.210\n---\n> host=10.164.133.212", 
+        "stdout_lines": [
+            "5,7c5,7", 
+            "< udpbindaddr=10.164.133.210:5060", 
+            "< tcpbindaddr=10.164.133.210:5060", 
+            "< tlsbindaddr=10.164.133.210:5060", 
+            "---", 
+            "> udpbindaddr=10.164.133.212:5060", 
+            "> tcpbindaddr=10.164.133.212:5060", 
+            "> tlsbindaddr=10.164.133.212:5060", 
+            "152c152", 
+            "< host=10.164.133.210", 
+            "---", 
+            "> host=10.164.133.212"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sip.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas2/sip.conf"
+        ], 
+        "delta": "0:00:00.001803", 
+        "end": "2018-10-03 07:07:18.125482", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sip.conf /etc/ansible/playbooks/uk3/mas/mas2/sip.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas2", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-10-03 07:07:18.123679", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "5,7c5,7\n< udpbindaddr=10.164.133.210:5060\n< tcpbindaddr=10.164.133.210:5060\n< tlsbindaddr=10.164.133.210:5060\n---\n> udpbindaddr=10.164.133.211:5060\n> tcpbindaddr=10.164.133.211:5060\n> tlsbindaddr=10.164.133.211:5060\n152c152\n< host=10.164.133.210\n---\n> host=10.164.133.211", 
+        "stdout_lines": [
+            "5,7c5,7", 
+            "< udpbindaddr=10.164.133.210:5060", 
+            "< tcpbindaddr=10.164.133.210:5060", 
+            "< tlsbindaddr=10.164.133.210:5060", 
+            "---", 
+            "> udpbindaddr=10.164.133.211:5060", 
+            "> tcpbindaddr=10.164.133.211:5060", 
+            "> tlsbindaddr=10.164.133.211:5060", 
+            "152c152", 
+            "< host=10.164.133.210", 
+            "---", 
+            "> host=10.164.133.211"
+        ]
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/sip.conf", 
+            "/etc/ansible/playbooks/uk3/mas/mas1/sip.conf"
+        ], 
+        "delta": "0:00:00.002182", 
+        "end": "2018-10-03 07:07:18.352608", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/sip.conf /etc/ansible/playbooks/uk3/mas/mas1/sip.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas1", 
+        "rc": 0, 
+        "start": "2018-10-03 07:07:18.350426", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

@@ -1,0 +1,15 @@
+{
+    "changed": true, 
+    "cmd": "/opt/mcp/falcon/fmc -v | grep httpd", 
+    "delta": "0:00:01.006748", 
+    "end": "2019-04-21 17:28:43.815130", 
+    "failed": false, 
+    "rc": 0, 
+    "start": "2019-04-21 17:28:42.808382", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "httpd             8   3   running     2     13719      start/running    14673                  ", 
+    "stdout_lines": [
+        "httpd             8   3   running     2     13719      start/running    14673                  "
+    ]
+}

@@ -1,0 +1,12 @@
+---
+- hosts: nanoserver
+  gather_facts: true
+  tasks:
+   - name: Upgrade all the nano servers
+     command: spm_util -c upgrade {{ansible_hostname}} -s MCP-3.4.{{ mcp_version }}
+     command: ifconfig
+     delegate_to: nanoserver
+     register: myname
+
+   - name: Print myname
+     debug: msg="{{ myname.stdout }}"

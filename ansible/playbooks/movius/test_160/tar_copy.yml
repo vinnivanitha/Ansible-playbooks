@@ -1,0 +1,22 @@
+     - block:
+       - name: copy tar file from 198 to 160
+         copy:
+            src=/root/builds/3.4/"{{ nnaovars.tar }}"
+            dest=/root/builds/3.4/
+         register: copyoutput
+         delegate_to: nano
+        
+
+       rescue:
+       
+       - name: send mail
+         mail:
+           to: "{{ nanovars.mail }}"
+           subject: copying tar file from remote server is failed
+           body: copying tar file from ansible_server to nano_server is failed
+         when: copyoutput is failed
+
+       - name: pause the task
+         meta: end_play
+         when: copyoutput is failed
+

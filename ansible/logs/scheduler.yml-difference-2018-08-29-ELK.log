@@ -1,0 +1,1 @@
+{"stderr_lines": [], "cmd": ["diff", "/etc/ansible/playbooks/master/db/scheduler.yml", "/etc/ansible/playbooks/uk3/db/db1a/scheduler.yml"], "stdout": "", "delta": "0:00:00.001836", "stdout_lines": [], "failed_when_result": false, "end": "2018-08-29 05:32:21.669917", "start": "2018-08-29 05:32:21.668081", "changed": false, "failed": false, "stderr": "", "rc": 0}

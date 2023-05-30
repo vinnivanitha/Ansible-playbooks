@@ -1,0 +1,12 @@
+---
+- hosts: ansible
+  gather_facts: true
+
+  tasks:
+  - name: 'Compare indications.conf files'
+    command: 
+      diff /root/config/before_upgrade/mas1/indications.conf /root/config/after_upgrade/mas1/indications.conf
+      chdir=/root/config/
+    register: difference
+    failed_when: difference.rc > 1
+    changed_when: difference.rc == 1

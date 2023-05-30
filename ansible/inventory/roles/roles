@@ -1,0 +1,5 @@
+sendmail_host: smtp.google.com
+sendmail_port: 587
+sendmail_username: "vinnivanitha99@gmail.com"
+sendmail_password: "password@1"
+sendmail_to: vinnivanitha99@gmail.com

@@ -1,0 +1,10 @@
+auto-attendant  dial ANSWER
+auto-attendant  end-call
+auto-attendant  transfer ANSWER
+handle-outdials external-deposit success
+handle-outdials mwi-outdial success
+voicemail       announce-and-transfer
+voicemail       caller-operator-transfer
+voicemail       subscriber-operator-transfer
+voicemail       transfer-to-forward
+broadcaster	    broadcastreciever

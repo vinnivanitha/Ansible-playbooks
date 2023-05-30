@@ -1,0 +1,148 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/scheduler.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas4/scheduler.yml"
+        ], 
+        "delta": "0:00:00.085553", 
+        "end": "2018-10-08 02:21:32.272689", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/scheduler.yml /etc/ansible/playbooks/uk3/mas/mas4/scheduler.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas4", 
+        "rc": 0, 
+        "start": "2018-10-08 02:21:32.187136", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/scheduler.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas3/scheduler.yml"
+        ], 
+        "delta": "0:00:00.002326", 
+        "end": "2018-10-08 02:21:32.500996", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/scheduler.yml /etc/ansible/playbooks/uk3/mas/mas3/scheduler.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas3", 
+        "rc": 0, 
+        "start": "2018-10-08 02:21:32.498670", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/scheduler.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas2/scheduler.yml"
+        ], 
+        "delta": "0:00:00.019589", 
+        "end": "2018-10-08 02:21:32.743704", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/scheduler.yml /etc/ansible/playbooks/uk3/mas/mas2/scheduler.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas2", 
+        "rc": 0, 
+        "start": "2018-10-08 02:21:32.724115", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": true, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/mas/scheduler.yml", 
+            "/etc/ansible/playbooks/uk3/mas/mas1/scheduler.yml"
+        ], 
+        "delta": "0:00:00.001635", 
+        "end": "2018-10-08 02:21:32.969361", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/mas/scheduler.yml /etc/ansible/playbooks/uk3/mas/mas1/scheduler.yml", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "mas1", 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2018-10-08 02:21:32.967726", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "11c11\n<  :log_level: 'error'\n---\n>  :log_level: 'debug'", 
+        "stdout_lines": [
+            "11c11", 
+            "<  :log_level: 'error'", 
+            "---", 
+            ">  :log_level: 'debug'"
+        ]
+    }
+]

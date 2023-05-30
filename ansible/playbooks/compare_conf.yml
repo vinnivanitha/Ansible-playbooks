@@ -1,0 +1,19 @@
+#This playbook is for comparing conf files in mas1
+---
+- hosts: mas1
+  gather_facts: yes
+  become: yes
+  tasks:
+     - name: check disk sapce
+       shell: df | tail --lines=+2 | sed s/%//g | awk '{ if($5 > 50) print $0;}' | mail -s "space alert" vinnivanitha99@gmail.com
+       register: disk_output
+     - name: print disk_space
+       debug:
+          msg: "{{ disk_output }}"
+   
+# BEFORE UPGRADE COPY THE CONF FILES
+      
+     - name: copy conf files to mas1 to ansible
+       import_task: mas1_configfiles.yml
+     
+

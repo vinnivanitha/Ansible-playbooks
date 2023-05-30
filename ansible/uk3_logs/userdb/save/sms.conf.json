@@ -1,0 +1,107 @@
+[
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/userdb/sms.conf", 
+            "/etc/ansible/playbooks/uk3/userdb/user2b/sms.conf"
+        ], 
+        "delta": "0:00:00.002020", 
+        "end": "2018-09-18 02:27:24.075807", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/userdb/sms.conf /etc/ansible/playbooks/uk3/userdb/user2b/sms.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "user2b", 
+        "rc": 0, 
+        "start": "2018-09-18 02:27:24.073787", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/userdb/sms.conf", 
+            "/etc/ansible/playbooks/uk3/userdb/user2a/sms.conf"
+        ], 
+        "delta": "0:00:00.001871", 
+        "end": "2018-09-18 02:27:24.324357", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/userdb/sms.conf /etc/ansible/playbooks/uk3/userdb/user2a/sms.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "user2a", 
+        "rc": 0, 
+        "start": "2018-09-18 02:27:24.322486", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }, 
+    {
+        "_ansible_ignore_errors": null, 
+        "_ansible_item_result": true, 
+        "_ansible_no_log": false, 
+        "_ansible_parsed": true, 
+        "changed": false, 
+        "cmd": [
+            "diff", 
+            "/etc/ansible/playbooks/master/userdb/sms.conf", 
+            "/etc/ansible/playbooks/uk3/userdb/user1/sms.conf"
+        ], 
+        "delta": "0:00:00.001815", 
+        "end": "2018-09-18 02:27:24.558553", 
+        "failed": false, 
+        "failed_when_result": false, 
+        "invocation": {
+            "module_args": {
+                "_raw_params": "diff /etc/ansible/playbooks/master/userdb/sms.conf /etc/ansible/playbooks/uk3/userdb/user1/sms.conf", 
+                "_uses_shell": false, 
+                "chdir": "/etc/ansible/playbooks/", 
+                "creates": null, 
+                "executable": null, 
+                "removes": null, 
+                "stdin": null, 
+                "warn": true
+            }
+        }, 
+        "item": "user1", 
+        "rc": 0, 
+        "start": "2018-09-18 02:27:24.556738", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+]

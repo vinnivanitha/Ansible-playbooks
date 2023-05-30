@@ -1,0 +1,25 @@
+--- 
+- 
+  become: true
+  hosts: ansible_server
+  tasks: 
+    - 
+      action: ping
+    - 
+      command: touchhfile1
+      name: "create file"
+      register: output
+      rescue: 
+    - 
+      local_action: 
+        body: fails
+        host: ansible_server
+        module: mail
+        subject: failure
+        to: vinnivanitha99@gmail.com
+      name: "send email"
+      when: output | failure
+    - 
+      command: "create  file2"
+      name: "touch 2ndfile"
+

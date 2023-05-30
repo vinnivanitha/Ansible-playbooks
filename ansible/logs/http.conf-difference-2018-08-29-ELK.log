@@ -1,0 +1,1 @@
+{"stderr_lines": [], "cmd": ["diff", "/etc/ansible/playbooks/master/mas/http.conf", "/etc/ansible/playbooks/uk3/mas/mas1/http.conf"], "stdout": "", "delta": "0:00:00.001632", "stdout_lines": [], "failed_when_result": false, "end": "2018-08-29 04:51:41.997828", "start": "2018-08-29 04:51:41.996196", "changed": false, "failed": false, "stderr": "", "rc": 0}

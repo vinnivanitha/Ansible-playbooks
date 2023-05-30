@@ -1,0 +1,34 @@
+# This playbook compares a specific file from two different hosts
+# Example usage: ansible-playbook compare_sip2.conf.yml
+
+---
+- name: Compare sip.conf Playbook
+  hosts: mas_servers
+  gather_facts: true
+
+  tasks:
+  - name: Fetch first sip.conf file
+    fetch: dest=save/{{ansible_hostname}}/sip.conf src=/etc/asterisk/sip.conf flat=true validate_checksum=true
+
+- hosts: cm1
+  gather_facts: true
+
+  tasks:
+  - name: 'Compare sip.conf files'
+    command: 
+      diff /etc/ansible/playbooks/monitor/save/{{ansible_hostname}}/sip.conf /etc/ansible/playbooks/monitor/save/{{ansible_hostname}}/sip.conf
+      chdir=/etc/ansible/logs
+    register: difference
+    failed_when: difference.rc > 1
+    changed_when: difference.rc == 1
+
+  - name: Print differences
+    debug: msg='{{ difference.stdout }}'
+
+  - name: Create output file
+    local_action: copy content='{{ item.value }}' dest='/etc/ansible/logs/sip.conf-{{ item.variable }}-{{ ansible_date_time.date }}-{{ ansible_hostname }}.log'
+    with_items:
+      - variable: difference
+        value: '{{ difference }}'
+    no_log: true
+

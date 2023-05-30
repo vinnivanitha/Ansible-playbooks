@@ -1,0 +1,14 @@
+---
+- hosts: nano
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: Before upgrade
+      include: bef_master.yml
+    - name: upgrade 
+      include: nanoupgrade.yml
+    - name: after upgrade
+      include: after_master.yml
+    - name: compare conf files
+      include: nano_compare_master.yml
+      delegate_to: ansible

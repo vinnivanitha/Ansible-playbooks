@@ -1,0 +1,19 @@
+---
+- name: copy conf files before upgrade
+  hosts: userdb_servers 
+  gather_facts: yes
+  tasks:
+     - name: fetch the conf file
+       fetch: dest=/etc/ansible/playbooks/master/userdb/  src=/opt/cdrtool/etc/etl.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/etc/ansible/playbooks/master/userdb/  src=/opt/mcp/config/sms.conf flat=true validate_checksum=true
+     - name: fetch
+       fetch: dest=/etc/ansible/playbooks/master/userdb/  src=/opt/mcp/config/scheduler.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/etc/ansible/playbooks/master/userdb/  src=/opt/mcp/config/ha.yml flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/etc/ansible/playbooks/master/userdb/  src=/opt/mcp/courier/conf/mmail.conf flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/etc/ansible/playbooks/master/userdb/  src=/opt/mcp/config/pgbouncer.ini flat=true validate_checksum=true
+     - name: fetch the files
+       fetch: dest=/etc/ansible/playbooks/master/userdb/  src=/opt/cdrtool/etc/webapi.conf flat=true validate_checksum=true

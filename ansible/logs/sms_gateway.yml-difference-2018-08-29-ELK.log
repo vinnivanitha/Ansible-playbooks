@@ -1,0 +1,1 @@
+{"stderr_lines": [], "cmd": ["diff", "/etc/ansible/playbooks/master/mas/sms_gateway.yml", "/etc/ansible/playbooks/uk3/mas/mas1/sms_gateway.yml"], "stdout": "", "delta": "0:00:00.001655", "stdout_lines": [], "failed_when_result": false, "end": "2018-08-29 04:51:44.829941", "start": "2018-08-29 04:51:44.828286", "changed": false, "failed": false, "stderr": "", "rc": 0}

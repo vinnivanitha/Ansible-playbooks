@@ -1,0 +1,17 @@
+{
+    "changed": true, 
+    "cmd": "/opt/mcp/falcon/fmc -v | grep pgsql", 
+    "delta": "0:00:01.016113", 
+    "end": "2018-09-20 02:14:34.428179", 
+    "failed": false, 
+    "rc": 0, 
+    "start": "2018-09-20 02:14:33.412066", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "pgsql             6   3   running     1     1183789    start/running    4421                   \npgsql-ltq         7   3   running     1     1183780    start/running    4493                   \npgsql-sms         8   2   running     1     1183719    start/running    4705                   ", 
+    "stdout_lines": [
+        "pgsql             6   3   running     1     1183789    start/running    4421                   ", 
+        "pgsql-ltq         7   3   running     1     1183780    start/running    4493                   ", 
+        "pgsql-sms         8   2   running     1     1183719    start/running    4705                   "
+    ]
+}

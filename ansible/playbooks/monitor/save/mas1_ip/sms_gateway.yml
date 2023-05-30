@@ -1,0 +1,32 @@
+# configuration file for sms_gateway
+# :mt_optin_confirmation_notif_text: '[Automated Message]: You have successfully opted-in to converse with JPMC employee.'
+# :mt_optin_sms_text: '[Automated Message]: You are trying to contact a JPMC Employee. Please Opt-In to conversations with the JPMC Employee by replying YES to this message. Reply NO to stop conversations with the JPMC Employee.'
+# :mt_optin_requested_notif_text: '[Automated Message]: An Opt-In message was sent to a new Customer.'
+# :mt_optin_accepted_notif_text: '[Automated Message]: The Customer has Opted-In to converse with you.'
+# :mo_optin_sms_text: '[Automated Message]: A JPMC Employee is trying to contact you. Please Opt-In to conversations with the JPMC Employee by replying YES to this message. Reply NO to stop conversations with the JPMC Employee.'
+# :mo_optin_requested_notif_text: '[Automated Message]: An Opt-In message was sent to a new Customer.'
+# :mo_optin_accepted_notif_text: '[Automated Message]: The Customer has Opted-In to converse with you.'
+# :mo_message_dropped_ntfn: '[Automated Message]: Your previous message was not sent because of illegal content.'
+# :kannel_sendsms_url: 'http://157.230.166.89:13013/cgi-bin/sendsms'
+# :kannel_username: 'tester'
+# :kannel_password: 'foobar'
+# :kannel_charset: 'utf-8'
+# :kannel_coding: '2'
+#
+properties:
+ :mt_optin_confirmation_notif_text: '[Automated Message]: You have successfully opted-in to converse with JPMC employee.'
+ :mt_optin_sms_text: '[Automated Message]: You are trying to contact a JPMC Employee. Please Opt-In to conversations with the JPMC Employee by replying YES to this message. Reply NO to stop conversations with the JPMC Employee.'
+ :mt_optin_requested_notif_text: '[Automated Message]: An Opt-In message was sent to a new Customer.'
+ :mt_optin_accepted_notif_text: '[Automated Message]: The Customer has Opted-In to converse with you.'
+ :mo_optin_sms_text: '[Automated Message]: A JPMC Employee is trying to contact you. Please Opt-In to conversations with the JPMC Employee by replying YES to this message. Reply NO to stop conversations with the JPMC Employee.'
+ :mo_optin_requested_notif_text: '[Automated Message]: An Opt-In message was sent to a new Customer.'
+ :mo_optin_accepted_notif_text: '[Automated Message]: The Customer has Opted-In to converse with you.'
+ :mo_message_dropped_ntfn: '[Automated Message]: Your previous message was not sent because of illegal content.'
+ :kannel_sendsms_url: 
+ :kannel_username: 
+ :kannel_password: 
+ :kannel_charset: 
+ :kannel_coding: 
+ :sprint_calea: 'false' 
+ :mo_optin_confirmation_notif_text: '[Automated Message]: This is confirmation text. The customer whom you want to text with has just accepted the request. You can text now.'
+

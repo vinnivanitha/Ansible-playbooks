@@ -1,0 +1,9 @@
+---
+- name: Master config audit playbook
+  hosts: ansible
+  gather_facts: no
+  become: yes
+
+- include: disk_space.yml
+- include: falstat.yml
+- include: compare_master.yml 

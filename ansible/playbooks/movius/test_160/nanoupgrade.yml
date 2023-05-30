@@ -1,0 +1,44 @@
+       - name: ping server
+         ping:
+         register: ping_output
+       - name: print ping
+         debug:
+           msg: "{{ ping_output }}"
+
+
+
+#    This task is to check version on nano server 
+       - name: check version on nano
+         command: version
+         register: version_output
+       - name: print version
+         debug:
+           msg: "{{ version_output }}"
+
+#    This task calls and executes copy.yml for copy tar file
+
+       - name: run copy.yml
+         include: tar_copy.yml
+
+#    This task calls and execute addsoftware.yml 
+
+       - name: run addsoftware.yml
+         include: addsoftware.yml
+
+#    This task will upgrade the software
+     
+       - name: to upgrade
+         command: spm_util -c upgrade "{{ myvars.host }}" -s "{{ myvars.version }}"
+         register: upgrade_output
+       - name: print output
+         debug:
+           msg: "{{ upgrade_output }}"
+       - name: send an email on failure upgrade
+         mail:
+           to: "{{ myvars.mail }}"
+           subject: upgrading task is  failed
+           body: upgrading software  on $(nano) is failed 
+         when: upgrade_output | failed
+               
+
+
